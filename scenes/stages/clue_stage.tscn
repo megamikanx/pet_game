@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://4ea6jr6to70y"]
 
 [ext_resource type="Script" uid="uid://c7p820ob0wo8l" path="res://scripts/clue_stage.gd" id="1_0arma"]
-[ext_resource type="Texture2D" uid="uid://ip3trfuhjt5" path="res://sprites/background.png" id="2_35tmf"]
+[ext_resource type="Texture2D" uid="uid://ctjy3spfiyj73" path="res://sprites/Green_back.png" id="2_gudl0"]
 [ext_resource type="Texture2D" uid="uid://c1srtue2opvwh" path="res://sprites/speech_bubble.png" id="3_1mnxu"]
 [ext_resource type="Texture2D" uid="uid://b0ephu6ofhq0c" path="res://sprites/character_sprites/miku1.png" id="4_uwv4v"]
+[ext_resource type="Texture2D" uid="uid://dfak2t0mevft0" path="res://sprites/Client-office-background.png" id="4_w8x7c"]
 
 [node name="ClueStage" type="Control" unique_id=1216388204]
 layout_mode = 3
@@ -21,14 +22,31 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_35tmf")
+texture = ExtResource("2_gudl0")
+
+[node name="ClientPortrait" type="TextureRect" parent="." unique_id=1188071241]
+layout_mode = 0
+offset_left = 467.0
+offset_top = 106.0
+offset_right = 913.0
+offset_bottom = 653.0
+texture = ExtResource("4_uwv4v")
+
+[node name="Detective" type="TextureRect" parent="." unique_id=754127998]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_w8x7c")
 
 [node name="ContinueButton" type="Button" parent="." unique_id=1435280580]
 layout_mode = 0
-offset_left = 544.0
-offset_top = 573.0
-offset_right = 735.0
-offset_bottom = 634.0
+offset_left = 998.0
+offset_top = 35.0
+offset_right = 1233.0
+offset_bottom = 131.0
 text = "Continue"
 
 [node name="StageLabel" type="Label" parent="." unique_id=1790314576]
@@ -79,27 +97,20 @@ grow_vertical = 2
 [node name="AdvanceButton" type="Button" parent="Bubble" unique_id=786516747]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
-offset_left = -228.0
-offset_top = -180.0
-offset_right = -38.0
-offset_bottom = 10.0
+offset_left = -236.0
+offset_top = -266.0
+offset_right = -46.0
+offset_bottom = -76.0
 icon = ExtResource("3_1mnxu")
+flat = true
 
 [node name="TraitIcon" type="TextureRect" parent="Bubble" unique_id=1376832352]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
-offset_left = -195.0
-offset_top = -146.0
-offset_right = -143.0
-offset_bottom = -92.0
-
-[node name="ClientPortrait" type="TextureRect" parent="." unique_id=1188071241]
-layout_mode = 0
-offset_left = 492.0
-offset_top = 154.0
-offset_right = 792.0
-offset_bottom = 520.0
-texture = ExtResource("4_uwv4v")
+offset_left = -201.0
+offset_top = -221.0
+offset_right = -107.0
+offset_bottom = -125.0
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
 [connection signal="pressed" from="Bubble/AdvanceButton" to="." method="_on_advance_button_pressed"]

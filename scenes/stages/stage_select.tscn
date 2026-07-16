@@ -1,10 +1,16 @@
 [gd_scene format=3 uid="uid://fguh6mdw13wl"]
 
 [ext_resource type="Script" uid="uid://f6xxvgceo5hw" path="res://scripts/stage_select.gd" id="1_aysmx"]
-[ext_resource type="Texture2D" uid="uid://bsh5q7g6m0l13" path="res://sprites/stage_select_bg.jpg" id="2_q2msg"]
-[ext_resource type="Texture2D" uid="uid://oes70cfk582y" path="res://sprites/level_select.png" id="3_wajm8"]
-[ext_resource type="Texture2D" uid="uid://c4t7ithtf7dko" path="res://sprites/checkmark.svg.png" id="4_jrv0x"]
-[ext_resource type="Texture2D" uid="uid://dy4luho1rgm0k" path="res://sprites/stage_select_catalogue.png" id="4_wajm8"]
+[ext_resource type="Texture2D" uid="uid://evvyu5ahii21" path="res://sprites/Yellow_background.png" id="2_j8ci8"]
+[ext_resource type="Texture2D" uid="uid://6qmi31iaf3hw" path="res://sprites/Levelselect_title.png" id="3_iyq84"]
+[ext_resource type="Texture2D" uid="uid://b68678r3o47vp" path="res://sprites/level_1.png" id="4_dpect"]
+[ext_resource type="Texture2D" uid="uid://uqwpd3tjjf3w" path="res://sprites/Levelcomplete_tick.png" id="5_iyq84"]
+[ext_resource type="Texture2D" uid="uid://c807ymktifjd4" path="res://sprites/level_2.png" id="5_v7qrm"]
+[ext_resource type="Texture2D" uid="uid://cj3m6fuy01t2c" path="res://sprites/level_3.png" id="6_inlx4"]
+[ext_resource type="Texture2D" uid="uid://baoqoroxlutph" path="res://sprites/level_4.png" id="7_fp7w0"]
+[ext_resource type="Texture2D" uid="uid://bctaccwb2ri40" path="res://sprites/level_5.png" id="8_x7rqn"]
+[ext_resource type="Texture2D" uid="uid://ch5av183lw6yq" path="res://sprites/Catalogue.png" id="9_vhbds"]
+[ext_resource type="Texture2D" uid="uid://bds7hjwimoaci" path="res://sprites/Menu_button.png" id="10_v2kd5"]
 
 [node name="StageSelect" type="Control" unique_id=1163298533]
 layout_mode = 3
@@ -22,9 +28,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_q2msg")
+texture = ExtResource("2_j8ci8")
 
 [node name="TitleBanner" type="TextureRect" parent="." unique_id=333313314]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -32,156 +39,223 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -327.0
-offset_top = -233.0
+offset_top = -273.0
 offset_right = 329.0
 offset_bottom = -107.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_wajm8")
+texture = ExtResource("3_iyq84")
 
 [node name="StageRow" type="HBoxContainer" parent="." unique_id=650857278]
+custom_minimum_size = Vector2(560, 100)
+custom_maximum_size = Vector2(1100, -1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -503.0
-offset_top = -9.0
-offset_right = 504.0
-offset_bottom = 104.0
+offset_left = -644.5
+offset_top = -27.5
+offset_right = 645.5
+offset_bottom = 122.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 135
+theme_override_constants/separation = 88
 
 [node name="StageButton1" type="Button" parent="StageRow" unique_id=153482841]
-custom_minimum_size = Vector2(96, 96)
+texture_filter = 1
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
+icon = ExtResource("4_dpect")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="LockOverlay" type="ColorRect" parent="StageRow/StageButton1" unique_id=1826693015]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 16.689117
+offset_top = 38.732094
+offset_right = 120.75861
+offset_bottom = 134.73209
+rotation = -0.21355894
+color = Color(0.40784314, 0.40784314, 0.40784314, 0.30980393)
 
 [node name="CheckMark" type="TextureRect" parent="StageRow/StageButton1" unique_id=519237928]
+custom_minimum_size = Vector2(96, 96)
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = -1
 anchor_left = 0.5
+anchor_top = -0.089
 anchor_right = 0.5
-offset_left = -49.5
-offset_top = -54.0
-offset_right = 65.25
-offset_bottom = 46.0
+offset_left = -59.5
+offset_top = -31.15
+offset_right = 36.5
+offset_bottom = 55.5
 grow_horizontal = 2
-texture = ExtResource("4_jrv0x")
+texture = ExtResource("5_iyq84")
 expand_mode = 1
 
 [node name="StageButton2" type="Button" parent="StageRow" unique_id=900396925]
-custom_minimum_size = Vector2(96, 96)
+texture_filter = 1
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
+icon = ExtResource("5_v7qrm")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="LockOverlay" type="ColorRect" parent="StageRow/StageButton2" unique_id=122086450]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 26.5
+offset_top = 22.5
+offset_right = 126.5
+offset_bottom = 118.5
+color = Color(0.40784314, 0.40784314, 0.40784314, 0.30980393)
 
 [node name="CheckMark" type="TextureRect" parent="StageRow/StageButton2" unique_id=1551009172]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = -1
 anchor_left = 0.5
+anchor_top = -0.031000001
 anchor_right = 0.5
-offset_left = -42.5
-offset_top = -45.0
-offset_right = 55.75
-offset_bottom = 51.0
+offset_left = -32.5
+offset_top = -51.85
+offset_right = 59.929657
+offset_bottom = 39.5
 grow_horizontal = 2
-texture = ExtResource("4_jrv0x")
+rotation = 0.16254596
+texture = ExtResource("5_iyq84")
 expand_mode = 1
 
 [node name="StageButton3" type="Button" parent="StageRow" unique_id=1815147473]
-custom_minimum_size = Vector2(96, 96)
+texture_filter = 1
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
+icon = ExtResource("6_inlx4")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="LockOverlay" type="ColorRect" parent="StageRow/StageButton3" unique_id=1115232600]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 16.5
+offset_top = 21.5
+offset_right = 129.5
+offset_bottom = 126.5
+color = Color(0.40784314, 0.40784314, 0.40784314, 0.30980393)
 
 [node name="CheckMark" type="TextureRect" parent="StageRow/StageButton3" unique_id=514407497]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -51.5
-offset_top = -49.0
-offset_right = 55.75
-offset_bottom = 49.0
+offset_left = -24.5
+offset_top = -62.5
+offset_right = 65.5
+offset_bottom = 36.0
 grow_horizontal = 2
-texture = ExtResource("4_jrv0x")
+rotation = 0.37946528
+texture = ExtResource("5_iyq84")
 expand_mode = 1
 
 [node name="StageButton4" type="Button" parent="StageRow" unique_id=1089570759]
-custom_minimum_size = Vector2(96, 96)
+texture_filter = 1
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
+icon = ExtResource("7_fp7w0")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="LockOverlay" type="ColorRect" parent="StageRow/StageButton4" unique_id=1582729405]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 22.5
+offset_top = 27.5
+offset_right = 121.99347
+offset_bottom = 128.53342
+rotation = -0.0680407
+color = Color(0.40784314, 0.40784314, 0.40784314, 0.30980393)
 
 [node name="CheckMark" type="TextureRect" parent="StageRow/StageButton4" unique_id=79144211]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -49.5
-offset_top = -46.0
-offset_right = 51.75
-offset_bottom = 49.0
+offset_left = -28.5
+offset_top = -56.5
+offset_right = 58.5
+offset_bottom = 38.5
 grow_horizontal = 2
-texture = ExtResource("4_jrv0x")
+rotation = 0.2848592
+texture = ExtResource("5_iyq84")
 expand_mode = 1
 
 [node name="StageButton5" type="Button" parent="StageRow" unique_id=1741392713]
-custom_minimum_size = Vector2(96, 96)
+texture_filter = 1
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
-size_flags_horizontal = 10
+size_flags_horizontal = 2
+button_mask = 0
+icon = ExtResource("8_x7rqn")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="LockOverlay" type="ColorRect" parent="StageRow/StageButton5" unique_id=1980300479]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 15.5
+offset_top = 26.5
+offset_right = 119.5
+offset_bottom = 129.2287
+rotation = -0.036834408
+color = Color(0.40784314, 0.40784314, 0.40784314, 0.30980393)
 
 [node name="CheckMark" type="TextureRect" parent="StageRow/StageButton5" unique_id=34278080]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -54.5
-offset_top = -47.0
-offset_right = 54.5
-offset_bottom = 51.0
+offset_left = -21.5
+offset_top = -64.5
+offset_right = 69.5
+offset_bottom = 33.5
 grow_horizontal = 2
-texture = ExtResource("4_jrv0x")
+rotation = 0.49921936
+texture = ExtResource("5_iyq84")
 expand_mode = 1
 
 [node name="CatalogueButton" type="Button" parent="." unique_id=1746360288]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -260.0
-offset_top = -166.0
-offset_right = 261.0
-offset_bottom = 3.0
+offset_left = -268.0
+offset_top = -167.0
+offset_right = 268.0
+offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 0
-icon = ExtResource("4_wajm8")
+icon = ExtResource("9_vhbds")
+flat = true
+expand_icon = true
+
+[node name="MenuButton" type="Button" parent="." unique_id=2050907324]
+texture_filter = 1
+layout_mode = 0
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 138.0
+offset_bottom = 134.0
+icon = ExtResource("10_v2kd5")
+flat = true
+icon_alignment = 1
 expand_icon = true
