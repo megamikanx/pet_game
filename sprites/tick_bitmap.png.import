@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cso7xl00mf6f2"
+path="res://.godot/imported/tick_bitmap.png-f7d1af10abaaffd2fdf2bdbf4ca92f1d.res"
+
+[deps]
+
+source_file="res://sprites/tick_bitmap.png"
+dest_files=["res://.godot/imported/tick_bitmap.png-f7d1af10abaaffd2fdf2bdbf4ca92f1d.res"]
+
+[params]
+
+create_from=1
+threshold=0.0
