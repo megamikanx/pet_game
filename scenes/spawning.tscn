@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c2wwq6df3yq1c"]
+[gd_scene format=3 uid="uid://e1nnxmatckyp"]
 
 [ext_resource type="Script" uid="uid://bepkwyfcsweoo" path="res://scripts/stage.gd" id="1_elga8"]
 [ext_resource type="Texture2D" uid="uid://fqrdve5lvvsc" path="res://sprites/pens/Grass_level.png" id="1_iuy6r"]

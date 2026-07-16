@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://b6qa6o63xuxdk"]
+[gd_scene format=3 uid="uid://dql3hlx84cpy4"]
 
-[ext_resource type="Script" uid="uid://b5ol55g6xqmkv" path="res://scripts/pet.gd" id="1_ep4w1"]
-[ext_resource type="Texture2D" uid="uid://dgf35ickg1xpx" path="res://sprites/pet_sprites/rabbit.png" id="2_8goqh"]
-[ext_resource type="Texture2D" uid="uid://c6pq82pyuohv6" path="res://sprites/item_sprites/spritesheet.webp" id="3_5ie0e"]
-[ext_resource type="Texture2D" uid="uid://by6y5dlf47i3s" path="res://sprites/pet_sprites/flag.png" id="4_xrie4"]
+[ext_resource type="Script" uid="uid://b5ol55g6xqmkv" path="res://scripts/pet.gd" id="1_hmkkh"]
+[ext_resource type="Texture2D" uid="uid://dgf35ickg1xpx" path="res://sprites/pet_sprites/rabbit.png" id="2_6nmc3"]
+[ext_resource type="Texture2D" uid="uid://c6pq82pyuohv6" path="res://sprites/item_sprites/spritesheet.webp" id="3_axfbl"]
+[ext_resource type="Texture2D" uid="uid://by6y5dlf47i3s" path="res://sprites/pet_sprites/flag.png" id="4_5c8qe"]
 
 [sub_resource type="Animation" id="Animation_ymejq"]
 length = 0.001
@@ -50,7 +50,7 @@ radius = 15.0
 collision_layer = 3
 mass = 3.0
 gravity_scale = 0.0
-script = ExtResource("1_ep4w1")
+script = ExtResource("1_hmkkh")
 metadata/_edit_group_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="." unique_id=2009394774]
@@ -59,19 +59,19 @@ update_rotation = false
 
 [node name="petSprite" type="Sprite2D" parent="." unique_id=189459606]
 top_level = true
-texture = ExtResource("2_8goqh")
+texture = ExtResource("2_6nmc3")
 offset = Vector2(5.3, -14)
 
 [node name="animation" type="Sprite2D" parent="petSprite" unique_id=742330165]
 position = Vector2(5.3, -14)
 scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("3_5ie0e")
+texture = ExtResource("3_axfbl")
 hframes = 3
 
 [node name="flagSprite" type="Sprite2D" parent="petSprite" unique_id=2065679614]
 position = Vector2(16.999998, 14.999998)
 scale = Vector2(0.6999999, 0.6999999)
-texture = ExtResource("4_xrie4")
+texture = ExtResource("4_5c8qe")
 offset = Vector2(5.3, -14)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="petSprite" unique_id=1705849304]

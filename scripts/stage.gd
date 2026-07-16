@@ -1,7 +1,7 @@
 extends Node2D
 
 #if drop pet near pen edge sometimes gets placed wrong
-
+# if dropped fast when in collection sometimes isnt centered
 
 @onready var spawner = $Spawner
 @onready var collection = $Collection
