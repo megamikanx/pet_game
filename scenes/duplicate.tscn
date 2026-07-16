@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://b6qa6o63xuxdk"]
+
+[ext_resource type="Script" uid="uid://b5ol55g6xqmkv" path="res://scripts/pet.gd" id="1_ni138"]
+[ext_resource type="Texture2D" uid="uid://dgf35ickg1xpx" path="res://spritse/rabbit.png" id="2_v2c2b"]
+[ext_resource type="Texture2D" uid="uid://c6pq82pyuohv6" path="res://spritse/items/spritesheet.webp" id="3_v2c2b"]
+[ext_resource type="Texture2D" uid="uid://by6y5dlf47i3s" path="res://spritse/flag.png" id="4_v2c2b"]
+
+[sub_resource type="Animation" id="Animation_ymejq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("petSprite/animation:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_xbk8b"]
+resource_name = "animation"
+length = 1.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("petSprite/animation:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0bgbx"]
+_data = {
+&"RESET": SubResource("Animation_ymejq"),
+&"animation": SubResource("Animation_xbk8b")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ni138"]
+radius = 15.0
+
+[node name="CharacterBody2D" type="RigidBody2D" unique_id=806234367]
+mass = 3.0
+gravity_scale = 0.0
+script = ExtResource("1_ni138")
+metadata/_edit_group_ = true
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="." unique_id=2009394774]
+remote_path = NodePath("../petSprite")
+update_rotation = false
+
+[node name="petSprite" type="Sprite2D" parent="." unique_id=189459606]
+top_level = true
+texture = ExtResource("2_v2c2b")
+offset = Vector2(5.3, -14)
+
+[node name="animation" type="Sprite2D" parent="petSprite" unique_id=742330165]
+position = Vector2(5.3, -14)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("3_v2c2b")
+hframes = 3
+
+[node name="flagSprite" type="Sprite2D" parent="petSprite" unique_id=2065679614]
+position = Vector2(16.999998, 14.999998)
+scale = Vector2(0.6999999, 0.6999999)
+texture = ExtResource("4_v2c2b")
+offset = Vector2(5.3, -14)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="petSprite" unique_id=1705849304]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_0bgbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1704819219]
+position = Vector2(0, -9.536743e-07)
+shape = SubResource("CircleShape2D_ni138")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=184480459]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=348510585]
+shape = SubResource("CircleShape2D_ni138")
+
+[node name="Timer" type="Timer" parent="." unique_id=795396339]
+autostart = true
+
+[connection signal="input_event" from="." to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="timeout" from="Timer" to="." method="_on_timeout"]

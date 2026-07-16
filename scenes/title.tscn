@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c357gtv2rwsf"]
+
+[ext_resource type="Texture2D" uid="uid://cqbky705c0dgo" path="res://spritse/icon.svg" id="1_b3w7a"]
+[ext_resource type="Texture2D" uid="uid://c2gusnlxfdl6b" path="res://spritse/iconHover.svg" id="2_4rr2b"]
+[ext_resource type="BitMap" uid="uid://riqgi1ijucu5" path="res://spritse/iconMap.svg" id="3_yql1r"]
+[ext_resource type="Script" uid="uid://lxaxutbkbcp3" path="res://scripts/start.gd" id="4_b3w7a"]
+[ext_resource type="Script" uid="uid://dnwbw55a2issp" path="res://scripts/exit.gd" id="5_b3w7a"]
+
+[node name="Node2D" type="Node2D" unique_id=2112373417]
+
+[node name="Buttons" type="Control" parent="." unique_id=1092077650]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 249.0
+offset_top = 213.0
+offset_right = 289.0
+offset_bottom = 253.0
+
+[node name="Start" type="TextureButton" parent="Buttons" unique_id=785269821]
+layout_mode = 0
+offset_left = 386.0
+offset_top = -67.0
+offset_right = 514.0
+offset_bottom = 61.0
+texture_normal = ExtResource("1_b3w7a")
+texture_hover = ExtResource("2_4rr2b")
+texture_click_mask = ExtResource("3_yql1r")
+script = ExtResource("4_b3w7a")
+
+[node name="Exit" type="TextureButton" parent="Buttons" unique_id=621044839]
+layout_mode = 0
+offset_left = 509.0
+offset_top = 301.0
+offset_right = 637.0
+offset_bottom = 429.0
+texture_normal = ExtResource("1_b3w7a")
+texture_pressed = ExtResource("2_4rr2b")
+texture_click_mask = ExtResource("3_yql1r")
+script = ExtResource("5_b3w7a")
+
+[connection signal="pressed" from="Buttons/Start" to="Buttons/Start" method="_on_pressed"]
+[connection signal="pressed" from="Buttons/Exit" to="Buttons/Start" method="_on_exit_pressed"]
+[connection signal="pressed" from="Buttons/Exit" to="Buttons/Exit" method="_on_pressed"]

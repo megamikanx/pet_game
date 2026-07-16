@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c2wwq6df3yq1c"]
+
+[ext_resource type="Script" uid="uid://cimm73q60ml3y" path="res://scripts/spawner.gd" id="1_g6ds7"]
+[ext_resource type="Texture2D" uid="uid://cu6q5maua4w56" path="res://spritse/wallpaperflare.com_wallpaper.jpg" id="2_g6ds7"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g6ds7"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xwuy2"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u48dw"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r23js"]
+
+[node name="Node2D" type="Node2D" unique_id=1719290976]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2072446821]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1624242281]
+shape = SubResource("WorldBoundaryShape2D_g6ds7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1946318714]
+shape = SubResource("WorldBoundaryShape2D_xwuy2")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=933115705]
+position = Vector2(1611, 926)
+shape = SubResource("WorldBoundaryShape2D_u48dw")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1876195972]
+position = Vector2(1611, 926)
+shape = SubResource("WorldBoundaryShape2D_r23js")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1782386482]
+position = Vector2(789.00006, 469)
+scale = Vector2(0.45277777, 0.45277777)
+texture = ExtResource("2_g6ds7")
+
+[node name="Spawner" type="Node2D" parent="." unique_id=1583796695]
+script = ExtResource("1_g6ds7")
