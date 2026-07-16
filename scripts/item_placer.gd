@@ -8,7 +8,7 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	var instance
-	"""if (event is InputEventMouseButton && event.is_pressed() && event.button_index == 2):
+	"""if event.is_action_pressed("LMB"):
 		instance = Global.ITEM_SCENE.instantiate()
 		instance.set_script(current_item_script)
 		instance.position = event.position

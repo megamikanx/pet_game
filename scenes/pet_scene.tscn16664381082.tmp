@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dgf35ickg1xpx" path="res://sprites/pet_sprites/rabbit.png" id="2_8goqh"]
 [ext_resource type="Texture2D" uid="uid://c6pq82pyuohv6" path="res://sprites/item_sprites/spritesheet.webp" id="3_5ie0e"]
 [ext_resource type="Texture2D" uid="uid://by6y5dlf47i3s" path="res://sprites/pet_sprites/flag.png" id="4_xrie4"]
+[ext_resource type="Texture2D" path="res://sprites/pet_sprites/scope.png" id="5_8goqh"]
 
 [sub_resource type="Animation" id="Animation_ymejq"]
 length = 0.001
@@ -46,8 +47,7 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_ni138"]
 radius = 15.0
 
-[node name="Pet" type="RigidBody2D" unique_id=806234367]
-collision_layer = 3
+[node name="CharacterBody2D" type="RigidBody2D" unique_id=806234367]
 mass = 3.0
 gravity_scale = 0.0
 script = ExtResource("1_ep4w1")
@@ -78,16 +78,22 @@ offset = Vector2(5.3, -14)
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_0bgbx")
 
-[node name="Collision" type="CollisionShape2D" parent="." unique_id=1704819219]
+[node name="scopeSprite" type="Sprite2D" parent="petSprite" unique_id=200727340]
+texture = ExtResource("5_8goqh")
+offset = Vector2(-0.67, -5.015)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1704819219]
 position = Vector2(0, -9.536743e-07)
 shape = SubResource("CircleShape2D_ni138")
 
-[node name="SelectionArea" type="Area2D" parent="." unique_id=184480459]
+[node name="Area2D" type="Area2D" parent="." unique_id=184480459]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectionArea" unique_id=348510585]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=348510585]
 shape = SubResource("CircleShape2D_ni138")
 
 [node name="Timer" type="Timer" parent="." unique_id=795396339]
 autostart = true
 
 [connection signal="input_event" from="." to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="timeout" from="Timer" to="." method="_on_timeout"]
