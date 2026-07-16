@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://cusw0u0ho3lwq"]
+
+[ext_resource type="Script" uid="uid://bg8wcx516f352" path="res://scripts/packing_stage.gd" id="1_x4hyh"]
+[ext_resource type="Texture2D" uid="uid://bge7u1044g42c" path="res://sprites/clue_bg.png" id="2_sgpkk"]
+[ext_resource type="Texture2D" uid="uid://yaqpjhekvyvh" path="res://sprites/IMG_1989.png" id="3_was5n"]
+[ext_resource type="Texture2D" uid="uid://d1pte8xa0rmmv" path="res://sprites/IMG_1990.png" id="4_fvwbu"]
+[ext_resource type="Texture2D" uid="uid://dxs1qmi4makin" path="res://sprites/IMG_1991.png" id="5_gf2ly"]
+[ext_resource type="Texture2D" uid="uid://ccu8b1rdd33lj" path="res://sprites/IMG_1992 (1).png" id="6_gmq2f"]
+[ext_resource type="Texture2D" uid="uid://c4swr61gus4sm" path="res://sprites/bagbar.png" id="7_pdicg"]
+
+[node name="PackingStage" type="Control" unique_id=1898771450]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x4hyh")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1809511776]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_sgpkk")
+
+[node name="DeskArea" type="Control" parent="." unique_id=2108115687]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 574.0
+grow_horizontal = 2
+
+[node name="SampleItem" type="Button" parent="DeskArea" unique_id=1025757343]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 128.0
+offset_top = 215.0
+offset_right = 274.0
+offset_bottom = 358.0
+icon = ExtResource("3_was5n")
+expand_icon = true
+
+[node name="SampleItem2" type="Button" parent="DeskArea" unique_id=1437634563]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 82.0
+offset_right = 577.0
+offset_bottom = 224.0
+icon = ExtResource("4_fvwbu")
+expand_icon = true
+
+[node name="SampleItem3" type="Button" parent="DeskArea" unique_id=220656396]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 301.0
+offset_right = 746.0
+offset_bottom = 438.0
+icon = ExtResource("5_gf2ly")
+expand_icon = true
+
+[node name="SampleItem4" type="Button" parent="DeskArea" unique_id=1593031628]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 863.0
+offset_top = 74.0
+offset_right = 1028.0
+offset_bottom = 241.0
+icon = ExtResource("6_gmq2f")
+expand_icon = true
+
+[node name="BagPanel" type="Control" parent="." unique_id=1287246949]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -182.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="BagArt" type="TextureRect" parent="BagPanel" unique_id=531296493]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -804.0
+offset_top = -256.0
+offset_right = 804.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("7_pdicg")
+
+[node name="BagBar" type="HBoxContainer" parent="BagPanel" unique_id=495099580]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

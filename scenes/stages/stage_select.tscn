@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://fguh6mdw13wl"]
+
+[ext_resource type="Script" uid="uid://f6xxvgceo5hw" path="res://scripts/stage_select.gd" id="1_aysmx"]
+[ext_resource type="Texture2D" uid="uid://bsh5q7g6m0l13" path="res://sprites/stage_select_bg.jpg" id="2_q2msg"]
+[ext_resource type="Texture2D" uid="uid://oes70cfk582y" path="res://sprites/level_select.png" id="3_wajm8"]
+[ext_resource type="Texture2D" uid="uid://c4t7ithtf7dko" path="res://sprites/checkmark.svg.png" id="4_jrv0x"]
+[ext_resource type="Texture2D" uid="uid://dy4luho1rgm0k" path="res://sprites/stage_select_catalogue.png" id="4_wajm8"]
+
+[node name="StageSelect" type="Control" unique_id=1163298533]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aysmx")
+
+[node name="Background" type="TextureRect" parent="." unique_id=216153792]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_q2msg")
+
+[node name="TitleBanner" type="TextureRect" parent="." unique_id=333313314]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -327.0
+offset_top = -233.0
+offset_right = 329.0
+offset_bottom = -107.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_wajm8")
+
+[node name="StageRow" type="HBoxContainer" parent="." unique_id=650857278]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -503.0
+offset_top = -9.0
+offset_right = 504.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 135
+
+[node name="StageButton1" type="Button" parent="StageRow" unique_id=153482841]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="LockOverlay" type="ColorRect" parent="StageRow/StageButton1" unique_id=1826693015]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CheckMark" type="TextureRect" parent="StageRow/StageButton1" unique_id=519237928]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -49.5
+offset_top = -54.0
+offset_right = 65.25
+offset_bottom = 46.0
+grow_horizontal = 2
+texture = ExtResource("4_jrv0x")
+expand_mode = 1
+
+[node name="StageButton2" type="Button" parent="StageRow" unique_id=900396925]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="LockOverlay" type="ColorRect" parent="StageRow/StageButton2" unique_id=122086450]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CheckMark" type="TextureRect" parent="StageRow/StageButton2" unique_id=1551009172]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -42.5
+offset_top = -45.0
+offset_right = 55.75
+offset_bottom = 51.0
+grow_horizontal = 2
+texture = ExtResource("4_jrv0x")
+expand_mode = 1
+
+[node name="StageButton3" type="Button" parent="StageRow" unique_id=1815147473]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="LockOverlay" type="ColorRect" parent="StageRow/StageButton3" unique_id=1115232600]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CheckMark" type="TextureRect" parent="StageRow/StageButton3" unique_id=514407497]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.5
+offset_top = -49.0
+offset_right = 55.75
+offset_bottom = 49.0
+grow_horizontal = 2
+texture = ExtResource("4_jrv0x")
+expand_mode = 1
+
+[node name="StageButton4" type="Button" parent="StageRow" unique_id=1089570759]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="LockOverlay" type="ColorRect" parent="StageRow/StageButton4" unique_id=1582729405]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CheckMark" type="TextureRect" parent="StageRow/StageButton4" unique_id=79144211]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -49.5
+offset_top = -46.0
+offset_right = 51.75
+offset_bottom = 49.0
+grow_horizontal = 2
+texture = ExtResource("4_jrv0x")
+expand_mode = 1
+
+[node name="StageButton5" type="Button" parent="StageRow" unique_id=1741392713]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="LockOverlay" type="ColorRect" parent="StageRow/StageButton5" unique_id=1980300479]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CheckMark" type="TextureRect" parent="StageRow/StageButton5" unique_id=34278080]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -54.5
+offset_top = -47.0
+offset_right = 54.5
+offset_bottom = 51.0
+grow_horizontal = 2
+texture = ExtResource("4_jrv0x")
+expand_mode = 1
+
+[node name="CatalogueButton" type="Button" parent="." unique_id=1746360288]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -260.0
+offset_top = -166.0
+offset_right = 261.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 0
+icon = ExtResource("4_wajm8")
+expand_icon = true

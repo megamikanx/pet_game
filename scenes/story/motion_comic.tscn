@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://oe64ib3vsgg6"]
+
+[ext_resource type="Script" uid="uid://c2sdg3wtfmak" path="res://scripts/motion_comic.gd" id="1_ch3jb"]
+
+[node name="motion_comic" type="Control" unique_id=569980031]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ch3jb")
+
+[node name="StubLabel" type="Label" parent="." unique_id=2049595371]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -11.5
+offset_right = 56.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Motion Comic "
+
+[node name="Continue" type="Button" parent="." unique_id=575948033]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.5
+offset_top = 29.0
+offset_right = 39.5
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Continue"
+
+[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
