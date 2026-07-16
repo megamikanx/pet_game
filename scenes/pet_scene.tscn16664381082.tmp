@@ -1,9 +1,10 @@
-[gd_scene format=3 uid="uid://dql3hlx84cpy4"]
+[gd_scene format=3 uid="uid://b6qa6o63xuxdk"]
 
-[ext_resource type="Script" uid="uid://b5ol55g6xqmkv" path="res://scripts/pet.gd" id="1_hmkkh"]
-[ext_resource type="Texture2D" uid="uid://dgf35ickg1xpx" path="res://sprites/pet_sprites/rabbit.png" id="2_6nmc3"]
-[ext_resource type="Texture2D" uid="uid://c6pq82pyuohv6" path="res://sprites/item_sprites/spritesheet.webp" id="3_axfbl"]
-[ext_resource type="Texture2D" uid="uid://by6y5dlf47i3s" path="res://sprites/pet_sprites/flag.png" id="4_5c8qe"]
+[ext_resource type="Script" uid="uid://b5ol55g6xqmkv" path="res://scripts/pet.gd" id="1_ep4w1"]
+[ext_resource type="Texture2D" uid="uid://dgf35ickg1xpx" path="res://sprites/pet_sprites/rabbit.png" id="2_8goqh"]
+[ext_resource type="Texture2D" uid="uid://c6pq82pyuohv6" path="res://sprites/item_sprites/spritesheet.webp" id="3_5ie0e"]
+[ext_resource type="Texture2D" uid="uid://by6y5dlf47i3s" path="res://sprites/pet_sprites/flag.png" id="4_xrie4"]
+[ext_resource type="Texture2D" path="res://sprites/pet_sprites/scope.png" id="5_8goqh"]
 
 [sub_resource type="Animation" id="Animation_ymejq"]
 length = 0.001
@@ -46,11 +47,10 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_ni138"]
 radius = 15.0
 
-[node name="Pet" type="RigidBody2D" unique_id=806234367]
-collision_layer = 3
+[node name="CharacterBody2D" type="RigidBody2D" unique_id=806234367]
 mass = 3.0
 gravity_scale = 0.0
-script = ExtResource("1_hmkkh")
+script = ExtResource("1_ep4w1")
 metadata/_edit_group_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="." unique_id=2009394774]
@@ -59,35 +59,41 @@ update_rotation = false
 
 [node name="petSprite" type="Sprite2D" parent="." unique_id=189459606]
 top_level = true
-texture = ExtResource("2_6nmc3")
+texture = ExtResource("2_8goqh")
 offset = Vector2(5.3, -14)
 
 [node name="animation" type="Sprite2D" parent="petSprite" unique_id=742330165]
 position = Vector2(5.3, -14)
 scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("3_axfbl")
+texture = ExtResource("3_5ie0e")
 hframes = 3
 
 [node name="flagSprite" type="Sprite2D" parent="petSprite" unique_id=2065679614]
 position = Vector2(16.999998, 14.999998)
 scale = Vector2(0.6999999, 0.6999999)
-texture = ExtResource("4_5c8qe")
+texture = ExtResource("4_xrie4")
 offset = Vector2(5.3, -14)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="petSprite" unique_id=1705849304]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_0bgbx")
 
-[node name="Collision" type="CollisionShape2D" parent="." unique_id=1704819219]
+[node name="scopeSprite" type="Sprite2D" parent="petSprite" unique_id=200727340]
+texture = ExtResource("5_8goqh")
+offset = Vector2(-0.67, -5.015)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1704819219]
 position = Vector2(0, -9.536743e-07)
 shape = SubResource("CircleShape2D_ni138")
 
-[node name="SelectionArea" type="Area2D" parent="." unique_id=184480459]
+[node name="Area2D" type="Area2D" parent="." unique_id=184480459]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectionArea" unique_id=348510585]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=348510585]
 shape = SubResource("CircleShape2D_ni138")
 
 [node name="Timer" type="Timer" parent="." unique_id=795396339]
 autostart = true
 
 [connection signal="input_event" from="." to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="timeout" from="Timer" to="." method="_on_timeout"]

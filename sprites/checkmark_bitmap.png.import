@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dehocbptttysx"
+path="res://.godot/imported/checkmark_bitmap.png-e73a2b209449d90433d829c778b065dd.res"
+
+[deps]
+
+source_file="res://sprites/checkmark_bitmap.png"
+dest_files=["res://.godot/imported/checkmark_bitmap.png-e73a2b209449d90433d829c778b065dd.res"]
+
+[params]
+
+create_from=0
+threshold=0.7

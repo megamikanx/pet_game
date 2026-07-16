@@ -1,13 +1,11 @@
-[gd_scene format=3 uid="uid://c2wwq6df3yq1c"]
+[gd_scene format=3 uid="uid://e1nnxmatckyp"]
 
-[ext_resource type="Texture2D" uid="uid://cu6q5maua4w56" path="res://sprites/wallpaperflare.com_wallpaper.jpg" id="1_uyta0"]
+[ext_resource type="Script" uid="uid://bepkwyfcsweoo" path="res://scripts/stage.gd" id="1_elga8"]
+[ext_resource type="Texture2D" uid="uid://fqrdve5lvvsc" path="res://sprites/pens/Grass_level.png" id="1_iuy6r"]
 [ext_resource type="Script" uid="uid://bpacpldcj6p3v" path="res://scripts/item_placer.gd" id="2_iuy6r"]
-[ext_resource type="Script" uid="uid://cl0rwy3bodsuc" path="res://scripts/pet_spawner.gd" id="3_elga8"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_opwt2"]
-normal = Vector2(-1, 0)
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n4ipy"]
+[ext_resource type="Script" uid="uid://cimm73q60ml3y" path="res://scripts/pet_spawner.gd" id="3_iuy6r"]
+[ext_resource type="Texture2D" uid="uid://c4t7ithtf7dko" path="res://sprites/checkmark.svg.png" id="5_n4ipy"]
+[ext_resource type="BitMap" uid="uid://dehocbptttysx" path="res://sprites/checkmark_bitmap.png" id="6_emswy"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6sj1v"]
 normal = Vector2(1, 0)
@@ -15,32 +13,67 @@ normal = Vector2(1, 0)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_emswy"]
 normal = Vector2(0, 1)
 
-[node name="Node2D" type="Node2D" unique_id=1452239159]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_opwt2"]
+normal = Vector2(-1, 0)
 
-[node name="WorldBorders" type="StaticBody2D" parent="." unique_id=972132779]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n4ipy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6sj1v"]
+size = Vector2(250, 250)
+
+[node name="Stage" type="Node2D" unique_id=1452239159]
+script = ExtResource("1_elga8")
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="WorldBorders" unique_id=583311306]
-position = Vector2(1280, 720)
-shape = SubResource("WorldBoundaryShape2D_opwt2")
+[node name="Pen" type="Sprite2D" parent="." unique_id=716637069]
+position = Vector2(681, 346.00003)
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("1_iuy6r")
+metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorders" unique_id=1403955545]
-position = Vector2(1280, 720)
-shape = SubResource("WorldBoundaryShape2D_n4ipy")
+[node name="TopLeftBorders" type="StaticBody2D" parent="Pen" unique_id=1120908664]
+position = Vector2(-113.0435, -116.52176)
+scale = Vector2(0.43478262, 0.43478262)
+metadata/_edit_group_ = true
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="WorldBorders" unique_id=962211839]
+[node name="right" type="CollisionShape2D" parent="Pen/TopLeftBorders" unique_id=1295464666]
 shape = SubResource("WorldBoundaryShape2D_6sj1v")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="WorldBorders" unique_id=1595619601]
+[node name="down" type="CollisionShape2D" parent="Pen/TopLeftBorders" unique_id=1863628234]
 shape = SubResource("WorldBoundaryShape2D_emswy")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=716637069]
-position = Vector2(846, 446)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_uyta0")
+[node name="BottomRightBorders" type="StaticBody2D" parent="Pen" unique_id=972132779]
+position = Vector2(113.04348, 109.56521)
+scale = Vector2(0.43478262, 0.43478262)
+metadata/_edit_group_ = true
+
+[node name="left" type="CollisionShape2D" parent="Pen/BottomRightBorders" unique_id=583311306]
+shape = SubResource("WorldBoundaryShape2D_opwt2")
+
+[node name="up" type="CollisionShape2D" parent="Pen/BottomRightBorders" unique_id=1403955545]
+shape = SubResource("WorldBoundaryShape2D_n4ipy")
 
 [node name="ItemPlacer" type="Node2D" parent="." unique_id=1825662186]
 script = ExtResource("2_iuy6r")
 
-[node name="spawner" type="Node2D" parent="." unique_id=67576762]
-script = ExtResource("3_elga8")
+[node name="Spawner" type="Node2D" parent="." unique_id=67576762]
+script = ExtResource("3_iuy6r")
+
+[node name="Collection" type="Area2D" parent="." unique_id=198388175]
+position = Vector2(199, 340)
+collision_layer = 0
+collision_mask = 3
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collection" unique_id=21094258]
+shape = SubResource("RectangleShape2D_6sj1v")
+
+[node name="SubmitButton" type="TextureButton" parent="." unique_id=1800364539]
+offset_left = 129.0
+offset_top = 486.0
+offset_right = 254.9754
+offset_bottom = 598.0
+texture_normal = ExtResource("5_n4ipy")
+texture_click_mask = ExtResource("6_emswy")
+ignore_texture_size = true
+stretch_mode = 0
