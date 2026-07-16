@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c2wwq6df3yq1c"]
 
 [ext_resource type="Script" uid="uid://cimm73q60ml3y" path="res://scripts/spawner.gd" id="1_g6ds7"]
-[ext_resource type="Texture2D" uid="uid://cu6q5maua4w56" path="res://spritse/wallpaperflare.com_wallpaper.jpg" id="2_g6ds7"]
+[ext_resource type="Texture2D" uid="uid://cu6q5maua4w56" path="res://sprites/wallpaperflare.com_wallpaper.jpg" id="2_g6ds7"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g6ds7"]
 normal = Vector2(0, 1)

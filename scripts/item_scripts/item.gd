@@ -1,6 +1,7 @@
 @abstract class_name Item
 extends Area2D
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	connect("body_entered", _on_body_entered)

@@ -11,9 +11,8 @@ config_version=5
 [application]
 
 config/name="Template"
-run/main_scene="res://scenes/title.tscn"
+run/main_scene="uid://c2wwq6df3yq1c"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://spritse/icon.svg"
 
 [autoload]
 
@@ -32,7 +31,7 @@ window/stretch/aspect="expand"
 folder_colors={
 "res://scenes/": "green",
 "res://scripts/": "blue",
-"res://spritse/": "pink"
+"res://sprites/": "pink"
 }
 
 [input]

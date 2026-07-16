@@ -64,7 +64,7 @@ var goal: Vector2
 # Intialise the Pet
 func _ready() -> void:
 	randomGoal()
-	petSprite.modulate = PALETTE.pick_random()
+	petSprite.self_modulate = PALETTE.pick_random()
 	flagSprite.visible = false
 	timer.wait_time = randf_range(0.5, 1.5)
 	

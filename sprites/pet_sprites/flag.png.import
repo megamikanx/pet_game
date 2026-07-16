@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgf35ickg1xpx"
-path="res://.godot/imported/rabbit.png-8ef18889775295c57bbc1dcc0504becc.ctex"
+uid="uid://by6y5dlf47i3s"
+path="res://.godot/imported/flag.png-926ca0111515aa1f187a2ae02003ee83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spritse/rabbit.png"
-dest_files=["res://.godot/imported/rabbit.png-8ef18889775295c57bbc1dcc0504becc.ctex"]
+source_file="res://sprites/pet_sprites/flag.png"
+dest_files=["res://.godot/imported/flag.png-926ca0111515aa1f187a2ae02003ee83.ctex"]
 
 [params]
 

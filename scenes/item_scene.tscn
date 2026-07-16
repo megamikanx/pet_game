@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bftq86v026khv"]
 
-[ext_resource type="Texture2D" uid="uid://c2gusnlxfdl6b" path="res://spritse/iconHover.svg" id="2_7ilwu"]
+[ext_resource type="Texture2D" uid="uid://ctcusln2aqlbf" path="res://sprites/item_sprites/Beer.png" id="1_bxfx1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8tn5n"]
 radius = 250.0
@@ -9,8 +9,7 @@ radius = 250.0
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1337877203]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_7ilwu")
+texture = ExtResource("1_bxfx1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1463318831]
 shape = SubResource("CircleShape2D_8tn5n")
