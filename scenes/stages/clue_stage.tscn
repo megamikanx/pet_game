@@ -95,10 +95,10 @@ offset_bottom = -92.0
 
 [node name="ClientPortrait" type="TextureRect" parent="." unique_id=1188071241]
 layout_mode = 0
-offset_left = 648.0
-offset_top = 212.0
-offset_right = 1027.0
-offset_bottom = 664.0
+offset_left = 492.0
+offset_top = 154.0
+offset_right = 792.0
+offset_bottom = 520.0
 texture = ExtResource("4_uwv4v")
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]

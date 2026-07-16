@@ -6,6 +6,7 @@ extends Node
 var current_stage: int = 1
 var highest_unlocked: int = 1
 var cleared_stages: Array[int] = []
+var has_seen_comic: bool = false
 
 func exit_game() -> void:
 	get_tree().quit()

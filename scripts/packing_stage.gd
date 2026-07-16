@@ -31,6 +31,9 @@ func _on_item_pressed(entry: Dictionary) -> void:
 	else:
 		_pack_item(entry)
 
+func _on_go_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/spawning.tscn")
+
 func _pack_item(entry: Dictionary) -> void:
 	var button: Button = entry["button"]
 	entry["is_packed"] = true
