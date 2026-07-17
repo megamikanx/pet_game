@@ -49,7 +49,7 @@ offset_right = 1090.0
 offset_bottom = 481.0
 texture = ExtResource("3_pdicg")
 
-[node name="BeerItem" type="Button" parent="DeskArea" unique_id=1025757343]
+[node name="Beer" type="Button" parent="DeskArea" unique_id=1025757343]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 0
 offset_left = 296.0
@@ -61,7 +61,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="BathItem" type="Button" parent="DeskArea" unique_id=1437634563]
+[node name="Bath" type="Button" parent="DeskArea" unique_id=1437634563]
 layout_mode = 0
 offset_left = 650.0
 offset_top = 254.0
@@ -71,7 +71,7 @@ icon = ExtResource("5_mspdc")
 flat = true
 expand_icon = true
 
-[node name="WaterItem" type="Button" parent="DeskArea" unique_id=220656396]
+[node name="Water" type="Button" parent="DeskArea" unique_id=220656396]
 layout_mode = 0
 offset_left = 881.0
 offset_top = 258.0
@@ -82,7 +82,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="BurgerItem" type="Button" parent="DeskArea" unique_id=1593031628]
+[node name="Burger" type="Button" parent="DeskArea" unique_id=1593031628]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
 offset_left = 914.0
@@ -94,7 +94,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="MoneyItem" type="Button" parent="DeskArea" unique_id=961589761]
+[node name="DollarBill" type="Button" parent="DeskArea" unique_id=961589761]
 layout_mode = 0
 offset_left = 637.0
 offset_top = 116.0
@@ -105,7 +105,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="SquishyItem" type="Button" parent="DeskArea" unique_id=714759041]
+[node name="Squishy" type="Button" parent="DeskArea" unique_id=714759041]
 layout_mode = 0
 offset_left = 331.0
 offset_top = 288.0
@@ -116,7 +116,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="MonsterItem" type="Button" parent="DeskArea" unique_id=966926920]
+[node name="EnergyDrink" type="Button" parent="DeskArea" unique_id=966926920]
 layout_mode = 0
 offset_left = 461.0
 offset_top = 85.0
@@ -127,7 +127,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="ProteinItem" type="Button" parent="DeskArea" unique_id=1602508745]
+[node name="ProteinBar" type="Button" parent="DeskArea" unique_id=1602508745]
 layout_mode = 0
 offset_left = 483.0
 offset_top = 255.0
@@ -188,6 +188,13 @@ icon = ExtResource("9_cnka2")
 flat = true
 icon_alignment = 1
 expand_icon = true
+
+[node name="ItemToolTip" type="TextureRect" parent="." unique_id=279773959]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 6.0
+offset_right = 43.0
+offset_bottom = 46.0
 
 [node name="ToolTip" type="TextureRect" parent="." unique_id=230251575]
 layout_mode = 0
