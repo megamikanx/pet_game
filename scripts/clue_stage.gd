@@ -6,18 +6,12 @@ extends Control
 @onready var trait_icon: TextureRect = $Bubble/TraitIcon
 @onready var client_portrait: TextureRect = $ClientPortrait
 
-var portrait_closed: Texture2D = preload("res://sprites/character_sprites/miku1.png")
-var portrait_open: Texture2D = preload("res://sprites/character_sprites/miku2.png")
+var portrait_closed: Texture2D
+var portrait_open: Texture2D
 
 var is_talking: bool = false
 
-
-var trait_icons: Array[Texture2D] = [
-	preload("res://sprites/trait1.png"),
-	preload("res://sprites/trait2.png"),
-	preload("res://sprites/trait3.png"),
-]
-
+var trait_icons: Array = []
 var trait_index: int = 0
 
 var portrait_rest_pos: Vector2
@@ -36,15 +30,18 @@ func _play_talk_animation() -> void:
 	client_portrait.texture = portrait_closed
 	client_portrait.position = portrait_rest_pos
 	
+
 func _ready() -> void:
-	stage_label.text = "Clue Stage %d" % Global.current_stage
+	var data: Dictionary = Global.get_current_stage_data()
+	portrait_closed = data["portrait_closed"]
+	portrait_open = data["portrait_open"]
+	trait_icons = data["dialogue"]
 	client_portrait.texture = portrait_closed
 	bubble.visible = true
 	continue_button.visible = false
 	trait_index = 0
-	_show_current_trait()
-	client_portrait.texture = portrait_closed
 	portrait_rest_pos = client_portrait.position
+	_show_current_trait()
 
 func _on_advance_button_pressed() -> void:
 	if is_talking:

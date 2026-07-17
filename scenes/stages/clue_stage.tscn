@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" uid="uid://c7p820ob0wo8l" path="res://scripts/clue_stage.gd" id="1_0arma"]
 [ext_resource type="Texture2D" uid="uid://ctjy3spfiyj73" path="res://sprites/Green_back.png" id="2_gudl0"]
-[ext_resource type="Texture2D" uid="uid://c1srtue2opvwh" path="res://sprites/speech_bubble.png" id="3_1mnxu"]
-[ext_resource type="Texture2D" uid="uid://b0ephu6ofhq0c" path="res://sprites/character_sprites/miku1.png" id="4_uwv4v"]
+[ext_resource type="Texture2D" uid="uid://b16o1trgybngk" path="res://sprites/miku_talk_open.png" id="3_uwv4v"]
 [ext_resource type="Texture2D" uid="uid://dfak2t0mevft0" path="res://sprites/Client-office-background.png" id="4_w8x7c"]
+[ext_resource type="Texture2D" uid="uid://cuhj0icy5yqjy" path="res://sprites/miku_nametag.png" id="5_gudl0"]
+[ext_resource type="Texture2D" uid="uid://dno1q5yjukaym" path="res://sprites/Ready_button.png" id="5_w8x7c"]
 
 [node name="ClueStage" type="Control" unique_id=1216388204]
 layout_mode = 3
@@ -26,11 +27,11 @@ texture = ExtResource("2_gudl0")
 
 [node name="ClientPortrait" type="TextureRect" parent="." unique_id=1188071241]
 layout_mode = 0
-offset_left = 467.0
-offset_top = 106.0
-offset_right = 913.0
-offset_bottom = 653.0
-texture = ExtResource("4_uwv4v")
+offset_left = 515.0
+offset_top = 63.0
+offset_right = 1146.0
+offset_bottom = 656.0
+texture = ExtResource("3_uwv4v")
 
 [node name="Detective" type="TextureRect" parent="." unique_id=754127998]
 layout_mode = 1
@@ -43,11 +44,14 @@ texture = ExtResource("4_w8x7c")
 
 [node name="ContinueButton" type="Button" parent="." unique_id=1435280580]
 layout_mode = 0
-offset_left = 998.0
-offset_top = 35.0
-offset_right = 1233.0
-offset_bottom = 131.0
-text = "Continue"
+offset_left = 935.0
+offset_top = 559.0
+offset_right = 1274.0
+offset_bottom = 723.0
+icon = ExtResource("5_w8x7c")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="StageLabel" type="Label" parent="." unique_id=1790314576]
 layout_mode = 1
@@ -62,10 +66,11 @@ offset_right = 27.0
 offset_bottom = 24.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Stage ?
+text = "
 "
 
 [node name="Bubble" type="Panel" parent="." unique_id=25480998]
+custom_maximum_size = Vector2(0, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -80,7 +85,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TraitLabel" type="Label" parent="Bubble" unique_id=341895379]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -94,23 +98,30 @@ offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="AdvanceButton" type="Button" parent="Bubble" unique_id=786516747]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 0
-offset_left = -236.0
-offset_top = -266.0
-offset_right = -46.0
-offset_bottom = -76.0
-icon = ExtResource("3_1mnxu")
-flat = true
-
 [node name="TraitIcon" type="TextureRect" parent="Bubble" unique_id=1376832352]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
-offset_left = -201.0
-offset_top = -221.0
-offset_right = -107.0
-offset_bottom = -125.0
+offset_left = -595.0
+offset_top = -308.0
+offset_right = 28.0
+offset_bottom = -79.0
+
+[node name="AdvanceButton" type="Button" parent="Bubble/TraitIcon" unique_id=786516747]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 22.0
+offset_top = -3.0
+offset_right = 592.0
+offset_bottom = 222.0
+flat = true
+
+[node name="CharacterLabel" type="TextureRect" parent="." unique_id=41344483]
+layout_mode = 0
+offset_left = 1006.0
+offset_top = 19.0
+offset_right = 1255.0
+offset_bottom = 211.0
+texture = ExtResource("5_gudl0")
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
-[connection signal="pressed" from="Bubble/AdvanceButton" to="." method="_on_advance_button_pressed"]
+[connection signal="pressed" from="Bubble/TraitIcon/AdvanceButton" to="." method="_on_advance_button_pressed"]

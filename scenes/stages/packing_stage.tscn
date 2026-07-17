@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://dxm7hhb5xqip" path="res://sprites/bath.png" id="5_mspdc"]
 [ext_resource type="Texture2D" uid="uid://ugwhredpmb0o" path="res://sprites/water.png" id="6_uctxv"]
 [ext_resource type="Texture2D" uid="uid://banyr3bxsfhy5" path="res://sprites/burger.png" id="7_abt0k"]
-[ext_resource type="Texture2D" uid="uid://doruomv756ay4" path="res://sprites/Bag.png" id="8_7o5jh"]
 [ext_resource type="Texture2D" uid="uid://cg216oehwtqq5" path="res://sprites/Money.png" id="8_fok3m"]
 [ext_resource type="Texture2D" uid="uid://dno1q5yjukaym" path="res://sprites/Ready_button.png" id="9_cnka2"]
 [ext_resource type="Texture2D" uid="uid://bmcqj2c2vw4n8" path="res://sprites/squishy.png" id="9_kk86w"]
@@ -15,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://crif68m68vs55" path="res://sprites/energy drink.png" id="10_r73xc"]
 [ext_resource type="Texture2D" uid="uid://diabqjiq0if84" path="res://sprites/protein bar.png" id="11_0obs4"]
 [ext_resource type="Texture2D" uid="uid://bds7hjwimoaci" path="res://sprites/Menu_button.png" id="11_mspdc"]
+[ext_resource type="Texture2D" uid="uid://dxk5fu4culu4p" path="res://sprites/Inventory.png" id="12_r01do"]
 
 [node name="PackingStage" type="Control" unique_id=1898771450]
 layout_mode = 3
@@ -160,10 +160,10 @@ anchor_bottom = 1.0
 offset_left = -174.0
 offset_top = -249.0
 offset_right = 512.0
-offset_bottom = -52.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 0
-texture = ExtResource("8_7o5jh")
+texture = ExtResource("12_r01do")
 expand_mode = 1
 
 [node name="BagBar" type="HBoxContainer" parent="BagPanel" unique_id=495099580]

@@ -8,7 +8,7 @@ var items: Array[Dictionary] = []
 const MAX_PACKED_ITEMS: int = 5
 
 func _ready() -> void:
-	await get_tree().process_frame  # wait one frame so positions are real
+	await get_tree().process_frame  
 
 	var buttons: Array[Dictionary] = [
 		{

@@ -13,7 +13,6 @@ signal hold_item
 var items: Array[Item] = [Beer.new(),Squishy.new(),Beer.new(),Beer.new(),Beer.new()]
 var held_item
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var slots: Array[Area2D] = [slot1, slot2, slot3, slot4, slot5]
 	
