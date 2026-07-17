@@ -3,13 +3,17 @@
 [ext_resource type="Script" uid="uid://bg8wcx516f352" path="res://scripts/packing_stage.gd" id="1_x4hyh"]
 [ext_resource type="Texture2D" uid="uid://c3kwheyp7d3fr" path="res://sprites/Blue_background.png" id="2_gmq2f"]
 [ext_resource type="Texture2D" uid="uid://dywykoinjrd2f" path="res://sprites/Storage.png" id="3_pdicg"]
-[ext_resource type="Texture2D" uid="uid://yaqpjhekvyvh" path="res://sprites/IMG_1989.png" id="3_was5n"]
-[ext_resource type="Texture2D" uid="uid://d1pte8xa0rmmv" path="res://sprites/IMG_1990.png" id="4_fvwbu"]
-[ext_resource type="Texture2D" uid="uid://dxs1qmi4makin" path="res://sprites/IMG_1991.png" id="5_gf2ly"]
-[ext_resource type="Texture2D" uid="uid://ccu8b1rdd33lj" path="res://sprites/IMG_1992 (1).png" id="6_gmq2f"]
+[ext_resource type="Texture2D" uid="uid://ctcusln2aqlbf" path="res://sprites/item_sprites/Beer.png" id="4_r01do"]
+[ext_resource type="Texture2D" uid="uid://dxm7hhb5xqip" path="res://sprites/bath.png" id="5_mspdc"]
+[ext_resource type="Texture2D" uid="uid://ugwhredpmb0o" path="res://sprites/water.png" id="6_uctxv"]
+[ext_resource type="Texture2D" uid="uid://banyr3bxsfhy5" path="res://sprites/burger.png" id="7_abt0k"]
 [ext_resource type="Texture2D" uid="uid://doruomv756ay4" path="res://sprites/Bag.png" id="8_7o5jh"]
+[ext_resource type="Texture2D" uid="uid://cg216oehwtqq5" path="res://sprites/Money.png" id="8_fok3m"]
 [ext_resource type="Texture2D" uid="uid://dno1q5yjukaym" path="res://sprites/Ready_button.png" id="9_cnka2"]
+[ext_resource type="Texture2D" uid="uid://bmcqj2c2vw4n8" path="res://sprites/squishy.png" id="9_kk86w"]
 [ext_resource type="Texture2D" uid="uid://bjkdn4kkqf1kg" path="res://sprites/Select_tooltip.png" id="10_r01do"]
+[ext_resource type="Texture2D" uid="uid://crif68m68vs55" path="res://sprites/energy drink.png" id="10_r73xc"]
+[ext_resource type="Texture2D" uid="uid://diabqjiq0if84" path="res://sprites/protein bar.png" id="11_0obs4"]
 [ext_resource type="Texture2D" uid="uid://bds7hjwimoaci" path="res://sprites/Menu_button.png" id="11_mspdc"]
 
 [node name="PackingStage" type="Control" unique_id=1898771450]
@@ -39,48 +43,99 @@ grow_horizontal = 2
 
 [node name="DeskArt" type="TextureRect" parent="DeskArea" unique_id=1356349270]
 layout_mode = 0
-offset_left = 151.0
-offset_top = 13.0
-offset_right = 1085.0
-offset_bottom = 463.0
+offset_left = 156.0
+offset_top = 31.0
+offset_right = 1090.0
+offset_bottom = 481.0
 texture = ExtResource("3_pdicg")
 
-[node name="SampleItem" type="Button" parent="DeskArea" unique_id=1025757343]
+[node name="BeerItem" type="Button" parent="DeskArea" unique_id=1025757343]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 0
-offset_left = 304.0
-offset_top = 243.0
-offset_right = 450.0
-offset_bottom = 386.0
-icon = ExtResource("3_was5n")
+offset_left = 296.0
+offset_top = 91.0
+offset_right = 428.0
+offset_bottom = 234.0
+icon = ExtResource("4_r01do")
+flat = true
+icon_alignment = 1
 expand_icon = true
 
-[node name="SampleItem2" type="Button" parent="DeskArea" unique_id=1437634563]
+[node name="BathItem" type="Button" parent="DeskArea" unique_id=1437634563]
 layout_mode = 0
-offset_left = 443.0
-offset_top = 82.0
-offset_right = 577.0
-offset_bottom = 224.0
-icon = ExtResource("4_fvwbu")
+offset_left = 650.0
+offset_top = 254.0
+offset_right = 784.0
+offset_bottom = 396.0
+icon = ExtResource("5_mspdc")
+flat = true
 expand_icon = true
 
-[node name="SampleItem3" type="Button" parent="DeskArea" unique_id=220656396]
+[node name="WaterItem" type="Button" parent="DeskArea" unique_id=220656396]
 layout_mode = 0
-offset_left = 639.0
-offset_top = 192.0
-offset_right = 772.0
-offset_bottom = 329.0
-icon = ExtResource("5_gf2ly")
+offset_left = 881.0
+offset_top = 258.0
+offset_right = 993.0
+offset_bottom = 374.0
+icon = ExtResource("6_uctxv")
+flat = true
+icon_alignment = 1
 expand_icon = true
 
-[node name="SampleItem4" type="Button" parent="DeskArea" unique_id=1593031628]
+[node name="BurgerItem" type="Button" parent="DeskArea" unique_id=1593031628]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
-offset_left = 863.0
-offset_top = 74.0
-offset_right = 1028.0
-offset_bottom = 241.0
-icon = ExtResource("6_gmq2f")
+offset_left = 914.0
+offset_top = 97.0
+offset_right = 1027.0
+offset_bottom = 216.0
+icon = ExtResource("7_abt0k")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="MoneyItem" type="Button" parent="DeskArea" unique_id=961589761]
+layout_mode = 0
+offset_left = 637.0
+offset_top = 116.0
+offset_right = 754.0
+offset_bottom = 227.0
+icon = ExtResource("8_fok3m")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="SquishyItem" type="Button" parent="DeskArea" unique_id=714759041]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 288.0
+offset_right = 439.0
+offset_bottom = 410.0
+icon = ExtResource("9_kk86w")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="MonsterItem" type="Button" parent="DeskArea" unique_id=966926920]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 85.0
+offset_right = 572.0
+offset_bottom = 214.0
+icon = ExtResource("10_r73xc")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ProteinItem" type="Button" parent="DeskArea" unique_id=1602508745]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 255.0
+offset_right = 600.0
+offset_bottom = 372.0
+icon = ExtResource("11_0obs4")
+flat = true
+icon_alignment = 1
 expand_icon = true
 
 [node name="BagPanel" type="Control" parent="." unique_id=1287246949]

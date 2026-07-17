@@ -4,14 +4,19 @@ extends Control
 @onready var bag_bar: HBoxContainer = $BagPanel/BagBar
 
 var items: Array[Dictionary] = []
+const MAX_PACKED_ITEMS: int = 5
 
 func _ready() -> void:
 	await get_tree().process_frame  # wait one frame so positions are real
 	var buttons: Array[Button] = [
-		$DeskArea/SampleItem,
-		$DeskArea/SampleItem2,
-		$DeskArea/SampleItem3,
-		$DeskArea/SampleItem4,
+		$DeskArea/BeerItem,
+		$DeskArea/BathItem,
+		$DeskArea/WaterItem,
+		$DeskArea/BurgerItem,
+		$DeskArea/MoneyItem,
+		$DeskArea/SquishyItem,
+		$DeskArea/MonsterItem,
+		$DeskArea/ProteinItem,
 	]
 	for button in buttons:
 		var entry: Dictionary = {
@@ -24,10 +29,19 @@ func _ready() -> void:
 		items.append(entry)
 		button.pressed.connect(_on_item_pressed.bind(entry))
 
+func _get_packed_item_count() -> int:
+	var packed_count: int = 0
+	for entry in items:
+		if entry["is_packed"]:
+			packed_count += 1
+	return packed_count
+	
 func _on_item_pressed(entry: Dictionary) -> void:
-	print("Clicked: ", entry["button"].name, " packed=", entry["is_packed"])
 	if entry["is_packed"]:
 		await _unpack_item(entry)
+	elif _get_packed_item_count() >= MAX_PACKED_ITEMS:
+		print("The bag is full!")
+		return
 	else:
 		_pack_item(entry)
 
@@ -62,3 +76,4 @@ func _unpack_item(entry: Dictionary) -> void:
 	await get_tree().process_frame
 	button.global_position = entry["desk_global_pos"]
 	button.size = entry["desk_size"]
+	
