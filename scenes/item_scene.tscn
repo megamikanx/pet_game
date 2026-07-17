@@ -5,10 +5,12 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_8tn5n"]
 radius = 250.0
 
-[node name="Area2D" type="Area2D" unique_id=1582898440]
+[node name="Item" type="Area2D" unique_id=1582898440]
+monitoring = false
+monitorable = false
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1337877203]
+[node name="ItemSprite" type="Sprite2D" parent="." unique_id=1337877203]
 texture = ExtResource("1_bxfx1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1463318831]

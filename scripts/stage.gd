@@ -6,14 +6,16 @@ extends Node2D
 @onready var spawner = $Spawner
 @onready var collection = $Collection
 @onready var submitButton = $SubmitButton
+@onready var bag = $Bag
 
-var held_pet: Pet
+var held: Node
 var mouse_pressed: bool = false
 var locked: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	spawner.hold_pet.connect(hold_pet)
+	spawner.hold_pet.connect(hold_something)
+	bag.hold_item.connect(hold_something)
 	collection.body_entered.connect(lock_held_pet)
 	collection.body_exited.connect(unlock_held_pet)
 	
@@ -26,27 +28,32 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if mouse_pressed:
-		held_pet.set_position(get_global_mouse_position())
+		held.set_position(get_global_mouse_position())
 	pass
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_released("LMB"):
 		mouse_pressed = false
-		if !locked:
-			spawner.unfreeze_pets(held_pet)
+		if locked and held is Pet:
+			held.set_position(collection.position)
+			submitButton.visible = true
+		else:
+			if held is Pet:
+				spawner.unfreeze_pets(held)
+			
+			held.placed()
 			set_process_input(false)
 			set_process(false)
-		else:
-			held_pet.set_position(collection.position)
-			submitButton.visible = true
+		
 
-func hold_pet(held: Pet) -> void:
-	held_pet = held
+func hold_something(heldor: Node) -> void:
+	held = heldor
 	set_process_input(true)
 	set_process(true)
 	mouse_pressed = true
 	submitButton.visible = false #done when pressing LMB to repick pet
 	pass
+
 
 func lock_held_pet(body: Node2D) -> void:
 	if body is Pet:

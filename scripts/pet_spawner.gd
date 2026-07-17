@@ -37,6 +37,5 @@ func freeze_pets(the_holded : Pet) -> void:
 		pet.freeze()
 
 func unfreeze_pets(the_holded : Pet) -> void:
-	the_holded.stop_drag()
 	for pet in get_children():
 		pet.unfreeze.call_deferred()

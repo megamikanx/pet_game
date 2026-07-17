@@ -6,7 +6,10 @@
 [ext_resource type="Script" uid="uid://cimm73q60ml3y" path="res://scripts/pet_spawner.gd" id="3_iuy6r"]
 [ext_resource type="Texture2D" uid="uid://uqwpd3tjjf3w" path="res://sprites/Levelcomplete_tick.png" id="5_32rk1"]
 [ext_resource type="Texture2D" uid="uid://cu6q5maua4w56" path="res://sprites/wallpaperflare.com_wallpaper.jpg" id="6_g6xxn"]
+[ext_resource type="Script" uid="uid://cxl73i0obw2bn" path="res://scripts/bag.gd" id="7_118ur"]
 [ext_resource type="BitMap" uid="uid://cso7xl00mf6f2" path="res://sprites/tick_bitmap.png" id="7_ewtv5"]
+[ext_resource type="Texture2D" uid="uid://doruomv756ay4" path="res://sprites/Bag.png" id="8_g6xxn"]
+[ext_resource type="Script" uid="uid://duvqkq7fakewl" path="res://scripts/slot.gd" id="9_118ur"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6sj1v"]
 normal = Vector2(1, 0)
@@ -22,6 +25,21 @@ normal = Vector2(-1, 0)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6sj1v"]
 size = Vector2(250, 250)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qv0k"]
+size = Vector2(108.999985, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f845d"]
+size = Vector2(117, 104)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tojul"]
+size = Vector2(116.49999, 107)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0w2ba"]
+size = Vector2(108.999985, 104)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tn5n"]
+size = Vector2(103.49999, 99)
+
 [node name="Stage" type="Node2D" unique_id=1452239159]
 script = ExtResource("1_elga8")
 metadata/_edit_lock_ = true
@@ -30,6 +48,7 @@ metadata/_edit_lock_ = true
 position = Vector2(681, 346.00003)
 scale = Vector2(2.3, 2.3)
 texture = ExtResource("1_iuy6r")
+metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
 [node name="TopLeftBorders" type="StaticBody2D" parent="Pen" unique_id=1120908664]
@@ -54,9 +73,6 @@ shape = SubResource("WorldBoundaryShape2D_opwt2")
 [node name="up" type="CollisionShape2D" parent="Pen/BottomRightBorders" unique_id=1403955545]
 shape = SubResource("WorldBoundaryShape2D_n4ipy")
 
-[node name="ItemPlacer" type="Node2D" parent="." unique_id=1825662186]
-script = ExtResource("2_iuy6r")
-
 [node name="Spawner" type="Node2D" parent="." unique_id=67576762]
 script = ExtResource("3_iuy6r")
 
@@ -79,3 +95,120 @@ texture_hover = ExtResource("6_g6xxn")
 texture_click_mask = ExtResource("7_ewtv5")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="Bag" type="Node2D" parent="." unique_id=1523518998]
+position = Vector2(681.00006, 625)
+scale = Vector2(2.6, 2.6)
+script = ExtResource("7_118ur")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="BagSprite" type="Sprite2D" parent="Bag" unique_id=780282846]
+texture = ExtResource("8_g6xxn")
+metadata/_edit_lock_ = true
+
+[node name="Slot1" type="Area2D" parent="Bag" unique_id=1367215215]
+position = Vector2(-93.915, 5.215)
+script = ExtResource("9_118ur")
+metadata/_edit_lock_ = true
+
+[node name="Collision" type="CollisionShape2D" parent="Bag/Slot1" unique_id=688032300]
+position = Vector2(-0.12350464, 0.1696167)
+scale = Vector2(0.38461542, 0.38461542)
+shape = SubResource("RectangleShape2D_2qv0k")
+
+[node name="ColorRect" type="ColorRect" parent="Bag/Slot1" unique_id=417533552]
+offset_left = -21.854263
+offset_top = -20.214981
+offset_right = 22.37651
+offset_bottom = 20.938843
+mouse_filter = 2
+color = Color(0.09803922, 0.06666667, 0.023529412, 0.36078432)
+metadata/_edit_use_anchors_ = true
+
+[node name="ItemSprite" type="Sprite2D" parent="Bag/Slot1" unique_id=458141447]
+
+[node name="Slot2" type="Area2D" parent="Bag" unique_id=602708744]
+position = Vector2(-48.105, 5.185)
+script = ExtResource("9_118ur")
+metadata/_edit_lock_ = true
+
+[node name="Collision" type="CollisionShape2D" parent="Bag/Slot2" unique_id=1173416889]
+position = Vector2(0.60498047, -0.18499756)
+scale = Vector2(0.38461542, 0.38461542)
+shape = SubResource("RectangleShape2D_f845d")
+
+[node name="ColorRect" type="ColorRect" parent="Bag/Slot2" unique_id=504806327]
+offset_left = -23.048859
+offset_top = -21.338867
+offset_right = 25.797287
+offset_bottom = 20.968811
+mouse_filter = 2
+color = Color(0.09803922, 0.06666667, 0.023529412, 0.36078432)
+
+[node name="ItemSprite" type="Sprite2D" parent="Bag/Slot2" unique_id=1002129799]
+
+[node name="Slot3" type="Area2D" parent="Bag" unique_id=342937008]
+position = Vector2(0.905, 3.46)
+script = ExtResource("9_118ur")
+metadata/_edit_lock_ = true
+
+[node name="Collision" type="CollisionShape2D" parent="Bag/Slot3" unique_id=2043015562]
+position = Vector2(0.5372925, 0.96307373)
+scale = Vector2(0.38461542, 0.38461542)
+shape = SubResource("RectangleShape2D_tojul")
+
+[node name="ColorRect" type="ColorRect" parent="Bag/Slot3" unique_id=275288863]
+offset_left = -23.212723
+offset_top = -21.152328
+offset_right = 25.24884
+offset_bottom = 22.693832
+mouse_filter = 2
+color = Color(0.09803922, 0.06666667, 0.023529412, 0.36078432)
+
+[node name="ItemSprite" type="Sprite2D" parent="Bag/Slot3" unique_id=11475609]
+
+[node name="Slot4" type="Area2D" parent="Bag" unique_id=1362461433]
+position = Vector2(48.99, 5.04)
+script = ExtResource("9_118ur")
+metadata/_edit_lock_ = true
+
+[node name="Collision" type="CollisionShape2D" parent="Bag/Slot4" unique_id=988809993]
+position = Vector2(-0.14389038, -0.039993286)
+scale = Vector2(0.38461542, 0.38461542)
+shape = SubResource("RectangleShape2D_0w2ba")
+
+[node name="ColorRect" type="ColorRect" parent="Bag/Slot4" unique_id=920656905]
+offset_left = -22.836182
+offset_top = -21.193848
+offset_right = 21.394592
+offset_bottom = 21.113846
+mouse_filter = 2
+color = Color(0.09803922, 0.06666667, 0.023529412, 0.36078432)
+
+[node name="ItemSprite" type="Sprite2D" parent="Bag/Slot4" unique_id=1732011339]
+
+[node name="Slot5" type="Area2D" parent="Bag" unique_id=158846593]
+position = Vector2(92.86, 4.925)
+script = ExtResource("9_118ur")
+metadata/_edit_lock_ = true
+
+[node name="Collision" type="CollisionShape2D" parent="Bag/Slot5" unique_id=723133672]
+position = Vector2(-0.45614624, 0.26731873)
+scale = Vector2(0.38461542, 0.38461542)
+shape = SubResource("RectangleShape2D_8tn5n")
+
+[node name="ColorRect" type="ColorRect" parent="Bag/Slot5" unique_id=828368550]
+offset_left = -21.706146
+offset_top = -20.309616
+offset_right = 21.370758
+offset_bottom = 20.844208
+mouse_filter = 2
+color = Color(0.09803922, 0.06666667, 0.023529412, 0.36078432)
+
+[node name="ItemSprite" type="Sprite2D" parent="Bag/Slot5" unique_id=1590712345]
+
+[node name="ItemSpawner" type="Node2D" parent="Bag" unique_id=1825662186]
+position = Vector2(-261.92313, -240.38464)
+scale = Vector2(0.38461542, 0.38461542)
+script = ExtResource("2_iuy6r")

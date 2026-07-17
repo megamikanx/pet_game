@@ -133,10 +133,10 @@ func input_selection_area(viewport: Node, event: InputEvent, shape_idx: int) -> 
 	if event.is_action_pressed("RMB"):
 		flagSprite.visible = not flagSprite.visible
 	elif event.is_action_pressed("LMB"):
-		start_drag()
+		picked_up()
 	pass
 
-func start_drag() -> void:
+func picked_up() -> void:
 	predrag_position = position
 	linear_velocity = Vector2.ZERO
 	set_collision_mask_value(1, false)
@@ -144,7 +144,7 @@ func start_drag() -> void:
 	
 	freeze_pets.emit(self)
 
-func stop_drag() -> void:
+func placed() -> void:
 	position = predrag_position
 	rand_walk = true
 	set_collision_mask_value(1, true)

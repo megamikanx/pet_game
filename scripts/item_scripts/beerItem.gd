@@ -1,6 +1,11 @@
+class_name Beer
 extends Item
 
 const PREFERENCE: String = "Beer"
+var SPRITE = load("res://sprites/item_sprites/Beer.png")
+
+func get_sprite() -> Texture2D:
+	return SPRITE
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Pet:
