@@ -1,9 +1,8 @@
-class_name TopHat
+class_name Bath
 extends Item
 
-const PREFERENCE: String = "TopHat"
-var SPRITE = load("res://sprites/item_sprites/Beer.png")
-var SPRITE_TO_ADD = load("res://sprites/pet_sprites/scope.png")
+const PREFERENCE: String = "Bath"
+var SPRITE = load("res://sprites/item_sprites/bath.png")
 
 func get_pri() -> int:
 	return ItemInfo.ITEM_PRIORITY.get(PREFERENCE)
@@ -16,7 +15,6 @@ func get_sprite() -> Texture2D:
 
 func cause_afflication(pet: Pet, doesLike: bool) -> void:
 	if doesLike:
-		add_pet_sprite(pet, SPRITE_TO_ADD)
-	else:
 		pass
-	pass
+	else:
+		run(pet)

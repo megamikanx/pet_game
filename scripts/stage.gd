@@ -14,13 +14,15 @@ var locked: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	bag.set_bag(StageLoadedInfo.get_hotbar())
+	spawner.spawn_pets(StageLoadedInfo.get_numPets(), StageLoadedInfo.get_petTexture())
+	
 	spawner.hold_pet.connect(hold_something)
 	bag.hold_item.connect(hold_something)
 	collection.body_entered.connect(lock_held_pet)
 	collection.body_exited.connect(unlock_held_pet)
 	
 	submitButton.visible = false
-	
 	set_process(false)
 	set_process_input(false)
 	pass # Replace with function body.

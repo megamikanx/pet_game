@@ -18,9 +18,14 @@ var border_rigX: float = 941
 
 @onready var OFFSET = petSprite.texture.get_size().x/2
 
-const SPEED = 50
 const MIN_RAND_GOAL_DIST = 75
 const MAX_RAND_GOAL_DIST = 100
+
+#Pet variables
+var SPEED = 50
+
+
+
 
 const PALETTE: Array[Color] = [
 	Color.WHITE,
@@ -30,42 +35,8 @@ const PALETTE: Array[Color] = [
 	Color.DEEP_SKY_BLUE
 ]
 
-const PREF_REACTION: Dictionary = {
-	Chocolate = ["run", "run"],
-	Speaker = ["animate", "run"],
-	Plushie = ["run", "ignore"],
-	BucketOfSlop = ["run", "run"],
-	DeadCarcass = ["run", "run"],
-	Flower = ["ignore", "run"],
-	TopHat = ["animate", "ignore"],
-	Beer = ["animate", "run"],
-	DollarBill = ["animate", "ignore"],
-	Water = ["run", "animate"],
-	Squishy = ["animate", "ignore"]
-}
-
-var ANIMATION: Dictionary = {
-	Speaker = "animation",
-	TopHat = "animation",
-	Beer = "animation",
-	DollarBill = "animation",
-	Water = "animation",
-	Squishy = "animation"
-}
-
-var personality: Dictionary = {
-	Chocolate = false,
-	Speaker = false,
-	Plushie = false,
-	BucketOfSlop = false,
-	DeadCarcass = false,
-	Flower = false,
-	TopHat = false,
-	Beer = false,
-	DollarBill = false,
-	Water = false,
-	Squishy = false
-}
+var personality: Array[String] = ["Beer", "Burger"]
+var afflication: Array[Item]
 
 var rand_walk: bool = true
 var goal: Vector2
@@ -75,7 +46,6 @@ var predrag_position: Vector2
 # Intialise the Pet
 func _ready() -> void:
 	randomGoal()
-	petSprite.self_modulate = PALETTE.pick_random()
 	flagSprite.visible = false
 	timer.wait_time = randf_range(0.5, 1.5)
 	set_process_input(false)
@@ -83,11 +53,11 @@ func _ready() -> void:
 	timer.timeout.connect(timeout_rand_walk)
 	selectArea.input_event.connect(input_selection_area)
 	
-	for like in personality.keys():
-		personality[like] = bool(randi_range(0,1))
-	
 	pass
 
+func set_petTexture(new_text: Texture2D) -> void:
+	petSprite.texture = new_text
+	petSprite.self_modulate = PALETTE.pick_random()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -118,7 +88,15 @@ func randomGoal() -> void:
 	
 	pass
 
-# Changes pets goal everynow and then
+func set_goal(new_goal: Vector2) -> void:
+	rand_walk = false
+	goal = new_goal
+
+func restart_walking() -> void:
+	rand_walk = true
+	randomGoal()
+
+# Changes pets goal every now and then
 func timeout_rand_walk() -> void:
 	randomGoal()
 	timer.wait_time = randf_range(0.5, 1.5)
@@ -146,7 +124,6 @@ func picked_up() -> void:
 
 func placed() -> void:
 	position = predrag_position
-	rand_walk = true
 	set_collision_mask_value(1, true)
 
 func freeze() -> void:
@@ -160,41 +137,30 @@ func unfreeze() -> void:
 	linear_velocity = Vector2.ZERO
 
 
+func add_sprite(new_texture: Texture2D) -> Sprite2D:
+	var instance = Sprite2D.new()
+	petSprite.add_child(instance)
+	
+	instance.texture = new_texture
+	return instance
 
+func update_afflications() -> void:
+	restart_walking()
+	for aff in afflication:
+		aff.cause_afflication(self, aff.get_preference() in personality)
+	
 
-func move_preference(new_pos: Vector2, preference: String) -> void:
-	if personality.get(preference):
-		positive_reaction(new_pos, preference)
-	else:
-		negative_reaction(new_pos, preference)
+func add_afflication(new_item: Item) -> void:
+	afflication.append(new_item)
+	#sort by priority
+	var paired = afflication.map(func(a): return {"pri": a.get_pri(), "key": a})
+	paired.sort_custom(func(a,b): return a["pri"] < b["pri"])
+	afflication.assign(paired.map(func(p): return p["key"]))
+	
+	update_afflications()
 	pass
 
-
-func positive_reaction(new_pos: Vector2, preference: String) -> void:
-	match PREF_REACTION.get(preference)[0]:
-		"run":
-			rand_walk = false
-			goal = new_pos
-			pass
-		"ignore":
-			pass
-		"animate":
-			rand_walk = false
-			goal = position
-			aniPlayer.current_animation = ANIMATION.get(preference)
-			pass
-	pass
-func negative_reaction(new_pos: Vector2, preference: String) -> void:
-	match PREF_REACTION.get(preference)[1]:
-		"run":
-			rand_walk = false
-			goal = position + 1000 * new_pos.direction_to(position)
-			pass
-		"ignore":
-			pass
-		"animate":
-			rand_walk = false
-			goal = position
-			aniPlayer.current_animation = ANIMATION.get(preference)
-			pass
+func remove_afflication(r_item: Item) -> void:
+	afflication.erase(r_item)
+	update_afflications()
 	pass

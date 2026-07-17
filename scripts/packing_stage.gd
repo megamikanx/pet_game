@@ -46,7 +46,9 @@ func _on_item_pressed(entry: Dictionary) -> void:
 		_pack_item(entry)
 
 func _on_go_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/spawning.tscn")
+	if _get_packed_item_count() == MAX_PACKED_ITEMS:
+		StageLoadedInfo.set_items(bag_bar.get_children())
+		get_tree().change_scene_to_file("res://scenes/spawning.tscn")
 
 func _pack_item(entry: Dictionary) -> void:
 	var button: Button = entry["button"]

@@ -2,28 +2,31 @@ class_name Spawner
 extends Node2D
 
 const OFFSET = 64
-const NUM = 30
 
 signal hold_pet
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	pass # Replace with function body.
+
+func spawn_pets(num : int, texture: Texture2D) -> void:
 	var lower_sx = 421 + OFFSET
 	var upper_sx = 941 - OFFSET
 	var lower_sy = 78 + OFFSET
 	var upper_sy = 598 - OFFSET
 	
-	var instance
-	for i in NUM:
+	var instance: Pet
+	for i in num:
 		instance = Global.PET_SCENE.instantiate()
 		instance.freeze_pets.connect(freeze_pets)
+		add_child(instance)
+		
 		instance.position = Vector2(randi_range(lower_sx, upper_sx),
 									randi_range(lower_sy, upper_sy))
+		instance.set_petTexture(texture)
 		
-		add_child(instance)
-	pass # Replace with function body.
-
-
+	pass
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
