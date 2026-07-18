@@ -63,5 +63,5 @@ func get_valid_preferences() -> Array[ItemInfo.ITEM_TYPE]:
 	var valid: Array[ItemInfo.ITEM_TYPE]
 	for item in ItemInfo.ITEM_TYPE.values():
 		valid.append(item)
-	print(valid)
+
 	return valid

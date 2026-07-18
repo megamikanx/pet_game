@@ -15,5 +15,10 @@ petTexture = ExtResource("2_ibdut")
 clientNameTag = ExtResource("1_svgqy")
 clientTalkClose = ExtResource("2_385wc")
 clientTalkOpen = ExtResource("3_chgxy")
-answer_personality = Array[int]([0, 12])
+answer_personality = Dictionary[int, bool]({
+0: true,
+1: false,
+2: false,
+12: true
+})
 metadata/_custom_type_script = "uid://byo44lt2ql7u4"

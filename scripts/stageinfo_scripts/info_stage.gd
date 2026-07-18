@@ -13,5 +13,5 @@ extends Resource
 @export var clientTalkClose: Texture2D
 @export var clientTalkOpen: Texture2D
 
-@export var answer_personality: Array[ItemInfo.ITEM_TYPE]
+@export var answer_personality: Dictionary[ItemInfo.ITEM_TYPE, bool]
 @export var valid_preferences: Array[ItemInfo.ITEM_TYPE]
