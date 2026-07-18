@@ -1,14 +1,14 @@
 extends Node
 
 @onready var NAMES: Dictionary = {
-	BeerItem = Beer,
-	BathItem = Bath,
-	WaterItem = Water,
-	BurgerItem = Burger,
-	MoneyItem = Money,
-	SquishyItem = Squishy,
-	MonsterItem = EnergyDrink,
-	ProteinItem = ProteinBar
+	Beer = Beer,
+	Bath = Bath,
+	Water= Water,
+	Burger = Burger,
+	DollarBill = Money,
+	Squishy = Squishy,
+	EnergyDrink = EnergyDrink,
+	ProteinBar = ProteinBar
 }
 
 @onready var stageInfo: Resource = Info_Stage1.new()
@@ -23,7 +23,7 @@ func set_items(items: Array[Node]) -> void:
 	itemsHotbar = []
 	for entry in items:
 		itemsHotbar.append(NAMES[entry.name].new())
-
+	pass
 
 #GETTERS
 
