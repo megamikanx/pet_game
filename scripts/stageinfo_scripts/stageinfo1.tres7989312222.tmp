@@ -1,18 +1,13 @@
 [gd_resource type="Resource" script_class="Info_Stage" format=3 uid="uid://c04ef3xxuv57n"]
 
 [ext_resource type="Texture2D" uid="uid://svfe8ewulpq4" path="res://sprites/levels/grass_level.png" id="1_sg317"]
-[ext_resource type="Texture2D" uid="uid://blh7a0gqhly86" path="res://sprites/character_sprites/stage1/miku_nametag.png" id="1_xyfot"]
 [ext_resource type="Texture2D" uid="uid://dep3t3dypqyy4" path="res://sprites/pet_sprites/pibbles.png" id="1_yhsgm"]
-[ext_resource type="Texture2D" uid="uid://lxbwq7afrojm" path="res://sprites/character_sprites/stage1/miku_talk_close.png" id="2_ln6x5"]
 [ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/stageinfo_scripts/info_stage.gd" id="2_sg317"]
-[ext_resource type="Texture2D" uid="uid://bn0q22wphepru" path="res://sprites/character_sprites/stage1/miku_talk_open.png" id="3_wns6r"]
 
 [resource]
 script = ExtResource("2_sg317")
 levelTexture = ExtResource("1_sg317")
 petTexture = ExtResource("1_yhsgm")
-clientNameTag = ExtResource("1_xyfot")
-clientTalkClose = ExtResource("2_ln6x5")
-clientTalkOpen = ExtResource("3_wns6r")
 answer_personality = Array[int]([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
+valid_preferences = Array[int]([1])
 metadata/_custom_type_script = "uid://byo44lt2ql7u4"

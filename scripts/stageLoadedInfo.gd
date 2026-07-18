@@ -56,11 +56,12 @@ func get_answer_personality() -> Array[ItemInfo.ITEM_TYPE]:
 	return stageInfo.answer_personality
 
 func get_valid_preferences() -> Array[ItemInfo.ITEM_TYPE]:
+	print(stageInfo.valid_preferences.size())
 	if stageInfo.valid_preferences.size() > 0:
 		return stageInfo.valid_preferences
 	
 	var valid: Array[ItemInfo.ITEM_TYPE]
-	for item in ItemInfo.ITEM_TYPE:
+	for item in ItemInfo.ITEM_TYPE.values():
 		valid.append(item)
-	
+	print(valid)
 	return valid

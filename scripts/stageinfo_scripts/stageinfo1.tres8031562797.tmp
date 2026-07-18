@@ -15,4 +15,5 @@ clientNameTag = ExtResource("1_xyfot")
 clientTalkClose = ExtResource("2_ln6x5")
 clientTalkOpen = ExtResource("3_wns6r")
 answer_personality = Array[int]([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
+valid_preferences = Array[int]([1])
 metadata/_custom_type_script = "uid://byo44lt2ql7u4"
