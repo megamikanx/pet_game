@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Info_Stage" format=3 uid="uid://ddeogbdehndra"]
+
+[ext_resource type="Texture2D" uid="uid://dep3t3dypqyy4" path="res://sprites/pet_sprites/pibbles.png" id="1_5dxqp"]
+[ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/stageinfo_scripts/info_stage.gd" id="2_4q363"]
+
+[resource]
+script = ExtResource("2_4q363")
+stageNum = 4
+metadata/_custom_type_script = "uid://byo44lt2ql7u4"
