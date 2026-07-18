@@ -4,6 +4,7 @@ extends Area2D
 @onready var sprite = $ItemSprite
 
 var added_sprite: Sprite2D
+var slot: Slot
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,9 +16,25 @@ func _ready() -> void:
 @abstract func cause_afflication(pet: Pet, doesLike: bool) -> void
 @abstract func get_preference() -> ItemInfo.ITEM_TYPE
 
+func set_slot(owner_slot: Slot) -> void:
+	slot = owner_slot
+
 func place() -> void:
 	monitorable = true
 	monitoring = true
+	var border_topY: float = 78
+	var border_botY: float = 598
+	var border_lefX: float = 421
+	var border_rigX: float = 941
+	
+	var square_pos = Vector2(421, 78)
+	var square_size = Vector2(598-78, 941-421)
+	
+	if not Rect2(square_pos, square_size).has_point(global_position):
+		queue_free()
+		return
+		
+	slot.increment_uses()
 	pass
 
 func setup() -> void:

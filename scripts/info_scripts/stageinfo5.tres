@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Info_Stage" format=3 uid="uid://c4ot6clwkt8tu"]
+
+[ext_resource type="Texture2D" uid="uid://oq7ae8v3xyi8" path="res://sprites/character_sprites/stage5/dialogue/isaac_talk_1.png" id="1_h7ypq"]
+[ext_resource type="Texture2D" uid="uid://c0ry3wscjcu7x" path="res://sprites/character_sprites/stage5/dialogue/isaac_talk_2.png" id="2_ogtm7"]
+[ext_resource type="Texture2D" uid="uid://32k36f0jrf4d" path="res://sprites/character_sprites/stage5/dialogue/isaac_talk_3.png" id="3_sox4f"]
+[ext_resource type="Texture2D" uid="uid://cwkkr1p31bb0v" path="res://sprites/character_sprites/stage5/dialogue/isaac_talk_4.png" id="4_ir3br"]
+[ext_resource type="Texture2D" uid="uid://bdyqanckv44q2" path="res://sprites/character_sprites/stage5/dialogue/isaac_talk_5.png" id="5_atkyw"]
+[ext_resource type="Texture2D" uid="uid://c7egcnxtiimpf" path="res://sprites/character_sprites/stage5/dialogue/isaac_talk_6.png" id="6_hupua"]
+[ext_resource type="Texture2D" uid="uid://yj5j6l7an3b5" path="res://sprites/character_sprites/stage5/dialogue/isaac_talk_7.png" id="7_1xess"]
+[ext_resource type="Texture2D" uid="uid://dhhmbyxwmgmsx" path="res://sprites/character_sprites/stage5/dialogue/isaac_talk_8.png" id="8_0bjhi"]
+[ext_resource type="Texture2D" uid="uid://crm1epkbbjsep" path="res://sprites/character_sprites/stage5/dialogue/isaac_talk_9.png" id="9_us6tk"]
+[ext_resource type="Texture2D" uid="uid://o7rdmytiul7w" path="res://sprites/character_sprites/stage5/dialogue/isaac_talk_10.png" id="10_704su"]
+[ext_resource type="Texture2D" uid="uid://dfwvwyvdltahd" path="res://sprites/character_sprites/stage5/dialogue/isaac_talk_11.png" id="11_pm6t2"]
+[ext_resource type="Texture2D" uid="uid://dcu8stmb26uv0" path="res://sprites/character_sprites/stage5/isaac_nametag.png" id="12_f3q5n"]
+[ext_resource type="Texture2D" uid="uid://cho7g32n4v7um" path="res://sprites/character_sprites/stage5/dialogue/isaac_level_right.png" id="13_yyyi2"]
+[ext_resource type="Texture2D" uid="uid://sbf1cw1flsqs" path="res://sprites/character_sprites/stage5/isaac_talk_close.png" id="14_bta83"]
+[ext_resource type="Texture2D" uid="uid://dufyqqyg0qsfe" path="res://sprites/character_sprites/stage5/isaac_talk_open.png" id="15_d1wwp"]
+[ext_resource type="Texture2D" uid="uid://4gml3nbtm4et" path="res://sprites/character_sprites/stage5/dialogue/isaac_level_wrong.png" id="16_sfklq"]
+[ext_resource type="Texture2D" uid="uid://b5idiou4yt0bq" path="res://sprites/levels/room_level.png" id="17_eob0a"]
+[ext_resource type="Texture2D" uid="uid://gil7g74ps4jw" path="res://sprites/pet_sprites/pyungus.png" id="18_5tmjx"]
+[ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/info_scripts/info_stage.gd" id="19_1hrmb"]
+
+[resource]
+script = ExtResource("19_1hrmb")
+stageNum = 5
+levelTexture = ExtResource("17_eob0a")
+petTexture = ExtResource("18_5tmjx")
+clientName = "Isaac"
+clientNameTag = ExtResource("12_f3q5n")
+clientTalkClose = ExtResource("14_bta83")
+clientTalkOpen = ExtResource("15_d1wwp")
+clientDialogue = Array[Texture2D]([ExtResource("1_h7ypq"), ExtResource("2_ogtm7"), ExtResource("3_sox4f"), ExtResource("4_ir3br"), ExtResource("5_atkyw"), ExtResource("6_hupua"), ExtResource("7_1xess"), ExtResource("8_0bjhi"), ExtResource("9_us6tk"), ExtResource("10_704su"), ExtResource("11_pm6t2")])
+clientWrongLine = ExtResource("16_sfklq")
+clientSuccessLine = ExtResource("13_yyyi2")
+answer_personality = Dictionary[int, bool]({
+0: false,
+1: true,
+8: false,
+9: true,
+13: true
+})
+metadata/_custom_type_script = "uid://byo44lt2ql7u4"

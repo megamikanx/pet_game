@@ -9,6 +9,9 @@ extends Node2D
 var held: Node
 var locked: bool = false
 
+
+var health: int
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var info = StageLoadedInfo
@@ -22,6 +25,9 @@ func _ready() -> void:
 	
 	set_process(false)
 	set_process_input(false)
+	
+	health = Global.GameStats.Health
+	
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

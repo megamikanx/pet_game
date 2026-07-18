@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Info_Stage" format=3 uid="uid://dlknbaearse2a"]
+
+[ext_resource type="Texture2D" uid="uid://cu0fg15tweb57" path="res://sprites/character_sprites/stage3/dialogue/kris_talk_1.png" id="1_g01mp"]
+[ext_resource type="Texture2D" uid="uid://bex0ebwvk4ufp" path="res://sprites/character_sprites/stage3/dialogue/kris_talk_2.png" id="2_ocig8"]
+[ext_resource type="Texture2D" uid="uid://8vkphmp6vegq" path="res://sprites/character_sprites/stage3/dialogue/kris_talk_3.png" id="3_x1rh1"]
+[ext_resource type="Texture2D" uid="uid://lnvvdr4j543l" path="res://sprites/character_sprites/stage3/dialogue/kris_talk_4.png" id="4_i4vk0"]
+[ext_resource type="Texture2D" uid="uid://cepebay4qa15p" path="res://sprites/character_sprites/stage3/dialogue/kris_talk_5.png" id="5_62e7f"]
+[ext_resource type="Texture2D" uid="uid://bed3r2dt3gpun" path="res://sprites/character_sprites/stage3/dialogue/kris_talk_6.png" id="6_3jr4v"]
+[ext_resource type="Texture2D" uid="uid://dhx40wmo7nkul" path="res://sprites/character_sprites/stage3/dialogue/kris_talk_7.png" id="7_nssu7"]
+[ext_resource type="Texture2D" uid="uid://di75e323rxvhm" path="res://sprites/character_sprites/stage3/dialogue/kris_talk_8.png" id="8_gs0rs"]
+[ext_resource type="Texture2D" uid="uid://hoy223e6tpnb" path="res://sprites/character_sprites/stage3/dialogue/kris_talk_9.png" id="9_p7xnp"]
+[ext_resource type="Texture2D" uid="uid://46eqy7cqvon4" path="res://sprites/character_sprites/stage3/dialogue/kris_talk_10.png" id="10_0jgxu"]
+[ext_resource type="Texture2D" uid="uid://cvmsordn6akkw" path="res://sprites/character_sprites/stage3/kris_nametag.png" id="11_yrmxm"]
+[ext_resource type="Texture2D" uid="uid://ckyw160fxl78p" path="res://sprites/character_sprites/stage3/dialogue/kris_level_right.png" id="12_mk0g4"]
+[ext_resource type="Texture2D" uid="uid://c3q42a02xvsh7" path="res://sprites/character_sprites/stage3/kris_talk_close.png" id="13_4n37s"]
+[ext_resource type="Texture2D" uid="uid://cxt8hc55tp1cy" path="res://sprites/character_sprites/stage3/kris_talk_open.png" id="14_gg1dx"]
+[ext_resource type="Texture2D" uid="uid://cubc03y8dhslq" path="res://sprites/character_sprites/stage3/dialogue/kris_level_wrong.png" id="15_mts8f"]
+[ext_resource type="Texture2D" uid="uid://b2ht25xfsmyhw" path="res://sprites/levels/tiles_level.png" id="16_r5ldo"]
+[ext_resource type="Texture2D" uid="uid://cgkktykj64nh1" path="res://sprites/pet_sprites/bingus.png" id="17_is3v5"]
+[ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/info_scripts/info_stage.gd" id="18_y37d1"]
+
+[resource]
+script = ExtResource("18_y37d1")
+stageNum = 3
+levelTexture = ExtResource("16_r5ldo")
+petTexture = ExtResource("17_is3v5")
+clientName = "Kris"
+clientNameTag = ExtResource("11_yrmxm")
+clientTalkClose = ExtResource("13_4n37s")
+clientTalkOpen = ExtResource("14_gg1dx")
+clientDialogue = Array[Texture2D]([ExtResource("1_g01mp"), ExtResource("2_ocig8"), ExtResource("3_x1rh1"), ExtResource("4_i4vk0"), ExtResource("5_62e7f"), ExtResource("6_3jr4v"), ExtResource("7_nssu7"), ExtResource("8_gs0rs"), ExtResource("9_p7xnp"), ExtResource("10_0jgxu")])
+clientWrongLine = ExtResource("15_mts8f")
+clientSuccessLine = ExtResource("12_mk0g4")
+answer_personality = Dictionary[int, bool]({
+6: false,
+7: true,
+10: true,
+11: true
+})
+metadata/_custom_type_script = "uid://byo44lt2ql7u4"

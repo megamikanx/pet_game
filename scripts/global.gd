@@ -1,5 +1,7 @@
 extends Node
 
+@onready var GameStats: Resource = preload("res://scripts/info_scripts/GameStats.tres")
+
 @onready var PET_SCENE = preload("res://scenes/pet_scene.tscn")
 @onready var ITEM_SCENE = preload("res://scenes/item_scene.tscn")
 
@@ -11,6 +13,23 @@ var captured_pets: Array[Dictionary] = []
 
 var petScale: float = 0.25
 
+var stage_data: Dictionary[int, Dictionary]
+
+func _ready() -> void:
+	for stage in StageLoadedInfo.STAGES:
+		stage_data[stage.stageNum] = {
+		"client_name": stage.clientName,
+		"portrait_closed": stage.clientTalkClose,
+		"portrait_open": stage.clientTalkOpen,
+		"dialogue": stage.clientDialogue,
+		"required_items": ["Plushie"], # only thing that doesn't work really
+		"wrong_line": stage.clientWrongLine,
+		"success_line": stage.clientSuccessLine,
+	}
+	print(stage_data)
+
+
+"""
 var stage_data: Dictionary = {
 	1: {
 		"client_name": "Miku",
@@ -130,7 +149,7 @@ var stage_data: Dictionary = {
 		"success_line": preload("res://sprites/isaac_level_right.png"),
 	},
 }
-
+"""
 func get_current_stage_data() -> Dictionary:
 	return stage_data[current_stage]
 	

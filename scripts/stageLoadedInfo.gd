@@ -2,11 +2,12 @@ extends Node
 
 
 @onready var STAGES: Array[Resource] = [
-	preload("res://scripts/stageinfo_scripts/stageinfo1.tres"),
-	preload("res://scripts/stageinfo_scripts/stageinfo2.tres"),
-	preload("res://scripts/stageinfo_scripts/stageinfo3.tres"),
-	preload("res://scripts/stageinfo_scripts/stageinfo4.tres"),
-	preload("res://scripts/stageinfo_scripts/stageinfo5.tres")
+	preload("res://scripts/info_scripts/stageinfo1.tres"),
+	preload("res://scripts/info_scripts/stageinfo2.tres"),
+	preload("res://scripts/info_scripts/stageinfo3.tres"),
+	preload("res://scripts/info_scripts/stageinfo4.tres"),
+	preload("res://scripts/info_scripts/stageinfo5.tres"),
+	preload("res://scripts/info_scripts/stageinfo6.tres")
 ]
 
 @onready var NAMES: Dictionary = {

@@ -16,8 +16,8 @@ config/features=PackedStringArray("4.7", "Forward Plus")
 
 [autoload]
 
-Global="*uid://c6sqeux2huje7"
 StageLoadedInfo="*uid://dvjnhilem5vpy"
+Global="*uid://c6sqeux2huje7"
 ItemInfo="*uid://dpaxoat7dv3av"
 AudioManager="*uid://c5sdk3h2cjjn4"
 

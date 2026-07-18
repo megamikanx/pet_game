@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Info_Stage" format=3 uid="uid://c04ef3xxuv57n"]
+
+[ext_resource type="Texture2D" uid="uid://dxbj5kwy67or6" path="res://sprites/character_sprites/stage1/dialogue/miku_talk_1.png" id="1_croga"]
+[ext_resource type="Texture2D" uid="uid://dbmpqp6b1q6m5" path="res://sprites/character_sprites/stage1/dialogue/miku_talk_2.png" id="2_no328"]
+[ext_resource type="Texture2D" uid="uid://c80bhlna5bi7r" path="res://sprites/character_sprites/stage1/dialogue/miku_talk_3.png" id="3_7i1am"]
+[ext_resource type="Texture2D" uid="uid://wubtvofhr808" path="res://sprites/character_sprites/stage1/dialogue/miku_talk_4.png" id="4_hn6pu"]
+[ext_resource type="Texture2D" uid="uid://bkq1nhampswcw" path="res://sprites/character_sprites/stage1/dialogue/miku_talk_5.png" id="5_246wo"]
+[ext_resource type="Texture2D" uid="uid://ncdmfusrs14w" path="res://sprites/character_sprites/stage1/dialogue/miku_talk_6.png" id="6_1gbrd"]
+[ext_resource type="Texture2D" uid="uid://blh7a0gqhly86" path="res://sprites/character_sprites/stage1/miku_nametag.png" id="7_ni8vb"]
+[ext_resource type="Texture2D" uid="uid://vms3jc5n5anj" path="res://sprites/character_sprites/stage1/dialogue/miku_level_right.png" id="8_uw0wi"]
+[ext_resource type="Texture2D" uid="uid://lxbwq7afrojm" path="res://sprites/character_sprites/stage1/miku_talk_close.png" id="9_eniei"]
+[ext_resource type="Texture2D" uid="uid://bn0q22wphepru" path="res://sprites/character_sprites/stage1/miku_talk_open.png" id="10_y5on1"]
+[ext_resource type="Texture2D" uid="uid://bffatiu2aiqph" path="res://sprites/character_sprites/stage1/dialogue/miku_level_wrong.png" id="11_ep4d3"]
+[ext_resource type="Texture2D" uid="uid://svfe8ewulpq4" path="res://sprites/levels/grass_level.png" id="12_qgxol"]
+[ext_resource type="Texture2D" uid="uid://dep3t3dypqyy4" path="res://sprites/pet_sprites/pibbles.png" id="13_ncsuh"]
+[ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/info_scripts/info_stage.gd" id="14_jvn52"]
+
+[resource]
+script = ExtResource("14_jvn52")
+levelTexture = ExtResource("12_qgxol")
+petTexture = ExtResource("13_ncsuh")
+clientName = "Miku"
+clientNameTag = ExtResource("7_ni8vb")
+clientTalkClose = ExtResource("9_eniei")
+clientTalkOpen = ExtResource("10_y5on1")
+clientDialogue = Array[Texture2D]([ExtResource("1_croga"), ExtResource("2_no328"), ExtResource("3_7i1am"), ExtResource("4_hn6pu"), ExtResource("5_246wo"), ExtResource("6_1gbrd")])
+clientWrongLine = ExtResource("11_ep4d3")
+clientSuccessLine = ExtResource("8_uw0wi")
+answer_personality = Dictionary[int, bool]({
+8: true
+})
+metadata/_custom_type_script = "uid://byo44lt2ql7u4"

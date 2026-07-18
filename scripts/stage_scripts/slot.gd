@@ -5,6 +5,7 @@ extends Area2D
 @onready var itemSprite = $ItemSprite
 
 var storedItem: Item
+var uses: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,3 +21,9 @@ func darken() -> void:
 	
 func undarken() -> void:
 	colorRect.visible = false
+
+func get_uses() -> int:
+	return uses
+
+func increment_uses() -> void:
+	uses += 1

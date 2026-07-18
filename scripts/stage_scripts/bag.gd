@@ -8,6 +8,8 @@ signal hold_item
 var items: Array[Item] = []
 var held_item
 
+var MAX_USES = Global.GameStats.MaxItemUsages
+
 func _ready() -> void:
 	for slot in slots:
 		slot.input_event.connect(slot_grab.bind(slot))
@@ -23,7 +25,7 @@ func set_bag(new_bag: Array[Item]):
 	pass
 
 func slot_grab(viewport: Node, event: InputEvent, shape_idx: int, slot: Slot) -> void:
-	if event.is_action_pressed("LMB"):
+	if event.is_action_pressed("LMB") and slot.get_uses() < MAX_USES:
 		hold_item.emit(itemSpawner.spawn(slot))
 	pass
 

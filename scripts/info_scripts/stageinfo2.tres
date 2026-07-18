@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Info_Stage" format=3 uid="uid://bodhkylen8u51"]
+
+[ext_resource type="Texture2D" uid="uid://dfcpxmyds2irt" path="res://sprites/character_sprites/stage2/dialogue/sonic_talk_1.png" id="1_tmvp6"]
+[ext_resource type="Texture2D" uid="uid://7u8a2w8mfn3y" path="res://sprites/character_sprites/stage2/dialogue/sonic_talk_2.png" id="2_brgn0"]
+[ext_resource type="Texture2D" uid="uid://dfna34b7jhfx6" path="res://sprites/character_sprites/stage2/dialogue/sonic_talk_3.png" id="3_23p8f"]
+[ext_resource type="Texture2D" uid="uid://c7mwe3ithik5s" path="res://sprites/character_sprites/stage2/dialogue/sonic_talk_4.png" id="4_v5mbg"]
+[ext_resource type="Texture2D" uid="uid://b5fbovpl0soxv" path="res://sprites/character_sprites/stage2/dialogue/sonic_talk_5.png" id="5_b47y3"]
+[ext_resource type="Texture2D" uid="uid://deg3bvjslwb2v" path="res://sprites/character_sprites/stage2/dialogue/sonic_talk_6.png" id="6_jmdxu"]
+[ext_resource type="Texture2D" uid="uid://bvljw7pm3qaee" path="res://sprites/character_sprites/stage2/dialogue/sonic_talk_7.png" id="7_gjsgf"]
+[ext_resource type="Texture2D" uid="uid://dni3avlh6pla2" path="res://sprites/character_sprites/stage2/dialogue/sonic_talk_8.png" id="8_grbsk"]
+[ext_resource type="Texture2D" uid="uid://chltv1u2x54hm" path="res://sprites/character_sprites/stage2/dialogue/sonic_talk_9.png" id="9_p05ch"]
+[ext_resource type="Texture2D" uid="uid://duxau2pjyvc13" path="res://sprites/character_sprites/stage2/sonic_nametag.png" id="10_76521"]
+[ext_resource type="Texture2D" uid="uid://bdkwf8kqoqciy" path="res://sprites/character_sprites/stage2/dialogue/sonic_level_right.png" id="11_mxox6"]
+[ext_resource type="Texture2D" uid="uid://waiou08e2tr3" path="res://sprites/character_sprites/stage2/sonic_talk_close.png" id="12_12d66"]
+[ext_resource type="Texture2D" uid="uid://dlsww1y84hxmu" path="res://sprites/character_sprites/stage2/sonic_talk_open.png" id="13_c37bw"]
+[ext_resource type="Texture2D" uid="uid://cp7xnd4il1omj" path="res://sprites/character_sprites/stage2/dialogue/sonic_level_wrong.png" id="14_n8myi"]
+[ext_resource type="Texture2D" uid="uid://chgcimg4xtnno" path="res://sprites/levels/hospital_level.png" id="15_nwqq6"]
+[ext_resource type="Texture2D" uid="uid://b6ijcmt71i13k" path="res://sprites/pet_sprites/gooba.png" id="16_vacps"]
+[ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/info_scripts/info_stage.gd" id="17_dfuyk"]
+
+[resource]
+script = ExtResource("17_dfuyk")
+stageNum = 2
+levelTexture = ExtResource("15_nwqq6")
+petTexture = ExtResource("16_vacps")
+clientName = "Sonic"
+clientNameTag = ExtResource("10_76521")
+clientTalkClose = ExtResource("12_12d66")
+clientTalkOpen = ExtResource("13_c37bw")
+clientDialogue = Array[Texture2D]([ExtResource("1_tmvp6"), ExtResource("2_brgn0"), ExtResource("3_23p8f"), ExtResource("4_v5mbg"), ExtResource("5_b47y3"), ExtResource("6_jmdxu"), ExtResource("7_gjsgf"), ExtResource("8_grbsk"), ExtResource("9_p05ch")])
+clientWrongLine = ExtResource("14_n8myi")
+clientSuccessLine = ExtResource("11_mxox6")
+answer_personality = Dictionary[int, bool]({
+11: false,
+13: true,
+14: true
+})
+metadata/_custom_type_script = "uid://byo44lt2ql7u4"
