@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://e1nnxmatckyp"]
 
 [ext_resource type="Script" uid="uid://bepkwyfcsweoo" path="res://scripts/stage_scripts/stage.gd" id="1_elga8"]
-[ext_resource type="Texture2D" uid="uid://svfe8ewulpq4" path="res://sprites/levels/Grass_level.png" id="1_iuy6r"]
+[ext_resource type="Texture2D" uid="uid://svfe8ewulpq4" path="res://sprites/levels/grass_level.png" id="1_iuy6r"]
 [ext_resource type="Script" uid="uid://bpacpldcj6p3v" path="res://scripts/stage_scripts/item_placer.gd" id="2_iuy6r"]
 [ext_resource type="Script" uid="uid://cimm73q60ml3y" path="res://scripts/stage_scripts/pet_spawner.gd" id="3_iuy6r"]
 [ext_resource type="Script" uid="uid://cmiqkqj6rwf8g" path="res://scripts/stage_scripts/collection.gd" id="4_2qv0k"]
