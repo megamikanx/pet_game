@@ -17,8 +17,13 @@ func _ready() -> void:
 	body_entered.connect(collect_held_pet)
 	body_exited.connect(uncollect_held_pet)
 	pass
-	
-func set_answer() -> void:
+
+#ID of answer always 0
+func check_answer() -> void:
+	if collected_pet.get_ID() == 0:
+		print("found")
+	else:
+		pass
 	pass
 
 func place_pet(pet: Pet) -> void:

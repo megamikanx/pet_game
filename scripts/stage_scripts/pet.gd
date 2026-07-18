@@ -30,8 +30,9 @@ var border_rigX: float = 941
 
 @onready var selectArea = $SelectionArea
 
-# var OFFSET = petSprite.texture.get_size().x * 0.5 * Global.petScale
-var OFFSET: float = 0.0
+var OFFSET = 0
+
+var petID: int = -1
 
 #Pet variables
 var SPEED = 50
@@ -49,12 +50,11 @@ var collected: bool = false
 func _ready() -> void:
 	randomGoal()
 	flagSprite.visible = false
-	timer.wait_time = randf_range(0.5, 1.5)
-	set_process_input(false)
 	
 	timer.timeout.connect(timeout_rand_walk)
-	selectArea.input_event.connect(input_selection_area)
+	timer.wait_time = randf_range(0.5, 1.5)
 	
+	selectArea.input_event.connect(input_selection_area)
 	pass
 
 func set_petTexture(new_text: Texture2D) -> void:
@@ -63,7 +63,17 @@ func set_petTexture(new_text: Texture2D) -> void:
 		return
 	petSprite.texture = new_text
 	petSprite.self_modulate = PALETTE.pick_random()
+<<<<<<< HEAD
 	OFFSET = new_text.get_size().x * 0.5 * Global.petScale
+=======
+	OFFSET = petSprite.texture.get_size().x * 0.5 * Global.petScale
+
+func set_ID(ID: int) -> void:
+	petID = ID
+
+func get_ID() -> int:
+	return petID
+>>>>>>> 631c7fe8d2faad1865108acea6dc062f3b94a087
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
