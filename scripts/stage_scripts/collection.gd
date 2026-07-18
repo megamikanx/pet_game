@@ -25,6 +25,9 @@ func check_answer() -> void:
 	if collected_pet.get_ID() == 0:
 		print("found")
 		# once stage cleared mark down and move on to next
+		var pet_tex: Texture2D = StageLoadedInfo.get_petTexture()
+		var pet_name: String = ""
+		Global.add_captured_pet(Global.current_stage, pet_tex, pet_name)
 		Global.clear_stage(Global.current_stage)
 		get_tree().change_scene_to_file("res://scenes/stages/stage_select.tscn")
 	else:

@@ -220,3 +220,13 @@ func clear_stage(stage: int) -> void:
 		cleared_stages.append(stage)
 	if stage >= highest_unlocked and highest_unlocked < 5:
 		highest_unlocked = stage + 1
+
+func add_captured_pet(stage: int, pet_texture: Texture2D, pet_name: String = "") -> void:
+	for entry in captured_pets:
+		if entry["stage"] == stage:
+			return
+	captured_pets.append({
+		"stage": stage,
+		"texture": pet_texture,
+		"name": pet_name,
+	})
