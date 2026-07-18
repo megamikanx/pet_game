@@ -42,8 +42,8 @@ func _on_body_exited(body: Node2D) -> void:
 
 
 #interaction methods
-func add_pet_sprite(pet: Pet, texture: Texture2D) -> void:
-	added_sprite = pet.add_sprite(texture)
+func add_pet_sprite(pet: Pet, texture: Texture2D, dim: Vector3) -> void:
+	added_sprite = pet.add_sprite(texture, dim)
 	
 func remove_pet_sprite(pet: Pet) -> void:
 	if added_sprite != null:
@@ -57,7 +57,7 @@ func change_speed(pet: Pet, speed: int) -> void:
 	pet.SPEED += speed
 
 func start_bouncing(pet: Pet) -> void:
-	pet.start_bouncing()
+	pet.start_animation("Bounce")
 
 func move_pet(pet: Pet, goal: Vector2) -> void:
 	pet.set_goal(goal)
@@ -68,5 +68,5 @@ func run(pet: Pet) -> void:
 func stop_running(pet: Pet) -> void:
 	pet.restart_walking()
 
-func animate_pet(pet: Pet, animation) -> void:
-	pass
+func animate_pet(pet: Pet, animation: String) -> void:
+	pet.start_animation(animation)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chqf5hyq38bj6"
-path="res://.godot/imported/scope.png-1af8bdd532b5f15542702a8c14b7191d.ctex"
+uid="uid://qk8jfo2qb4y1"
+path="res://.godot/imported/sweat.png-e10f395c5b61668c30541f431737d2d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/pet_sprites/scope.png"
-dest_files=["res://.godot/imported/scope.png-1af8bdd532b5f15542702a8c14b7191d.ctex"]
+source_file="res://sprites/item_sprites/item_addition/sweat.png"
+dest_files=["res://.godot/imported/sweat.png-e10f395c5b61668c30541f431737d2d7.ctex"]
 
 [params]
 

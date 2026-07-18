@@ -4,44 +4,121 @@
 [ext_resource type="Texture2D" uid="uid://dgf35ickg1xpx" path="res://sprites/pet_sprites/rabbit.png" id="2_6nmc3"]
 [ext_resource type="Texture2D" uid="uid://by6y5dlf47i3s" path="res://sprites/pet_sprites/flag.png" id="4_5c8qe"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jwt70"]
-
-[sub_resource type="Animation" id="Animation_ymejq"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("petSprite/animation:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="Animation" id="Animation_xbk8b"]
-resource_name = "animation"
-length = 1.3
+resource_name = "Bounce"
+length = 0.6
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("petSprite/animation:frame")
+tracks/0/path = NodePath("petSprite:offset")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8666667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
+"times": PackedFloat32Array(0.0009999999, 0.15666667, 0.3, 0.46666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(5.3, -14), Vector2(5.3, -43), Vector2(5.3, -43), Vector2(5.3, -14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("petSprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0009999999, 0.15666667, 0.3, 0.46666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.25, 0.25), Vector2(0.35, 0.35), Vector2(0.35, 0.35), Vector2(0.25, 0.25)]
+}
+
+[sub_resource type="Animation" id="Animation_jwt70"]
+resource_name = "Dance"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("petSprite:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.41887903, 0.0, -0.4188790204786391, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("petSprite:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.2617994, 0.0, -0.17453292519943295, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ymejq"]
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("petSprite:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0009999999, 0.15666667, 0.3, 0.46666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(5.3, -14), Vector2(5.3, -43), Vector2(5.3, -43), Vector2(5.3, -14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("petSprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0009999999, 0.15666667, 0.3, 0.46666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.25, 0.25), Vector2(0.35, 0.35), Vector2(0.35, 0.35), Vector2(0.25, 0.25)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("petSprite:skew")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("petSprite:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0bgbx"]
 _data = {
-&"RESET": SubResource("Animation_ymejq"),
-&"animation": SubResource("Animation_xbk8b")
+&"Bounce": SubResource("Animation_xbk8b"),
+&"Dance": SubResource("Animation_jwt70"),
+&"RESET": SubResource("Animation_ymejq")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ni138"]
@@ -64,12 +141,6 @@ top_level = true
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_6nmc3")
 offset = Vector2(5.3, -14)
-
-[node name="animation" type="Sprite2D" parent="petSprite" unique_id=742330165]
-position = Vector2(5.3, -14)
-scale = Vector2(0.99999994, 0.99999994)
-texture = SubResource("CompressedTexture2D_jwt70")
-hframes = 3
 
 [node name="flagSprite" type="Sprite2D" parent="petSprite" unique_id=2065679614]
 position = Vector2(16.999998, 14.999998)
