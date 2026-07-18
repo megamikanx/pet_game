@@ -15,11 +15,11 @@ static var ITEM: Dictionary = {
 	},
 	DeadCarcass = {
 		PRIORITY 	= 2,
-		SPRITE 		= load("res://sprites/item_sprites/bath.png")
+		SPRITE 		= load("res://sprites/item_sprites/carcass.png")
 	},
 	Chocolate = {
 		PRIORITY 	= 2,
-		SPRITE 		= load("res://sprites/item_sprites/bath.png")
+		SPRITE 		= load("res://sprites/item_sprites/yakult.png")
 	},
 	EnergyDrink = {
 		PRIORITY 	= 0,
@@ -27,7 +27,7 @@ static var ITEM: Dictionary = {
 	},
 	Flower = {
 		PRIORITY 	= 2,
-		SPRITE 		= load("res://sprites/item_sprites/bath.png")
+		SPRITE 		= load("res://sprites/item_sprites/flower.png")
 	},
 	Money = {
 		PRIORITY 	= 0,
@@ -35,7 +35,7 @@ static var ITEM: Dictionary = {
 	},
 	Plushie = {
 		PRIORITY 	= 2,
-		SPRITE 		= load("res://sprites/item_sprites/bath.png")
+		SPRITE 		= load("res://sprites/item_sprites/plushie.png")
 	},
 	ProteinBar = {
 		PRIORITY 	= 0,
@@ -43,11 +43,11 @@ static var ITEM: Dictionary = {
 	},
 	BucketOfSlop = {
 		PRIORITY 	= 2,
-		SPRITE 		= load("res://sprites/item_sprites/bath.png")
+		SPRITE 		= load("res://sprites/item_sprites/bucketslop.png")
 	},
 	Speaker = {
 		PRIORITY 	= 1,
-		SPRITE 		= load("res://sprites/item_sprites/bath.png")
+		SPRITE 		= load("res://sprites/item_sprites/speaker.png")
 	},
 	Squishy = {
 		PRIORITY 	= 3,
@@ -55,7 +55,7 @@ static var ITEM: Dictionary = {
 	},
 	TopHat = {
 		PRIORITY 	= 0,
-		SPRITE 		= load("res://sprites/item_sprites/bath.png")
+		SPRITE 		= load("res://sprites/item_sprites/tophat.png")
 	},
 	Water = {
 		PRIORITY 	= 1,
