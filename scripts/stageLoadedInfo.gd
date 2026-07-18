@@ -26,7 +26,7 @@ extends Node
 	TopHat = TopHat,
 }
 
-@onready var stageInfo: Resource
+@onready var stageInfo: Resource = STAGES[0]
 @onready var itemsHotbar: Array[Item]
 
 

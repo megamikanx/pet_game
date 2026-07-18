@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" uid="uid://b5ol55g6xqmkv" path="res://scripts/stage_scripts/pet.gd" id="1_hmkkh"]
 [ext_resource type="Texture2D" uid="uid://dgf35ickg1xpx" path="res://sprites/pet_sprites/rabbit.png" id="2_6nmc3"]
-[ext_resource type="Texture2D" uid="uid://c6pq82pyuohv6" path="res://sprites/item_sprites/spritesheet.webp" id="3_axfbl"]
 [ext_resource type="Texture2D" uid="uid://by6y5dlf47i3s" path="res://sprites/pet_sprites/flag.png" id="4_5c8qe"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jwt70"]
+load_path = "res://.godot/imported/spritesheet.webp-ad6c1b501bf31e73c1ede594017050bc.ctex"
 
 [sub_resource type="Animation" id="Animation_ymejq"]
 length = 0.001
@@ -67,7 +69,7 @@ offset = Vector2(5.3, -14)
 [node name="animation" type="Sprite2D" parent="petSprite" unique_id=742330165]
 position = Vector2(5.3, -14)
 scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("3_axfbl")
+texture = SubResource("CompressedTexture2D_jwt70")
 hframes = 3
 
 [node name="flagSprite" type="Sprite2D" parent="petSprite" unique_id=2065679614]

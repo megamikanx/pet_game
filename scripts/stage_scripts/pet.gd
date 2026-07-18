@@ -1,33 +1,6 @@
 class_name Pet
 extends RigidBody2D
 
-@onready var petSprite = $petSprite
-@onready var flagSprite = petSprite.get_node("flagSprite")
-@onready var animationSprite = petSprite.get_node("animation")
-@onready var aniPlayer = petSprite.get_node("AnimationPlayer")
-@onready var timer = $Timer
-
-@onready var selectArea = $SelectionArea
-
-signal freeze_pets
-
-var border_topY: float = 78
-var border_botY: float = 598
-var border_lefX: float = 421
-var border_rigX: float = 941
-
-@onready var OFFSET = petSprite.texture.get_size().x * 0.5 * Global.petScale
-
-const MIN_RAND_GOAL_DIST = 75
-const MAX_RAND_GOAL_DIST = 100
-
-#Pet variables
-var SPEED = 50
-
-
-
-
-
 const PALETTE: Array[Color] = [
 	Color.WHITE,
 	Color.GREEN,
@@ -36,13 +9,40 @@ const PALETTE: Array[Color] = [
 	Color.DEEP_SKY_BLUE
 ]
 
-var personality: Array[String] = ["Beer", "Burger"]
+const MIN_RAND_GOAL_DIST = 75
+const MAX_RAND_GOAL_DIST = 100
+
+signal pick_me_up
+signal freeze_pets
+signal unfreeze_pets
+signal send_coll
+
+var border_topY: float = 78
+var border_botY: float = 598
+var border_lefX: float = 421
+var border_rigX: float = 941
+
+@onready var petSprite = $petSprite
+@onready var flagSprite = $petSprite/flagSprite
+@onready var animationSprite = $petSprite/animation
+@onready var aniPlayer = $petSprite/AnimationPlayer
+@onready var timer = $Timer
+
+@onready var selectArea = $SelectionArea
+
+var OFFSET = petSprite.texture.get_size().x * 0.5 * Global.petScale
+
+#Pet variables
+var SPEED = 50
+
+var personality: Array[String] = []
 var afflication: Array[Item]
 
 var rand_walk: bool = true
 var goal: Vector2
-var dragging: bool = false
+var frozen: bool = false
 var predrag_position: Vector2
+var collected: bool = false
 
 # Intialise the Pet
 func _ready() -> void:
@@ -62,7 +62,7 @@ func set_petTexture(new_text: Texture2D) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if !dragging:
+	if !frozen:
 		walk(delta)
 	pass
 
@@ -103,10 +103,23 @@ func timeout_rand_walk() -> void:
 	timer.wait_time = randf_range(0.5, 1.5)
 	pass
 
+#Freezing
+func freeze() -> void:
+	set_process(false)
+	frozen = true
+	linear_velocity = Vector2.ZERO
+
+func unfreeze() -> void:
+	set_process(true)
+	frozen = false
+	linear_velocity = Vector2.ZERO
+
+#PICKING UP
 
 func input_selection_area(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if dragging and event.is_action_pressed("LMB"):
-		freeze_pets.emit(self)
+	if frozen:
+		if collected and event.is_action_pressed("LMB"):
+			pick_me_up.emit(self)
 		return
 	
 	if event.is_action_pressed("RMB"):
@@ -116,27 +129,28 @@ func input_selection_area(viewport: Node, event: InputEvent, shape_idx: int) -> 
 	pass
 
 func picked_up() -> void:
+	set_collision_mask_value(1, false)
+	set_collision_layer_value(1, false)
 	predrag_position = position
 	linear_velocity = Vector2.ZERO
-	set_collision_mask_value(1, false)
-	rand_walk = false
 	
-	freeze_pets.emit(self)
+	freeze_pets.emit()
+	pick_me_up.emit(self)
 
-func placed() -> void:
-	position = predrag_position
+func place() -> void:
+	if collected:
+		send_coll.emit(self)
+	else:
+		return_to_pen()
+
+func return_to_pen() -> void:
+	set_position.call_deferred(predrag_position)
 	set_collision_mask_value(1, true)
+	set_collision_layer_value(1, true)
+	unfreeze_pets.emit()
 
-func freeze() -> void:
-	set_process(false)
-	dragging = true
-	linear_velocity = Vector2.ZERO
 
-func unfreeze() -> void:
-	set_process(true)
-	dragging = false
-	linear_velocity = Vector2.ZERO
-
+# Afflictions
 
 func add_sprite(new_texture: Texture2D) -> Sprite2D:
 	var instance = Sprite2D.new()

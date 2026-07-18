@@ -1,0 +1,41 @@
+extends Area2D
+
+
+@onready var submitButton = $SubmitButton
+@onready var petSpawner = get_parent().get_node("Spawner")
+
+signal hold_pet
+
+var collected_pet: Pet
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	submitButton.visible = false
+	set_process(false)
+	set_process_input(false)
+	
+	body_entered.connect(collect_held_pet)
+	body_exited.connect(uncollect_held_pet)
+	pass
+	
+func set_answer() -> void:
+	pass
+
+func place_pet(pet: Pet) -> void:
+	collected_pet = pet
+	pet.set_global_position.call_deferred(position)
+	submitButton.visible = true
+	set_process_input(true)
+
+func collected_pickedup(pet : Pet) -> void:
+	collected_pet = null
+	submitButton.visible = false
+
+func collect_held_pet(body: Node2D) -> void:
+	if body is Pet:
+		body.collected = true
+
+func uncollect_held_pet(body: Node2D) -> void:
+	if body is Pet:
+		body.collected = false
+		
