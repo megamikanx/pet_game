@@ -8,6 +8,8 @@ var highest_unlocked: int = 1
 var cleared_stages: Array[int] = []
 var has_seen_comic: bool = false
 
+var petScale: float = 0.25
+
 var stage_data: Dictionary = {
 	1: {
 		"client_name": "Miku",

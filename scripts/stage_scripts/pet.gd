@@ -16,13 +16,14 @@ var border_botY: float = 598
 var border_lefX: float = 421
 var border_rigX: float = 941
 
-@onready var OFFSET = petSprite.texture.get_size().x/2
+@onready var OFFSET = petSprite.texture.get_size().x * 0.5 * Global.petScale
 
 const MIN_RAND_GOAL_DIST = 75
 const MAX_RAND_GOAL_DIST = 100
 
 #Pet variables
 var SPEED = 50
+
 
 
 

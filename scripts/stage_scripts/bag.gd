@@ -5,7 +5,7 @@ extends Node2D
 
 signal hold_item
 
-var items: Array[Item] = [Beer.new(),Squishy.new(),Beer.new(),Beer.new(),Beer.new()]
+var items: Array[Item] = []
 var held_item
 
 func _ready() -> void:

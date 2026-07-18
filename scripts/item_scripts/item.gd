@@ -12,13 +12,18 @@ func _ready() -> void:
 	monitoring = false
 	pass
 
+@abstract func cause_afflication(pet: Pet, doesLike: bool) -> void
+@abstract func get_preference() -> String
+
 func setup() -> void:
 	sprite.texture = get_sprite()
 
-@abstract func get_sprite() -> Texture2D
-@abstract func cause_afflication(pet: Pet, doesLike: bool) -> void
-@abstract func get_preference() -> String
-@abstract func get_pri() -> int
+func get_sprite() -> Texture2D:
+	return ItemInfo.ITEM.get(get_preference()).get("SPRITE")
+
+func get_pri() -> int:
+	return ItemInfo.ITEM.get(get_preference()).get("PRIORITY")
+
 
 func _on_body_entered(body: Node2D) -> void:
 	body.add_afflication(self)
@@ -28,9 +33,11 @@ func _on_body_exited(body: Node2D) -> void:
 	body.remove_afflication(self)
 	pass
 
-
+#Called when dropped by player
 func placed() -> void:
 	monitoring = true
+
+
 
 #interaction methods
 func add_pet_sprite(pet: Pet, texture: Texture2D) -> void:

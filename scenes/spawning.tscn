@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://e1nnxmatckyp"]
 
-[ext_resource type="Script" uid="uid://bepkwyfcsweoo" path="res://scripts/stage.gd" id="1_elga8"]
+[ext_resource type="Script" uid="uid://bepkwyfcsweoo" path="res://scripts/stage_scripts/stage.gd" id="1_elga8"]
 [ext_resource type="Texture2D" uid="uid://fqrdve5lvvsc" path="res://sprites/pens/Grass_level.png" id="1_iuy6r"]
-[ext_resource type="Script" uid="uid://bpacpldcj6p3v" path="res://scripts/item_placer.gd" id="2_iuy6r"]
-[ext_resource type="Script" uid="uid://cimm73q60ml3y" path="res://scripts/pet_spawner.gd" id="3_iuy6r"]
+[ext_resource type="Script" uid="uid://bpacpldcj6p3v" path="res://scripts/stage_scripts/item_placer.gd" id="2_iuy6r"]
+[ext_resource type="Script" uid="uid://cimm73q60ml3y" path="res://scripts/stage_scripts/pet_spawner.gd" id="3_iuy6r"]
 [ext_resource type="Texture2D" uid="uid://uqwpd3tjjf3w" path="res://sprites/Levelcomplete_tick.png" id="5_32rk1"]
 [ext_resource type="Texture2D" uid="uid://cu6q5maua4w56" path="res://sprites/wallpaperflare.com_wallpaper.jpg" id="6_g6xxn"]
-[ext_resource type="Script" uid="uid://cxl73i0obw2bn" path="res://scripts/bag.gd" id="7_118ur"]
+[ext_resource type="Script" uid="uid://cxl73i0obw2bn" path="res://scripts/stage_scripts/bag.gd" id="7_118ur"]
 [ext_resource type="BitMap" uid="uid://cso7xl00mf6f2" path="res://sprites/tick_bitmap.png" id="7_ewtv5"]
 [ext_resource type="Texture2D" uid="uid://doruomv756ay4" path="res://sprites/Bag.png" id="8_g6xxn"]
-[ext_resource type="Script" uid="uid://duvqkq7fakewl" path="res://scripts/slot.gd" id="9_118ur"]
+[ext_resource type="Script" uid="uid://duvqkq7fakewl" path="res://scripts/stage_scripts/slot.gd" id="9_118ur"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6sj1v"]
 normal = Vector2(1, 0)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bftq86v026khv"]
 
-[ext_resource type="Texture2D" uid="uid://ctcusln2aqlbf" path="res://sprites/item_sprites/Beer.png" id="1_bxfx1"]
+[ext_resource type="Texture2D" uid="uid://ctcusln2aqlbf" path="res://sprites/item_sprites/beer.png" id="1_bxfx1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8tn5n"]
 radius = 250.0
