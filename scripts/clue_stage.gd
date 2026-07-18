@@ -5,12 +5,11 @@ extends Control
 @onready var continue_button: Button = $ContinueButton
 @onready var trait_icon: TextureRect = $Bubble/TraitIcon
 @onready var client_portrait: TextureRect = $ClientPortrait
-
+@onready var character_label: TextureRect = $CharacterLabel
 
 var portrait_closed: Texture2D
 var portrait_open: Texture2D
 
-var character_label: Texture2D
 
 var is_talking: bool = false
 
@@ -39,7 +38,8 @@ func _ready() -> void:
 	portrait_closed = data["portrait_closed"]
 	portrait_open = data["portrait_open"]
 	trait_icons = data["dialogue"]
-	character_label = data["label"]
+	character_label.texture = data["label"]
+	
 	client_portrait.texture = portrait_closed
 	bubble.visible = true
 	continue_button.visible = false
