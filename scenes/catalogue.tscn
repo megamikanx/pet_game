@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bhnj7ehg05e3p" path="res://scripts/catalogue.gd" id="1_2hk3d"]
 [ext_resource type="Texture2D" uid="uid://gqxuc8khr77t" path="res://sprites/Pink_background.png" id="2_e6rsq"]
 [ext_resource type="Texture2D" uid="uid://dxu6ocrga5iqe" path="res://sprites/Catalogue_menu_button.png" id="3_yr0ms"]
+[ext_resource type="Texture2D" uid="uid://o5outwlgclc1" path="res://sprites/Pink_logo.png" id="3_yux3t"]
 [ext_resource type="Texture2D" uid="uid://2iul1gdmvr6c" path="res://sprites/grass_floor.png" id="4_yr0ms"]
 [ext_resource type="Texture2D" uid="uid://cagay3hsmk565" path="res://sprites/Closemenu_button.png" id="4_yux3t"]
 
@@ -23,6 +24,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_e6rsq")
+
+[node name="Pattern" type="TextureRect" parent="Background" unique_id=1925834095]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 382.0
+offset_bottom = 227.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_yux3t")
+stretch_mode = 1
 
 [node name="Title" type="TextureRect" parent="." unique_id=624708155]
 layout_mode = 1
