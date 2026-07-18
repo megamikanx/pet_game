@@ -8,7 +8,7 @@ signal hold_pet
 @onready var collection = get_parent().get_node("Collection")
 
 var valid_preferences: Array[ItemInfo.ITEM_TYPE]
-var answer_personality: Array[ItemInfo.ITEM_TYPE]
+var answer_personality: Dictionary[ItemInfo.ITEM_TYPE, bool]
 
 func spawn_pets(num : int, texture: Texture2D) -> void:
 	var offsetX = texture.get_size().x * 0.5 * Global.petScale
@@ -36,7 +36,7 @@ func spawn_pets(num : int, texture: Texture2D) -> void:
 		instance.set_petTexture(texture)
 		instance.set_ID(ID)
 		if ID == 0:
-			instance.set_personality(answer_personality)
+			instance.set_personality(make_answer_personality())
 		else:
 			instance.set_personality(create_random_personality())
 		print(instance.personality)
@@ -48,17 +48,28 @@ func create_random_personality() -> Array[ItemInfo.ITEM_TYPE]:
 		if randi() % 2 == 0:
 			personality.append(pre)
 		
-	personality.sort()
-	if personality == answer_personality and valid_preferences.size() != 0:
-		personality = create_random_personality()
+	for key in answer_personality.keys():
+		if not ( (answer_personality.get(key)) == (key in personality) ):
+			return personality
+	
+	return create_random_personality()
+
+func make_answer_personality() -> Array[ItemInfo.ITEM_TYPE]:
+	var personality: Array[ItemInfo.ITEM_TYPE] = []
+	
+	for pre in valid_preferences:
+		if pre in answer_personality.keys() and answer_personality.get(pre):
+			personality.append(pre)
+		else:
+			if randi() % 2 == 0:
+				personality.append(pre)
 	
 	return personality
 
 func config_preferences(valid: Array[ItemInfo.ITEM_TYPE],
-		 answer: Array[ItemInfo.ITEM_TYPE]) -> void:
+		 answer: Dictionary[ItemInfo.ITEM_TYPE, bool]) -> void:
 	valid_preferences = valid
 	answer_personality = answer
-	answer_personality.sort()
 	pass
 
 
