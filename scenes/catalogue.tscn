@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://23pmc2lpvvf0"]
 
 [ext_resource type="Script" uid="uid://bhnj7ehg05e3p" path="res://scripts/catalogue.gd" id="1_2hk3d"]
-[ext_resource type="Texture2D" uid="uid://c3kwheyp7d3fr" path="res://sprites/Blue_background.png" id="2_e6rsq"]
+[ext_resource type="Texture2D" uid="uid://gqxuc8khr77t" path="res://sprites/Pink_background.png" id="2_e6rsq"]
 [ext_resource type="Texture2D" uid="uid://dxu6ocrga5iqe" path="res://sprites/Catalogue_menu_button.png" id="3_yr0ms"]
+[ext_resource type="Texture2D" uid="uid://2iul1gdmvr6c" path="res://sprites/grass_floor.png" id="4_yr0ms"]
 [ext_resource type="Texture2D" uid="uid://cagay3hsmk565" path="res://sprites/Closemenu_button.png" id="4_yux3t"]
 
 [node name="Catalogue" type="Control" unique_id=527801742]
@@ -40,11 +41,23 @@ scale = Vector2(2.08, 2.04)
 texture = ExtResource("3_yr0ms")
 
 [node name="PetContainer" type="GridContainer" parent="." unique_id=1600217277]
-layout_mode = 0
-offset_left = 76.0
-offset_top = 172.0
-offset_right = 1233.0
-offset_bottom = 646.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -532.0
+offset_top = -415.0
+offset_right = 625.0
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2.2799993, 2.52)
+
+[node name="TextureRect" type="TextureRect" parent="PetContainer" unique_id=2066061850]
+layout_mode = 2
+texture = ExtResource("4_yr0ms")
 
 [node name="BackButton" type="Button" parent="." unique_id=1190664468]
 layout_mode = 0

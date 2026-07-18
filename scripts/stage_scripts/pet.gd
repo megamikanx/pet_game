@@ -57,8 +57,14 @@ func _ready() -> void:
 	pass
 
 func set_petTexture(new_text: Texture2D) -> void:
+	if new_text == null:
+		push_error("Pet texture is null — check stageinfo .tres petTexture")
+		return
 	petSprite.texture = new_text
 	petSprite.self_modulate = PALETTE.pick_random()
+<<<<<<< HEAD
+	OFFSET = new_text.get_size().x * 0.5 * Global.petScale
+=======
 	OFFSET = petSprite.texture.get_size().x * 0.5 * Global.petScale
 
 func set_ID(ID: int) -> void:
@@ -70,6 +76,7 @@ func set_personality(pers: Array[ItemInfo.ITEM_TYPE]) -> void:
 
 func get_ID() -> int:
 	return petID
+>>>>>>> 631c7fe8d2faad1865108acea6dc062f3b94a087
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
