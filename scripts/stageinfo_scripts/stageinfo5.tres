@@ -1,9 +1,12 @@
 [gd_resource type="Resource" script_class="Info_Stage" format=3 uid="uid://c4ot6clwkt8tu"]
 
-[ext_resource type="Texture2D" uid="uid://dep3t3dypqyy4" path="res://sprites/pet_sprites/pibbles.png" id="1_jtuwx"]
+[ext_resource type="Texture2D" uid="uid://b5idiou4yt0bq" path="res://sprites/levels/room_level.png" id="1_epwf5"]
 [ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/stageinfo_scripts/info_stage.gd" id="2_epwf5"]
+[ext_resource type="Texture2D" uid="uid://gil7g74ps4jw" path="res://sprites/pet_sprites/pyungus.png" id="2_oihjx"]
 
 [resource]
 script = ExtResource("2_epwf5")
 stageNum = 5
+levelTexture = ExtResource("1_epwf5")
+petTexture = ExtResource("2_oihjx")
 metadata/_custom_type_script = "uid://byo44lt2ql7u4"

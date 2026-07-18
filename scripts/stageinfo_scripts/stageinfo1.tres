@@ -1,10 +1,15 @@
 [gd_resource type="Resource" script_class="Info_Stage" format=3 uid="uid://c04ef3xxuv57n"]
 
+[ext_resource type="Texture2D" uid="uid://svfe8ewulpq4" path="res://sprites/levels/grass_level.png" id="1_sg317"]
 [ext_resource type="Texture2D" uid="uid://dep3t3dypqyy4" path="res://sprites/pet_sprites/pibbles.png" id="1_yhsgm"]
 [ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/stageinfo_scripts/info_stage.gd" id="2_sg317"]
 
 [resource]
 script = ExtResource("2_sg317")
+stageNum = null
+NUM_PETS = null
+levelTexture = ExtResource("1_sg317")
+petTexture = ExtResource("1_yhsgm")
 answer_personality = Array[int]([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
 valid_preferences = Array[int]([1])
 metadata/_custom_type_script = "uid://byo44lt2ql7u4"

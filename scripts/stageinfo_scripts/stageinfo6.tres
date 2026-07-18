@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Info_Stage" format=3 uid="uid://cpym3i2k3j0t4"]
+
+[ext_resource type="Texture2D" uid="uid://bmnog56vj4i85" path="res://sprites/levels/moon_level.png" id="1_5rlfl"]
+[ext_resource type="Texture2D" uid="uid://ccci5tarjq36j" path="res://sprites/pet_sprites/littleman.png" id="2_ae8xa"]
+[ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/stageinfo_scripts/info_stage.gd" id="3_aw5xs"]
+
+[resource]
+script = ExtResource("3_aw5xs")
+stageNum = 6
+NUM_PETS = null
+levelTexture = ExtResource("1_5rlfl")
+petTexture = ExtResource("2_ae8xa")
+answer_personality = null
+valid_preferences = null
+metadata/_custom_type_script = "uid://byo44lt2ql7u4"

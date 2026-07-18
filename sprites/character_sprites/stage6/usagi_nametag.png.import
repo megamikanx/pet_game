@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fqrdve5lvvsc"
-path="res://.godot/imported/Grass_level.png-36e90d0c5414434129db16c7ee54ad5a.ctex"
+uid="uid://dvxcajiwk255g"
+path="res://.godot/imported/usagi_nametag.png-2703522a669ced818ef598f7f7ab5caa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/pens/Grass_level.png"
-dest_files=["res://.godot/imported/Grass_level.png-36e90d0c5414434129db16c7ee54ad5a.ctex"]
+source_file="res://sprites/character_sprites/stage6/usagi_nametag.png"
+dest_files=["res://.godot/imported/usagi_nametag.png-2703522a669ced818ef598f7f7ab5caa.ctex"]
 
 [params]
 
