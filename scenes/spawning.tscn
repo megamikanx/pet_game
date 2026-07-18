@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://cimm73q60ml3y" path="res://scripts/stage_scripts/pet_spawner.gd" id="3_iuy6r"]
 [ext_resource type="Script" uid="uid://cmiqkqj6rwf8g" path="res://scripts/stage_scripts/collection.gd" id="4_2qv0k"]
 [ext_resource type="Texture2D" uid="uid://uqwpd3tjjf3w" path="res://sprites/Levelcomplete_tick.png" id="5_32rk1"]
-[ext_resource type="Texture2D" uid="uid://cu6q5maua4w56" path="res://sprites/wallpaperflare.com_wallpaper.jpg" id="6_g6xxn"]
 [ext_resource type="Script" uid="uid://cxl73i0obw2bn" path="res://scripts/stage_scripts/bag.gd" id="7_118ur"]
 [ext_resource type="BitMap" uid="uid://cso7xl00mf6f2" path="res://sprites/tick_bitmap.png" id="7_ewtv5"]
 [ext_resource type="Texture2D" uid="uid://doruomv756ay4" path="res://sprites/Bag.png" id="8_g6xxn"]
@@ -90,7 +89,6 @@ offset_top = 146.0
 offset_right = 55.975403
 offset_bottom = 258.0
 texture_normal = ExtResource("5_32rk1")
-texture_hover = ExtResource("6_g6xxn")
 texture_click_mask = ExtResource("7_ewtv5")
 ignore_texture_size = true
 stretch_mode = 0

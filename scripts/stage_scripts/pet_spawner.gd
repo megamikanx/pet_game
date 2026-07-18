@@ -20,8 +20,9 @@ func spawn_pets(num : int, texture: Texture2D) -> void:
 	var upper_sy = 598 - offsetY
 	
 	var instance: Pet
-	for i in num:
+	for ID in num:
 		instance = Global.PET_SCENE.instantiate()
+		#Setup connections
 		instance.pick_me_up.connect(pet_picked_up)
 		instance.pick_me_up.connect(collection.collected_pickedup)
 		instance.freeze_pets.connect(freeze_pets)
@@ -33,13 +34,31 @@ func spawn_pets(num : int, texture: Texture2D) -> void:
 		instance.position = Vector2(randi_range(lower_sx, upper_sx),
 									randi_range(lower_sy, upper_sy))
 		instance.set_petTexture(texture)
-		instance.set_ID(i)
+		instance.set_ID(ID)
+		if ID == 0:
+			instance.set_personality(answer_personality)
+		else:
+			instance.set_personality(create_random_personality())
+		print(instance.personality)
 	pass
+
+func create_random_personality() -> Array[ItemInfo.ITEM_TYPE]:
+	var personality: Array[ItemInfo.ITEM_TYPE] = []
+	for pre in valid_preferences:
+		if randi() % 2 == 0:
+			personality.append(pre)
+		
+	personality.sort()
+	if personality == answer_personality and valid_preferences.size() != 0:
+		personality = create_random_personality()
+	
+	return personality
 
 func config_preferences(valid: Array[ItemInfo.ITEM_TYPE],
 		 answer: Array[ItemInfo.ITEM_TYPE]) -> void:
 	valid_preferences = valid
 	answer_personality = answer
+	answer_personality.sort()
 	pass
 
 
