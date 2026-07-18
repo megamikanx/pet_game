@@ -68,3 +68,5 @@ offset_bottom = 127.0
 icon = ExtResource("4_yux3t")
 flat = true
 expand_icon = true
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

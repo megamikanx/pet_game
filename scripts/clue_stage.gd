@@ -6,8 +6,11 @@ extends Control
 @onready var trait_icon: TextureRect = $Bubble/TraitIcon
 @onready var client_portrait: TextureRect = $ClientPortrait
 
+
 var portrait_closed: Texture2D
 var portrait_open: Texture2D
+
+var character_label: Texture2D
 
 var is_talking: bool = false
 
@@ -36,6 +39,7 @@ func _ready() -> void:
 	portrait_closed = data["portrait_closed"]
 	portrait_open = data["portrait_open"]
 	trait_icons = data["dialogue"]
+	character_label = data["label"]
 	client_portrait.texture = portrait_closed
 	bubble.visible = true
 	continue_button.visible = false
@@ -44,6 +48,7 @@ func _ready() -> void:
 	_show_current_trait()
 
 func _on_advance_button_pressed() -> void:
+	AudioManager.play_click()
 	if is_talking:
 		return
 	is_talking = true
@@ -57,5 +62,7 @@ func _on_advance_button_pressed() -> void:
 		_show_current_trait()
 
 func _on_continue_button_pressed() -> void:
+	AudioManager.play_click()
+	Global.previous_scene = get_tree().current_scene.scene_file_path
 	get_tree().change_scene_to_file("res://scenes/stages/packing_stage.tscn")
 	

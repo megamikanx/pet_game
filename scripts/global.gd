@@ -10,6 +10,7 @@ var highest_unlocked: int = 1
 var cleared_stages: Array[int] = []
 var has_seen_comic: bool = false
 var captured_pets: Array[Dictionary] = []
+var previous_scene: String = ""
 
 var petScale: float = 0.25
 
@@ -39,6 +40,9 @@ var stage_data: Dictionary = {
 		"portrait_open": preload(
 			"res://sprites/miku_talk_open.png"
 		),
+		"label": preload(
+			"res://sprites/miku_nametag.png"
+		),
 		"dialogue": [
 			preload("res://sprites/miku_talk_1.png"),
 			preload("res://sprites/miku_talk_2.png"),
@@ -58,6 +62,9 @@ var stage_data: Dictionary = {
 		),
 		"portrait_open": preload(
 			"res://sprites/sonic_talk_open.png"
+		),
+		"label": preload(
+			"res://sprites/sonic_nametag.png"
 		),
 		"dialogue": [
 			preload("res://sprites/sonic_talk_1.png"),
@@ -81,6 +88,9 @@ var stage_data: Dictionary = {
 		),
 		"portrait_open": preload(
 			"res://sprites/kris_talk_open.png"
+		),
+		"label": preload(
+			"res://sprites/kris_nametag.png"
 		),
 		"dialogue": [
 			preload("res://sprites/kris_talk_1.png"),
@@ -106,6 +116,9 @@ var stage_data: Dictionary = {
 		"portrait_open": preload(
 			"res://sprites/joker_talk_open.png"
 		),
+		"label": preload(
+			"res://sprites/joker_nametag.png"
+		),
 		"dialogue": [
 			preload("res://sprites/joker_talk_1.png"),
 			preload("res://sprites/joker_talk_2.png"),
@@ -130,6 +143,9 @@ var stage_data: Dictionary = {
 		),
 		"portrait_open": preload(
 			"res://sprites/isaac_talk_open.png"
+		),
+		"label": preload(
+			"res://sprites/isaac_nametag.png"
 		),
 		"dialogue": [
 			preload("res://sprites/isaac_talk_1.png"),
