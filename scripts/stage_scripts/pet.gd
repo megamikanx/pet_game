@@ -64,6 +64,7 @@ func set_petTexture(new_text: Texture2D) -> void:
 	petSprite.self_modulate = PALETTE.pick_random()
 	OFFSET = new_text.get_size().x * 0.5 * Global.petScale
 
+
 func set_ID(ID: int) -> void:
 	petID = ID
 
