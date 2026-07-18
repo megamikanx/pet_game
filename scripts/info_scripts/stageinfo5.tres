@@ -18,7 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://4gml3nbtm4et" path="res://sprites/character_sprites/stage5/dialogue/isaac_level_wrong.png" id="16_sfklq"]
 [ext_resource type="Texture2D" uid="uid://b5idiou4yt0bq" path="res://sprites/levels/room_level.png" id="17_eob0a"]
 [ext_resource type="Texture2D" uid="uid://gil7g74ps4jw" path="res://sprites/pet_sprites/pyungus.png" id="18_5tmjx"]
+[ext_resource type="Texture2D" uid="uid://lck1up21nj2k" path="res://sprites/isaac_hints.png" id="18_sox4f"]
 [ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/info_scripts/info_stage.gd" id="19_1hrmb"]
+[ext_resource type="Texture2D" uid="uid://qhafnqxdpiw1" path="res://sprites/pyungus_nametag.png" id="19_ir3br"]
 
 [resource]
 script = ExtResource("19_1hrmb")
@@ -30,6 +32,8 @@ clientNameTag = ExtResource("12_f3q5n")
 clientTalkClose = ExtResource("14_bta83")
 clientTalkOpen = ExtResource("15_d1wwp")
 clientDialogue = Array[Texture2D]([ExtResource("1_h7ypq"), ExtResource("2_ogtm7"), ExtResource("3_sox4f"), ExtResource("4_ir3br"), ExtResource("5_atkyw"), ExtResource("6_hupua"), ExtResource("7_1xess"), ExtResource("8_0bjhi"), ExtResource("9_us6tk"), ExtResource("10_704su"), ExtResource("11_pm6t2")])
+petNameTag = ExtResource("19_ir3br")
+packingHint = ExtResource("18_sox4f")
 clientWrongLine = ExtResource("16_sfklq")
 clientSuccessLine = ExtResource("13_yyyi2")
 answer_personality = Dictionary[int, bool]({

@@ -16,6 +16,9 @@ extends Resource
 
 @export var clientDialogue: Array[Texture2D]
 
+@export var petNameTag: Texture2D  
+@export var packingHint: Texture2D  
+
 @export var clientWrongLine: Texture2D
 @export var clientSuccessLine: Texture2D
 

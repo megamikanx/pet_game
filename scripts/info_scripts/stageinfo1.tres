@@ -12,7 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://bn0q22wphepru" path="res://sprites/character_sprites/stage1/miku_talk_open.png" id="10_y5on1"]
 [ext_resource type="Texture2D" uid="uid://bffatiu2aiqph" path="res://sprites/character_sprites/stage1/dialogue/miku_level_wrong.png" id="11_ep4d3"]
 [ext_resource type="Texture2D" uid="uid://svfe8ewulpq4" path="res://sprites/levels/grass_level.png" id="12_qgxol"]
+[ext_resource type="Texture2D" uid="uid://cy6wqsd3ib1ju" path="res://sprites/miku_hints.png" id="13_7i1am"]
 [ext_resource type="Texture2D" uid="uid://dep3t3dypqyy4" path="res://sprites/pet_sprites/pibbles.png" id="13_ncsuh"]
+[ext_resource type="Texture2D" uid="uid://df5573urtid34" path="res://sprites/pibbles_nametag.png" id="14_hn6pu"]
 [ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/info_scripts/info_stage.gd" id="14_jvn52"]
 
 [resource]
@@ -24,6 +26,8 @@ clientNameTag = ExtResource("7_ni8vb")
 clientTalkClose = ExtResource("9_eniei")
 clientTalkOpen = ExtResource("10_y5on1")
 clientDialogue = Array[Texture2D]([ExtResource("1_croga"), ExtResource("2_no328"), ExtResource("3_7i1am"), ExtResource("4_hn6pu"), ExtResource("5_246wo"), ExtResource("6_1gbrd")])
+petNameTag = ExtResource("14_hn6pu")
+packingHint = ExtResource("13_7i1am")
 clientWrongLine = ExtResource("11_ep4d3")
 clientSuccessLine = ExtResource("8_uw0wi")
 answer_personality = Dictionary[int, bool]({

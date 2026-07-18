@@ -23,6 +23,8 @@ func _ready() -> void:
 		"portrait_closed": stage.clientTalkClose,
 		"portrait_open": stage.clientTalkOpen,
 		"label": stage.clientNameTag,
+		"nametag": stage.petNameTag,
+		"hint": stage.packingHint,
 		"dialogue": stage.clientDialogue,
 		"required_items": ["Plushie"], # only thing that doesn't work really
 		"wrong_line": stage.clientWrongLine,
