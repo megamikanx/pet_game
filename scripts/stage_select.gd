@@ -38,3 +38,6 @@ func _on_stage_pressed(stage_num: int) -> void:
 	StageLoadedInfo.set_stage(StageLoadedInfo.STAGES[Global.current_stage - 1])
 
 	get_tree().change_scene_to_file("res://scenes/stages/clue_stage.tscn")
+	
+func _on_menu_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

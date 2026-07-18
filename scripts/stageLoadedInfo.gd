@@ -12,12 +12,18 @@ extends Node
 @onready var NAMES: Dictionary = {
 	Beer = Beer,
 	Bath = Bath,
-	Water= Water,
+	Water = Water,
 	Burger = Burger,
 	Money = Money,
+	DollarBill = Money,
 	Squishy = Squishy,
 	EnergyDrink = EnergyDrink,
-	ProteinBar = ProteinBar
+	ProteinBar = ProteinBar,
+	BucketSlop = BucketOfSlop,
+	Carcass = DeadCarcass,
+	Flower = Flower,
+	Plushie = Plushie,
+	TopHat = TopHat,
 }
 
 @onready var stageInfo: Resource = STAGES[0]
@@ -30,10 +36,10 @@ func set_stage(stage: Resource) -> void:
 func set_items(items: Array[Node]) -> void:
 	itemsHotbar = []
 	for entry in items:
+		if not NAMES.has(entry.name):
+			push_error("No mapping for packed item: " + entry.name)
+			continue
 		itemsHotbar.append(NAMES[entry.name].new())
-	pass
-
-
 func get_hotbar() -> Array[Item]:
 	return itemsHotbar
 

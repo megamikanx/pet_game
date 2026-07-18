@@ -17,6 +17,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_aysmx")
@@ -259,3 +261,5 @@ icon = ExtResource("10_v2kd5")
 flat = true
 icon_alignment = 1
 expand_icon = true
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

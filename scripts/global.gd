@@ -7,6 +7,7 @@ var current_stage: int = 1
 var highest_unlocked: int = 1
 var cleared_stages: Array[int] = []
 var has_seen_comic: bool = false
+var captured_pets: Array[Dictionary] = []
 
 var petScale: float = 0.25
 
