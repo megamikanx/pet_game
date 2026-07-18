@@ -84,6 +84,7 @@ func _on_item_mouse_entered(entry: Dictionary) -> void:
 	item_tooltip.visible = true
 
 func _on_menu_button_pressed() -> void:
+	AudioManager.play_click()
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 func _on_item_mouse_exited() -> void:
@@ -130,12 +131,14 @@ func _on_item_pressed(entry: Dictionary) -> void:
 
 
 func _on_go_pressed() -> void:
+	AudioManager.play_click()
 	var packed := _get_packed_buttons()
 	if packed.size() != max_packed_items:
 		print("Need exactly ", max_packed_items, " items. Have ", packed.size())
 		return
 
 	StageLoadedInfo.set_items(packed)
+	Global.previous_scene = get_tree().current_scene.scene_file_path
 	get_tree().change_scene_to_file("res://scenes/spawning.tscn")
 
 

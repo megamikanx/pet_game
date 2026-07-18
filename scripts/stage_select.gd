@@ -32,12 +32,21 @@ func _refresh_stage_buttons() -> void:
 			check.visible = cleared
 
 func _on_stage_pressed(stage_num: int) -> void:
+	AudioManager.play_click()
 	if not Global.is_stage_unlocked(stage_num):
 		return
 	Global.current_stage = stage_num
 	StageLoadedInfo.set_stage(StageLoadedInfo.STAGES[Global.current_stage - 1])
 
+	Global.previous_scene = get_tree().current_scene.scene_file_path
 	get_tree().change_scene_to_file("res://scenes/stages/clue_stage.tscn")
 	
 func _on_menu_button_pressed() -> void:
+	AudioManager.play_click()
+	Global.previous_scene = get_tree().current_scene.scene_file_path
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+
+func _on_catalogue_button_pressed() -> void:
+	AudioManager.play_click()
+	Global.previous_scene = get_tree().current_scene.scene_file_path
+	get_tree().change_scene_to_file("res://scenes/catalogue.tscn")

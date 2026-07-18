@@ -262,4 +262,5 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
+[connection signal="pressed" from="CatalogueButton" to="." method="_on_catalogue_button_pressed"]
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
