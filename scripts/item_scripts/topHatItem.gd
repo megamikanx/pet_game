@@ -1,18 +1,11 @@
 class_name TopHat
 extends Item
 
-const PREFERENCE: String = "TopHat"
-var SPRITE = load("res://sprites/item_sprites/Beer.png")
+const PREFERENCE: ItemInfo.ITEM_TYPE = ItemInfo.ITEM_TYPE.TopHat
 var SPRITE_TO_ADD = load("res://sprites/pet_sprites/scope.png")
 
-func get_pri() -> int:
-	return ItemInfo.ITEM_PRIORITY.get(PREFERENCE)
-
-func get_preference() -> String:
+func get_preference() -> ItemInfo.ITEM_TYPE:
 	return PREFERENCE
-
-func get_sprite() -> Texture2D:
-	return SPRITE
 
 func cause_afflication(pet: Pet, doesLike: bool) -> void:
 	if doesLike:

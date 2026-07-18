@@ -11,8 +11,11 @@ var locked: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	bag.set_bag(StageLoadedInfo.get_hotbar())
-	spawner.spawn_pets(StageLoadedInfo.get_numPets(), StageLoadedInfo.get_petTexture())
+	var info = StageLoadedInfo
+	bag.set_bag(info.get_hotbar())
+	spawner.config_preferences(info.get_valid_preferences(), info.get_answer_personality())
+	spawner.spawn_pets(info.get_numPets(), info.get_petTexture())
+
 	
 	spawner.hold_pet.connect(hold_something)
 	bag.hold_item.connect(hold_something)

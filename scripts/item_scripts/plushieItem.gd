@@ -1,9 +1,9 @@
 class_name Plushie
 extends Item
 
-const PREFERENCE: String = "Plushie"
+const PREFERENCE: ItemInfo.ITEM_TYPE = ItemInfo.ITEM_TYPE.Plushie
 
-func get_preference() -> String:
+func get_preference() -> ItemInfo.ITEM_TYPE:
 	return PREFERENCE
 
 func cause_afflication(pet: Pet, doesLike: bool) -> void:

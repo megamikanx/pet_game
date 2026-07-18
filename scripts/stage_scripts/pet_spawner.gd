@@ -7,6 +7,9 @@ signal hold_pet
 
 @onready var collection = get_parent().get_node("Collection")
 
+var valid_preferences: Array[ItemInfo.ITEM_TYPE]
+var answer_personality: Array[ItemInfo.ITEM_TYPE]
+
 func spawn_pets(num : int, texture: Texture2D) -> void:
 	var offsetX = texture.get_size().x * 0.5 * Global.petScale
 	var offsetY = texture.get_size().y * 0.5 * Global.petScale
@@ -32,6 +35,13 @@ func spawn_pets(num : int, texture: Texture2D) -> void:
 		instance.set_petTexture(texture)
 		instance.set_ID(i)
 	pass
+
+func config_preferences(valid: Array[ItemInfo.ITEM_TYPE],
+		 answer: Array[ItemInfo.ITEM_TYPE]) -> void:
+	valid_preferences = valid
+	answer_personality = answer
+	pass
+
 
 func pet_picked_up(the_holded : Pet) -> void:
 	hold_pet.emit(the_holded)

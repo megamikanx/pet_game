@@ -1,10 +1,10 @@
 class_name Beer
 extends Item
 
-const PREFERENCE: String = "Beer"
+const PREFERENCE: ItemInfo.ITEM_TYPE = ItemInfo.ITEM_TYPE.Beer
 var SPRITE_TO_ADD = load("res://sprites/pet_sprites/scope.png")
 
-func get_preference() -> String:
+func get_preference() -> ItemInfo.ITEM_TYPE:
 	return PREFERENCE
 
 

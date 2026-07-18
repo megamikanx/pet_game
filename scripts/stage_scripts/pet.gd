@@ -37,7 +37,7 @@ var petID: int = -1
 #Pet variables
 var SPEED = 50
 
-var personality: Array[String] = []
+var personality: Array[ItemInfo.ITEM_TYPE] = []
 var afflication: Array[Item]
 
 var rand_walk: bool = true
@@ -48,7 +48,6 @@ var collected: bool = false
 
 # Intialise the Pet
 func _ready() -> void:
-	randomGoal()
 	flagSprite.visible = false
 	
 	timer.timeout.connect(timeout_rand_walk)
@@ -64,6 +63,10 @@ func set_petTexture(new_text: Texture2D) -> void:
 
 func set_ID(ID: int) -> void:
 	petID = ID
+
+func set_personality(pers: Array[ItemInfo.ITEM_TYPE]) -> void:
+	personality = pers
+
 
 func get_ID() -> int:
 	return petID
