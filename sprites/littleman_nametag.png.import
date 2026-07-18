@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4asvxcenstw1"
-path="res://.godot/imported/Money.png-cf99c70f0b24302b211d70f9c3b8565b.ctex"
+uid="uid://cfpagwgykjvje"
+path="res://.godot/imported/littleman_nametag.png-4d419bffe90ddc189648be8e4f42e29e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/item_sprites/Money.png"
-dest_files=["res://.godot/imported/Money.png-cf99c70f0b24302b211d70f9c3b8565b.ctex"]
+source_file="res://sprites/littleman_nametag.png"
+dest_files=["res://.godot/imported/littleman_nametag.png-4d419bffe90ddc189648be8e4f42e29e.ctex"]
 
 [params]
 

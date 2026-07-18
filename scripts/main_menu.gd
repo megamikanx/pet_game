@@ -15,5 +15,5 @@ func _on_quit_pressed() -> void:
 	
 func _on_menu_button_pressed() -> void:
 	AudioManager.play_click()
-	Global.previous_scene = get_tree().current_scene.scene_file_path
-	get_tree().change_scene_to_file("res://scenes/stages/stage_select.tscn")
+	if Global.previous_scene != "":
+		get_tree().change_scene_to_file(Global.previous_scene)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4asvxcenstw1"
-path="res://.godot/imported/Money.png-cf99c70f0b24302b211d70f9c3b8565b.ctex"
+uid="uid://dh2i4iwldn2cg"
+path="res://.godot/imported/joker_hints.png-5fdf39304157127e7d5e4d49623348c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/item_sprites/Money.png"
-dest_files=["res://.godot/imported/Money.png-cf99c70f0b24302b211d70f9c3b8565b.ctex"]
+source_file="res://sprites/joker_hints.png"
+dest_files=["res://.godot/imported/joker_hints.png-5fdf39304157127e7d5e4d49623348c6.ctex"]
 
 [params]
 

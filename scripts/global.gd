@@ -44,6 +44,12 @@ var stage_data: Dictionary = {
 		"label": preload(
 			"res://sprites/miku_nametag.png"
 		),
+		"nametag": preload(
+			"res://sprites/pibbles_nametag.png"
+		),
+		"hint": preload(
+			"res://sprites/miku_hints.png"
+		),
 		"dialogue": [
 			preload("res://sprites/miku_talk_1.png"),
 			preload("res://sprites/miku_talk_2.png"),
@@ -66,6 +72,12 @@ var stage_data: Dictionary = {
 		),
 		"label": preload(
 			"res://sprites/sonic_nametag.png"
+		),
+		"nametag": preload(
+			"res://sprites/gooba_nametag.png"
+		),
+		"hint": preload(
+			"res://sprites/sonic_hints.png"
 		),
 		"dialogue": [
 			preload("res://sprites/sonic_talk_1.png"),
@@ -92,6 +104,12 @@ var stage_data: Dictionary = {
 		),
 		"label": preload(
 			"res://sprites/kris_nametag.png"
+		),
+		"nametag": preload(
+			"res://sprites/bingus_nametag.png"
+		),
+		"hint": preload(
+			"res://sprites/kris_hints.png"
 		),
 		"dialogue": [
 			preload("res://sprites/kris_talk_1.png"),
@@ -120,6 +138,12 @@ var stage_data: Dictionary = {
 		"label": preload(
 			"res://sprites/joker_nametag.png"
 		),
+		"nametag": preload(
+			"res://sprites/healseal_nametag.png"
+		),
+		"hint": preload(
+			"res://sprites/joker_hints.png"
+		),
 		"dialogue": [
 			preload("res://sprites/joker_talk_1.png"),
 			preload("res://sprites/joker_talk_2.png"),
@@ -147,6 +171,12 @@ var stage_data: Dictionary = {
 		),
 		"label": preload(
 			"res://sprites/isaac_nametag.png"
+		),
+		"nametag": preload(
+			"res://sprites/pyungus_nametag.png"
+		),
+		"hint": preload(
+			"res://sprites/isaac_hints.png"
 		),
 		"dialogue": [
 			preload("res://sprites/isaac_talk_1.png"),
