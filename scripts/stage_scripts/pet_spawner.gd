@@ -30,7 +30,7 @@ func spawn_pets(num : int, texture: Texture2D) -> void:
 		instance.position = Vector2(randi_range(lower_sx, upper_sx),
 									randi_range(lower_sy, upper_sy))
 		instance.set_petTexture(texture)
-		
+		instance.set_ID(i)
 	pass
 
 func pet_picked_up(the_holded : Pet) -> void:

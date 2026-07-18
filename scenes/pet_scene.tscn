@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://by6y5dlf47i3s" path="res://sprites/pet_sprites/flag.png" id="4_5c8qe"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jwt70"]
-load_path = "res://.godot/imported/spritesheet.webp-ad6c1b501bf31e73c1ede594017050bc.ctex"
 
 [sub_resource type="Animation" id="Animation_ymejq"]
 length = 0.001

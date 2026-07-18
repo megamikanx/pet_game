@@ -14,7 +14,7 @@ extends Node
 	Bath = Bath,
 	Water= Water,
 	Burger = Burger,
-	DollarBill = Money,
+	Money = Money,
 	Squishy = Squishy,
 	EnergyDrink = EnergyDrink,
 	ProteinBar = ProteinBar
