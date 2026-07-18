@@ -85,6 +85,7 @@ func _on_item_mouse_entered(entry: Dictionary) -> void:
 
 func _on_menu_button_pressed() -> void:
 	AudioManager.play_click()
+	Global.previous_scene = get_tree().current_scene.scene_file_path
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 func _on_item_mouse_exited() -> void:
@@ -121,6 +122,7 @@ func _get_packed_buttons() -> Array[Node]:
 
 
 func _on_item_pressed(entry: Dictionary) -> void:
+	AudioManager.play_boop()
 	if entry["is_packed"]:
 		await _unpack_item(entry)
 	elif _get_packed_item_count() >= max_packed_items:
