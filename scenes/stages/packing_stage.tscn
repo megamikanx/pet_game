@@ -327,3 +327,4 @@ icon_alignment = 1
 expand_icon = true
 
 [connection signal="pressed" from="Go" to="." method="_on_go_pressed"]
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
