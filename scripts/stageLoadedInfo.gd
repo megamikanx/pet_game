@@ -23,7 +23,6 @@ extends Node
 @onready var stageInfo: Resource
 @onready var itemsHotbar: Array[Item]
 
-#SETTERS
 
 func set_stage(stage: Resource) -> void:
 	stageInfo = stage
@@ -34,7 +33,6 @@ func set_items(items: Array[Node]) -> void:
 		itemsHotbar.append(NAMES[entry.name].new())
 	pass
 
-#GETTERS
 
 func get_hotbar() -> Array[Item]:
 	return itemsHotbar
