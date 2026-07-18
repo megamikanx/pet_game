@@ -71,6 +71,8 @@ func set_ID(ID: int) -> void:
 func set_personality(pers: Array[ItemInfo.ITEM_TYPE]) -> void:
 	personality = pers
 
+func start_animation(animation: String) -> void:
+	aniPlayer.current_animation = animation
 
 func get_ID() -> int:
 	return petID
@@ -167,11 +169,13 @@ func return_to_pen() -> void:
 
 # Afflictions
 
-func add_sprite(new_texture: Texture2D) -> Sprite2D:
+func add_sprite(new_texture: Texture2D, dim: Vector3) -> Sprite2D:
 	var instance = Sprite2D.new()
 	petSprite.add_child(instance)
 	
 	instance.texture = new_texture
+	instance.scale = dim.z * Vector2.ONE
+	instance.position = Vector2(dim.x, dim.y)
 	return instance
 
 func update_afflications() -> void:

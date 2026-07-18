@@ -52,15 +52,16 @@ func get_numPets() -> int:
 func get_petTexture() -> Texture2D:
 	return stageInfo.petTexture
 
-func get_answer_personality() -> Array[ItemInfo.ITEM_TYPE]:
+func get_answer_personality() -> Dictionary[ItemInfo.ITEM_TYPE, bool]:
 	return stageInfo.answer_personality
 
 func get_valid_preferences() -> Array[ItemInfo.ITEM_TYPE]:
+	print(stageInfo.valid_preferences.size())
 	if stageInfo.valid_preferences.size() > 0:
 		return stageInfo.valid_preferences
 	
 	var valid: Array[ItemInfo.ITEM_TYPE]
-	for item in ItemInfo.ITEM_TYPE:
+	for item in ItemInfo.ITEM_TYPE.values():
 		valid.append(item)
-	
+
 	return valid

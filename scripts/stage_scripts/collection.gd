@@ -14,12 +14,14 @@ func _ready() -> void:
 	set_process(false)
 	set_process_input(false)
 	
+	submitButton.pressed.connect(check_answer)
 	body_entered.connect(collect_held_pet)
 	body_exited.connect(uncollect_held_pet)
 	pass
 
 #ID of answer always 0
 func check_answer() -> void:
+	print(collected_pet.get_ID())
 	if collected_pet.get_ID() == 0:
 		print("found")
 	else:
