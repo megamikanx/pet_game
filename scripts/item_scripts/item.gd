@@ -13,7 +13,7 @@ func _ready() -> void:
 	pass
 
 @abstract func cause_afflication(pet: Pet, doesLike: bool) -> void
-@abstract func get_preference() -> String
+@abstract func get_preference() -> ItemInfo.ITEM_TYPE
 
 func place() -> void:
 	monitorable = true

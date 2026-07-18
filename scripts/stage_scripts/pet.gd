@@ -37,7 +37,7 @@ var petID: int = -1
 #Pet variables
 var SPEED = 50
 
-var personality: Array[String] = []
+var personality: Array[ItemInfo.ITEM_TYPE] = []
 var afflication: Array[Item]
 
 var rand_walk: bool = true
@@ -48,7 +48,6 @@ var collected: bool = false
 
 # Intialise the Pet
 func _ready() -> void:
-	randomGoal()
 	flagSprite.visible = false
 	
 	timer.timeout.connect(timeout_rand_walk)
@@ -63,10 +62,15 @@ func set_petTexture(new_text: Texture2D) -> void:
 		return
 	petSprite.texture = new_text
 	petSprite.self_modulate = PALETTE.pick_random()
-	OFFSET = petSprite.texture.get_size().x * 0.5 * Global.petScale
+	OFFSET = new_text.get_size().x * 0.5 * Global.petScale
+
 
 func set_ID(ID: int) -> void:
 	petID = ID
+
+func set_personality(pers: Array[ItemInfo.ITEM_TYPE]) -> void:
+	personality = pers
+
 
 func get_ID() -> int:
 	return petID

@@ -1,63 +1,82 @@
 extends Node
 
-static var ITEM: Dictionary = {
-	Bath = {
+enum ITEM_TYPE {
+	Bath,
+	Beer,
+	Burger,
+	DeadCarcass,
+	Chocolate,
+	EnergyDrink,
+	Flower,
+	Money,
+	Plushie,
+	ProteinBar,
+	BucketOfSlop,
+	Speaker,
+	Squishy,
+	TopHat,
+	Water
+}
+
+
+static var ITEM: Dictionary[ITEM_TYPE, Dictionary] = {
+	ITEM_TYPE.Bath : {
 		PRIORITY 	= 2,
 		SPRITE 		= load("res://sprites/item_sprites/bath.png")
 	},
-	Beer = {
+	ITEM_TYPE.Beer : {
 		PRIORITY 	= 1,
 		SPRITE 		= load("res://sprites/item_sprites/beer.png")
 	},
-	Burger = {
+	ITEM_TYPE.Burger : {
 		PRIORITY 	= 0,
 		SPRITE 		= load("res://sprites/item_sprites/burger.png")
 	},
-	DeadCarcass = {
+	ITEM_TYPE.DeadCarcass : {
 		PRIORITY 	= 2,
 		SPRITE 		= load("res://sprites/item_sprites/carcass.png")
 	},
-	Chocolate = {
+	ITEM_TYPE.Chocolate : {
 		PRIORITY 	= 2,
 		SPRITE 		= load("res://sprites/item_sprites/yakult.png")
 	},
-	EnergyDrink = {
+	ITEM_TYPE.EnergyDrink : {
 		PRIORITY 	= 0,
 		SPRITE 		= load("res://sprites/item_sprites/energy_drink.png")
 	},
-	Flower = {
+	ITEM_TYPE.Flower : {
 		PRIORITY 	= 2,
 		SPRITE 		= load("res://sprites/item_sprites/flower.png")
 	},
-	Money = {
+	ITEM_TYPE.Money : {
 		PRIORITY 	= 0,
 		SPRITE 		= load("res://sprites/item_sprites/money.png")
 	},
-	Plushie = {
+	ITEM_TYPE.Plushie : {
 		PRIORITY 	= 2,
 		SPRITE 		= load("res://sprites/item_sprites/plushie.png")
 	},
-	ProteinBar = {
+	ITEM_TYPE.ProteinBar : {
 		PRIORITY 	= 0,
 		SPRITE 		= load("res://sprites/item_sprites/protein_bar.png")
 	},
-	BucketOfSlop = {
+	ITEM_TYPE.BucketOfSlop : {
 		PRIORITY 	= 2,
 		SPRITE 		= load("res://sprites/item_sprites/bucketslop.png")
 	},
-	Speaker = {
+	ITEM_TYPE.Speaker : {
 		PRIORITY 	= 1,
 		SPRITE 		= load("res://sprites/item_sprites/speaker.png")
 	},
-	Squishy = {
+	ITEM_TYPE.Squishy : {
 		PRIORITY 	= 3,
 		SPRITE 		= load("res://sprites/item_sprites/squishy.png")
 	},
-	TopHat = {
+	ITEM_TYPE.TopHat : {
 		PRIORITY 	= 0,
 		SPRITE 		= load("res://sprites/item_sprites/tophat.png")
 	},
-	Water = {
+	ITEM_TYPE.Water : {
 		PRIORITY 	= 1,
 		SPRITE 		= load("res://sprites/item_sprites/water.png")
 	}

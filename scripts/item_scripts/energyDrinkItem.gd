@@ -1,10 +1,10 @@
 class_name EnergyDrink
 extends Item
 
-const PREFERENCE: String = "EnergyDrink"
+const PREFERENCE: ItemInfo.ITEM_TYPE = ItemInfo.ITEM_TYPE.EnergyDrink
 const CHANGED_SPEED = 20
 
-func get_preference() -> String:
+func get_preference() -> ItemInfo.ITEM_TYPE:
 	return PREFERENCE
 
 func cause_afflication(pet: Pet, doesLike: bool) -> void:

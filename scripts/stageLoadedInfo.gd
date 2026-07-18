@@ -29,7 +29,7 @@ extends Node
 @onready var stageInfo: Resource = STAGES[0]
 @onready var itemsHotbar: Array[Item]
 
-
+# Setters
 func set_stage(stage: Resource) -> void:
 	stageInfo = stage
 
@@ -40,6 +40,9 @@ func set_items(items: Array[Node]) -> void:
 			push_error("No mapping for packed item: " + entry.name)
 			continue
 		itemsHotbar.append(NAMES[entry.name].new())
+
+
+# getters
 func get_hotbar() -> Array[Item]:
 	return itemsHotbar
 
@@ -48,3 +51,16 @@ func get_numPets() -> int:
 
 func get_petTexture() -> Texture2D:
 	return stageInfo.petTexture
+
+func get_answer_personality() -> Array[ItemInfo.ITEM_TYPE]:
+	return stageInfo.answer_personality
+
+func get_valid_preferences() -> Array[ItemInfo.ITEM_TYPE]:
+	if stageInfo.valid_preferences.size() > 0:
+		return stageInfo.valid_preferences
+	
+	var valid: Array[ItemInfo.ITEM_TYPE]
+	for item in ItemInfo.ITEM_TYPE:
+		valid.append(item)
+	
+	return valid
