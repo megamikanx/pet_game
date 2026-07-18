@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baex652re0ya6"
-path="res://.godot/imported/energy drink.png-1a48be837d543231e7acdabe1839aa6f.ctex"
+uid="uid://cpyvtcnnqmybw"
+path="res://.godot/imported/protein_bar.png-d19182027d6da26020cda70de23bcdf8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/item_sprites/energy drink.png"
-dest_files=["res://.godot/imported/energy drink.png-1a48be837d543231e7acdabe1839aa6f.ctex"]
+source_file="res://sprites/item_sprites/protein_bar.png"
+dest_files=["res://.godot/imported/protein_bar.png-d19182027d6da26020cda70de23bcdf8.ctex"]
 
 [params]
 

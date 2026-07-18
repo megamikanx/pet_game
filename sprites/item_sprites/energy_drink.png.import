@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6pq82pyuohv6"
-path="res://.godot/imported/spritesheet.webp-ad6c1b501bf31e73c1ede594017050bc.ctex"
+uid="uid://baex652re0ya6"
+path="res://.godot/imported/energy_drink.png-a4dc4678ac2e8802f39a4c6cbc4f3a0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/item_sprites/spritesheet.webp"
-dest_files=["res://.godot/imported/spritesheet.webp-ad6c1b501bf31e73c1ede594017050bc.ctex"]
+source_file="res://sprites/item_sprites/energy_drink.png"
+dest_files=["res://.godot/imported/energy_drink.png-a4dc4678ac2e8802f39a4c6cbc4f3a0c.ctex"]
 
 [params]
 

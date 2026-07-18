@@ -10,10 +10,13 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func spawn_pets(num : int, texture: Texture2D) -> void:
-	var lower_sx = 421 + OFFSET
-	var upper_sx = 941 - OFFSET
-	var lower_sy = 78 + OFFSET
-	var upper_sy = 598 - OFFSET
+	var offsetX = texture.get_size().x * 0.5 * Global.petScale
+	var offsetY = texture.get_size().y * 0.5 * Global.petScale
+	print(offsetX)
+	var lower_sx = 421 + offsetX
+	var upper_sx = 941 - offsetX
+	var lower_sy = 78 + offsetY
+	var upper_sy = 598 - offsetY
 	
 	var instance: Pet
 	for i in num:

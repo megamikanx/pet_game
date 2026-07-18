@@ -35,6 +35,6 @@ func _on_stage_pressed(stage_num: int) -> void:
 	if not Global.is_stage_unlocked(stage_num):
 		return
 	Global.current_stage = stage_num
-	StageLoadedInfo.set_stage(StageLoadedInfo.STAGES[Global.current_stage -1])
+	StageLoadedInfo.set_stage(StageLoadedInfo.STAGES[Global.current_stage - 1])
 
 	get_tree().change_scene_to_file("res://scenes/stages/clue_stage.tscn")

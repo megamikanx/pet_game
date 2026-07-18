@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctcusln2aqlbf"
-path="res://.godot/imported/Beer.png-960942683b4d346c8fd08461c9cf4644.ctex"
+path="res://.godot/imported/beer.png-e64c4119d84048a57feefe177e33cb73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/item_sprites/Beer.png"
-dest_files=["res://.godot/imported/Beer.png-960942683b4d346c8fd08461c9cf4644.ctex"]
+source_file="res://sprites/item_sprites/beer.png"
+dest_files=["res://.godot/imported/beer.png-e64c4119d84048a57feefe177e33cb73.ctex"]
 
 [params]
 
