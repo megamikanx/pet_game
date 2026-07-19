@@ -6,17 +6,17 @@ extends Node2D
 @onready var botRightB = $Pen/BottomRightBorders
 
 @onready var collectionSprite = $Collection/block
+@onready var collection = $Collection
 
 @onready var spawner = $Spawner
 @onready var bag = $Bag
 
 @onready var client = $Person
-@onready var clientHint = $PersonHint
+@onready var clientHintP1 = $PersonHintP1
+@onready var clientHintP2 = $PersonHintP2
 
 var held: Node
 var locked: bool = false
-
-
 
 var health: int
 
@@ -35,10 +35,14 @@ func _ready() -> void:
 	penSprite.texture = info.get_stageTexture()
 	collectionSprite.texture = info.get_floorTexture()
 	client.texture = info.get_playClient()
-	clientHint.texture = info.get_playHint()
+	
+	clientHintP1.texture = info.get_playHint()
+	clientHintP2.texture = info.get_playHint()
 	
 	spawner.hold_pet.connect(hold_something)
 	bag.hold_item.connect(hold_something)
+	
+	collection.wrong_guess.connect(decrement_health)
 	
 	set_process(false)
 	set_process_input(false)
@@ -47,6 +51,14 @@ func _ready() -> void:
 	health = Global.GameStats.Health
 	
 	pass
+
+func decrement_health() -> void:
+	health -= 1
+	if health <= 0:
+		await get_tree().create_timer(1.0).timeout
+		get_tree().change_scene_to_file("res://scenes/stages/stage_select.tscn")
+	pass
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

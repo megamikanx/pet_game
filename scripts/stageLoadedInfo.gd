@@ -59,6 +59,12 @@ func get_stageTexture() -> Texture2D:
 func get_floorTexture() -> Texture2D:
 	return stageInfo.floorTexture
 
+func get_wrongLine() -> Texture2D:
+	return stageInfo.clientWrongLine
+
+func get_successLine() -> Texture2D:
+	return stageInfo.clientSuccessLine
+
 func get_answer_personality() -> Dictionary[ItemInfo.ITEM_TYPE, bool]:
 	return stageInfo.answer_personality
 

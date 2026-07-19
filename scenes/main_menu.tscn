@@ -90,6 +90,7 @@ icon_alignment = 1
 expand_icon = true
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="ButtonColumn/MainMenuButton" to="." method="_on_title_screen_pressed"]
 [connection signal="pressed" from="ButtonColumn/LevelSelectButton" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="ButtonColumn/CatalogueButton" to="." method="_on_catalogue_pressed"]
 [connection signal="pressed" from="ButtonColumn/QuitButton" to="." method="_on_quit_pressed"]

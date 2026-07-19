@@ -3,8 +3,11 @@ extends Area2D
 
 @onready var submitButton = $SubmitButton
 @onready var petSpawner = get_parent().get_node("Spawner")
+@onready var instructionsSprite = get_parent().get_node("Instructions")
+@onready var responseSprite = $response
 
 signal hold_pet
+signal wrong_guess
 
 var collected_pet: Pet
 
@@ -14,6 +17,9 @@ func _ready() -> void:
 	set_process(false)
 	set_process_input(false)
 	
+	responseSprite.visible = false
+	instructionsSprite.visible = true
+	
 	submitButton.pressed.connect(check_answer)
 	body_entered.connect(collect_held_pet)
 	body_exited.connect(uncollect_held_pet)
@@ -22,6 +28,8 @@ func _ready() -> void:
 #ID of answer always 0
 func check_answer() -> void:
 	print(collected_pet.get_ID())
+	responseSprite.visible = true
+	
 	if collected_pet.get_ID() == 0:
 		print("found")
 		# once stage cleared mark down and move on to next
@@ -29,20 +37,30 @@ func check_answer() -> void:
 		var pet_name: String = ""
 		Global.add_captured_pet(Global.current_stage, pet_tex, pet_name)
 		Global.clear_stage(Global.current_stage)
+		
+		responseSprite.texture = StageLoadedInfo.get_successLine()
+		await get_tree().create_timer(2).timeout
+		
 		get_tree().change_scene_to_file("res://scenes/stages/stage_select.tscn")
 	else:
 		print("wrong pet")
+		responseSprite.texture = StageLoadedInfo.get_wrongLine()
+		wrong_guess.emit()
+		await get_tree().create_timer(3).timeout
+		responseSprite.visible = false
 	pass
 
 func place_pet(pet: Pet) -> void:
 	collected_pet = pet
 	pet.set_global_position.call_deferred(position)
 	submitButton.visible = true
+	instructionsSprite.visible = false
 	set_process_input(true)
 
 func collected_pickedup(pet : Pet) -> void:
 	collected_pet = null
 	submitButton.visible = false
+	instructionsSprite.visible = true
 
 func collect_held_pet(body: Node2D) -> void:
 	if body is Pet:
