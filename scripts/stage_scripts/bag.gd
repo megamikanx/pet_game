@@ -1,7 +1,9 @@
 extends Node2D
 
 @onready var slots: Array[Area2D] = [$Slot1, $Slot2, $Slot3, $Slot4, $Slot5]
-@onready var itemSpawner:  = $ItemSpawner
+@onready var itemSpawner = $ItemSpawner
+
+@onready var collections = get_parent().get_node("Collection")
 
 signal hold_item
 
@@ -25,7 +27,7 @@ func set_bag(new_bag: Array[Item]):
 	pass
 
 func slot_grab(viewport: Node, event: InputEvent, shape_idx: int, slot: Slot) -> void:
-	if event.is_action_pressed("LMB") and slot.get_uses() < MAX_USES:
+	if event.is_action_pressed("LMB") and slot.get_uses() < MAX_USES and collections.collected_pet == null:
 		hold_item.emit(itemSpawner.spawn(slot))
 	pass
 

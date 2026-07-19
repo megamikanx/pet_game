@@ -2,6 +2,7 @@
 extends Area2D
 
 @onready var sprite = $ItemSprite
+@onready var radius = $Radius
 
 var added_sprite: Sprite2D
 var slot: Slot
@@ -39,12 +40,17 @@ func place() -> void:
 
 func setup() -> void:
 	sprite.texture = get_sprite()
+	radius.texture.width = get_diamater()
+	radius.texture.height = get_diamater()
 
 func get_sprite() -> Texture2D:
 	return ItemInfo.ITEM.get(get_preference()).get("SPRITE")
 
 func get_pri() -> int:
 	return ItemInfo.ITEM.get(get_preference()).get("PRIORITY")
+
+func get_diamater() -> int:
+	return ItemInfo.ITEM.get(get_preference()).get("RADIUS") * 2
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Pet:

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctcusln2aqlbf"
-path="res://.godot/imported/beer.png-e64c4119d84048a57feefe177e33cb73.ctex"
+uid="uid://e4uupymrn6qh"
+path="res://.godot/imported/miku_level_hints.png-06631bfd9382e327969e70d328138f05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/item_sprites/beer.png"
-dest_files=["res://.godot/imported/beer.png-e64c4119d84048a57feefe177e33cb73.ctex"]
+source_file="res://sprites/character_sprites/stage1/miku_level_hints.png"
+dest_files=["res://.godot/imported/miku_level_hints.png-06631bfd9382e327969e70d328138f05.ctex"]
 
 [params]
 

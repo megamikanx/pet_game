@@ -10,6 +10,8 @@ var uses: int = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	colorRect.visible = false
+	itemSprite.global_position.y = 639
+	itemSprite.scale = 0.7 * Vector2.ONE
 	pass # Replace with function body.
 
 func assignItem(assItem: Item) -> void:

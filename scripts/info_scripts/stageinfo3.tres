@@ -10,16 +10,18 @@
 [ext_resource type="Texture2D" uid="uid://di75e323rxvhm" path="res://sprites/character_sprites/stage3/dialogue/kris_talk_8.png" id="8_gs0rs"]
 [ext_resource type="Texture2D" uid="uid://hoy223e6tpnb" path="res://sprites/character_sprites/stage3/dialogue/kris_talk_9.png" id="9_p7xnp"]
 [ext_resource type="Texture2D" uid="uid://46eqy7cqvon4" path="res://sprites/character_sprites/stage3/dialogue/kris_talk_10.png" id="10_0jgxu"]
+[ext_resource type="Texture2D" uid="uid://dmexcnckohi3o" path="res://sprites/character_sprites/stage3/kris_level_close.png" id="11_62e7f"]
 [ext_resource type="Texture2D" uid="uid://cvmsordn6akkw" path="res://sprites/character_sprites/stage3/kris_nametag.png" id="11_yrmxm"]
+[ext_resource type="Texture2D" uid="uid://by5t60pqcbbje" path="res://sprites/character_sprites/stage3/kris_level_hints.png" id="12_3jr4v"]
 [ext_resource type="Texture2D" uid="uid://ckyw160fxl78p" path="res://sprites/character_sprites/stage3/dialogue/kris_level_right.png" id="12_mk0g4"]
 [ext_resource type="Texture2D" uid="uid://c3q42a02xvsh7" path="res://sprites/character_sprites/stage3/kris_talk_close.png" id="13_4n37s"]
 [ext_resource type="Texture2D" uid="uid://cxt8hc55tp1cy" path="res://sprites/character_sprites/stage3/kris_talk_open.png" id="14_gg1dx"]
 [ext_resource type="Texture2D" uid="uid://cubc03y8dhslq" path="res://sprites/character_sprites/stage3/dialogue/kris_level_wrong.png" id="15_mts8f"]
 [ext_resource type="Texture2D" uid="uid://b2ht25xfsmyhw" path="res://sprites/levels/tiles_level.png" id="16_r5ldo"]
 [ext_resource type="Texture2D" uid="uid://cgkktykj64nh1" path="res://sprites/pet_sprites/bingus.png" id="17_is3v5"]
-[ext_resource type="Texture2D" uid="uid://dw52fp004qgle" path="res://sprites/kris_hints.png" id="17_x1rh1"]
 [ext_resource type="Texture2D" uid="uid://c1t8fq0o2kbe2" path="res://sprites/bingus_nametag.png" id="18_i4vk0"]
 [ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/info_scripts/info_stage.gd" id="18_y37d1"]
+[ext_resource type="Texture2D" uid="uid://fkx3fkprl677" path="res://sprites/character_sprites/stage3/kris_hints.png" id="19_nssu7"]
 
 [resource]
 script = ExtResource("18_y37d1")
@@ -32,9 +34,11 @@ clientTalkClose = ExtResource("13_4n37s")
 clientTalkOpen = ExtResource("14_gg1dx")
 clientDialogue = Array[Texture2D]([ExtResource("1_g01mp"), ExtResource("2_ocig8"), ExtResource("3_x1rh1"), ExtResource("4_i4vk0"), ExtResource("5_62e7f"), ExtResource("6_3jr4v"), ExtResource("7_nssu7"), ExtResource("8_gs0rs"), ExtResource("9_p7xnp"), ExtResource("10_0jgxu")])
 petNameTag = ExtResource("18_i4vk0")
-packingHint = ExtResource("17_x1rh1")
+packingHint = ExtResource("19_nssu7")
 clientWrongLine = ExtResource("15_mts8f")
 clientSuccessLine = ExtResource("12_mk0g4")
+clientGameplayBuild = ExtResource("11_62e7f")
+clientGameplayHints = ExtResource("12_3jr4v")
 answer_personality = Dictionary[int, bool]({
 6: false,
 7: true,

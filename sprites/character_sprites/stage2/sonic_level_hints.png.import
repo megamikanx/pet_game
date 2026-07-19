@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctcusln2aqlbf"
-path="res://.godot/imported/beer.png-e64c4119d84048a57feefe177e33cb73.ctex"
+uid="uid://4k3wa42osb4"
+path="res://.godot/imported/sonic_level_hints.png-7ceaaa01171d15444a54bff6090fb20d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/item_sprites/beer.png"
-dest_files=["res://.godot/imported/beer.png-e64c4119d84048a57feefe177e33cb73.ctex"]
+source_file="res://sprites/character_sprites/stage2/sonic_level_hints.png"
+dest_files=["res://.godot/imported/sonic_level_hints.png-7ceaaa01171d15444a54bff6090fb20d.ctex"]
 
 [params]
 

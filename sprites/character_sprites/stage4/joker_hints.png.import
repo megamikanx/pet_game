@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctcusln2aqlbf"
-path="res://.godot/imported/beer.png-e64c4119d84048a57feefe177e33cb73.ctex"
+uid="uid://ctrs48vse22rv"
+path="res://.godot/imported/joker_hints.png-f14190b5e7d3ea9f3cacede1c711f404.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/item_sprites/beer.png"
-dest_files=["res://.godot/imported/beer.png-e64c4119d84048a57feefe177e33cb73.ctex"]
+source_file="res://sprites/character_sprites/stage4/joker_hints.png"
+dest_files=["res://.godot/imported/joker_hints.png-f14190b5e7d3ea9f3cacede1c711f404.ctex"]
 
 [params]
 

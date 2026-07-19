@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctcusln2aqlbf"
-path="res://.godot/imported/beer.png-e64c4119d84048a57feefe177e33cb73.ctex"
+uid="uid://dmexcnckohi3o"
+path="res://.godot/imported/kris_level_close.png-03bcd2922fd587ca8f177eff67bf79aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/item_sprites/beer.png"
-dest_files=["res://.godot/imported/beer.png-e64c4119d84048a57feefe177e33cb73.ctex"]
+source_file="res://sprites/character_sprites/stage3/kris_level_close.png"
+dest_files=["res://.godot/imported/kris_level_close.png-03bcd2922fd587ca8f177eff67bf79aa.ctex"]
 
 [params]
 

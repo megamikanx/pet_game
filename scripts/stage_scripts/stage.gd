@@ -6,6 +6,9 @@ extends Node2D
 @onready var spawner = $Spawner
 @onready var bag = $Bag
 
+@onready var client = $Person
+@onready var clientHint = $PersonHint
+
 var held: Node
 var locked: bool = false
 
@@ -19,6 +22,8 @@ func _ready() -> void:
 	spawner.config_preferences(info.get_valid_preferences(), info.get_answer_personality())
 	spawner.spawn_pets(info.get_numPets(), info.get_petTexture())
 
+	client.texture = info.get_playClient()
+	clientHint.texture = info.get_playHint()
 	
 	spawner.hold_pet.connect(hold_something)
 	bag.hold_item.connect(hold_something)

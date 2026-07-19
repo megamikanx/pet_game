@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dql3hlx84cpy4"]
 
 [ext_resource type="Script" uid="uid://b5ol55g6xqmkv" path="res://scripts/stage_scripts/pet.gd" id="1_hmkkh"]
-[ext_resource type="Texture2D" uid="uid://dgf35ickg1xpx" path="res://sprites/pet_sprites/rabbit.png" id="2_6nmc3"]
+[ext_resource type="Texture2D" uid="uid://dep3t3dypqyy4" path="res://sprites/pet_sprites/pibbles.png" id="2_jwt70"]
 [ext_resource type="Texture2D" uid="uid://by6y5dlf47i3s" path="res://sprites/pet_sprites/flag.png" id="4_5c8qe"]
 
 [sub_resource type="Animation" id="Animation_xbk8b"]
@@ -121,15 +121,16 @@ _data = {
 &"RESET": SubResource("Animation_ymejq")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ni138"]
-radius = 15.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jwt70"]
+radius = 13.5
+height = 40.0
 
 [node name="Pet" type="RigidBody2D" unique_id=806234367]
 collision_layer = 3
 mass = 3.0
 gravity_scale = 0.0
 script = ExtResource("1_hmkkh")
-metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="." unique_id=2009394774]
 remote_path = NodePath("../petSprite")
@@ -139,12 +140,12 @@ update_scale = false
 [node name="petSprite" type="Sprite2D" parent="." unique_id=189459606]
 top_level = true
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_6nmc3")
+texture = ExtResource("2_jwt70")
 offset = Vector2(5.3, -14)
 
 [node name="flagSprite" type="Sprite2D" parent="petSprite" unique_id=2065679614]
-position = Vector2(16.999998, 14.999998)
-scale = Vector2(0.6999999, 0.6999999)
+position = Vector2(28, 4)
+scale = Vector2(1.1514063, 1.1514063)
 texture = ExtResource("4_5c8qe")
 offset = Vector2(5.3, -14)
 
@@ -153,13 +154,12 @@ root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_0bgbx")
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=1704819219]
-position = Vector2(0, -9.536743e-07)
-shape = SubResource("CircleShape2D_ni138")
+shape = SubResource("CapsuleShape2D_jwt70")
 
 [node name="SelectionArea" type="Area2D" parent="." unique_id=184480459]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SelectionArea" unique_id=348510585]
-shape = SubResource("CircleShape2D_ni138")
+shape = SubResource("CapsuleShape2D_jwt70")
 
 [node name="Timer" type="Timer" parent="." unique_id=795396339]
 autostart = true

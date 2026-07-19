@@ -66,3 +66,9 @@ func get_valid_preferences() -> Array[ItemInfo.ITEM_TYPE]:
 		valid.append(item)
 
 	return valid
+
+func get_playClient() -> Texture2D:
+	return stageInfo.clientGameplayBuild
+	
+func get_playHint() -> Texture2D:
+	return stageInfo.clientGameplayHints

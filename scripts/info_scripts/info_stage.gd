@@ -22,5 +22,8 @@ extends Resource
 @export var clientWrongLine: Texture2D
 @export var clientSuccessLine: Texture2D
 
+@export var clientGameplayBuild: Texture2D
+@export var clientGameplayHints: Texture2D
+
 @export var answer_personality: Dictionary[ItemInfo.ITEM_TYPE, bool]
 @export var valid_preferences: Array[ItemInfo.ITEM_TYPE]

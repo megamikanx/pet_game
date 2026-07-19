@@ -10,15 +10,17 @@
 [ext_resource type="Texture2D" uid="uid://dni3avlh6pla2" path="res://sprites/character_sprites/stage2/dialogue/sonic_talk_8.png" id="8_grbsk"]
 [ext_resource type="Texture2D" uid="uid://chltv1u2x54hm" path="res://sprites/character_sprites/stage2/dialogue/sonic_talk_9.png" id="9_p05ch"]
 [ext_resource type="Texture2D" uid="uid://duxau2pjyvc13" path="res://sprites/character_sprites/stage2/sonic_nametag.png" id="10_76521"]
+[ext_resource type="Texture2D" uid="uid://yx5leijb5j7a" path="res://sprites/character_sprites/stage2/sonic_level_close.png" id="10_b47y3"]
+[ext_resource type="Texture2D" uid="uid://4k3wa42osb4" path="res://sprites/character_sprites/stage2/sonic_level_hints.png" id="11_jmdxu"]
 [ext_resource type="Texture2D" uid="uid://bdkwf8kqoqciy" path="res://sprites/character_sprites/stage2/dialogue/sonic_level_right.png" id="11_mxox6"]
 [ext_resource type="Texture2D" uid="uid://waiou08e2tr3" path="res://sprites/character_sprites/stage2/sonic_talk_close.png" id="12_12d66"]
 [ext_resource type="Texture2D" uid="uid://dlsww1y84hxmu" path="res://sprites/character_sprites/stage2/sonic_talk_open.png" id="13_c37bw"]
 [ext_resource type="Texture2D" uid="uid://cp7xnd4il1omj" path="res://sprites/character_sprites/stage2/dialogue/sonic_level_wrong.png" id="14_n8myi"]
 [ext_resource type="Texture2D" uid="uid://chgcimg4xtnno" path="res://sprites/levels/hospital_level.png" id="15_nwqq6"]
-[ext_resource type="Texture2D" uid="uid://0taarr5hiuiw" path="res://sprites/sonic_hints.png" id="16_23p8f"]
 [ext_resource type="Texture2D" uid="uid://b6ijcmt71i13k" path="res://sprites/pet_sprites/gooba.png" id="16_vacps"]
 [ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/info_scripts/info_stage.gd" id="17_dfuyk"]
 [ext_resource type="Texture2D" uid="uid://bhngymis78va6" path="res://sprites/gooba_nametag.png" id="17_v5mbg"]
+[ext_resource type="Texture2D" uid="uid://coyv8cifepkdt" path="res://sprites/character_sprites/stage2/sonic_hints.png" id="18_gjsgf"]
 
 [resource]
 script = ExtResource("17_dfuyk")
@@ -31,9 +33,11 @@ clientTalkClose = ExtResource("12_12d66")
 clientTalkOpen = ExtResource("13_c37bw")
 clientDialogue = Array[Texture2D]([ExtResource("1_tmvp6"), ExtResource("2_brgn0"), ExtResource("3_23p8f"), ExtResource("4_v5mbg"), ExtResource("5_b47y3"), ExtResource("6_jmdxu"), ExtResource("7_gjsgf"), ExtResource("8_grbsk"), ExtResource("9_p05ch")])
 petNameTag = ExtResource("17_v5mbg")
-packingHint = ExtResource("16_23p8f")
+packingHint = ExtResource("18_gjsgf")
 clientWrongLine = ExtResource("14_n8myi")
 clientSuccessLine = ExtResource("11_mxox6")
+clientGameplayBuild = ExtResource("10_b47y3")
+clientGameplayHints = ExtResource("11_jmdxu")
 answer_personality = Dictionary[int, bool]({
 11: false,
 13: true,

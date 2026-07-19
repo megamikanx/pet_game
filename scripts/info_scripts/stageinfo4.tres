@@ -11,16 +11,18 @@
 [ext_resource type="Texture2D" uid="uid://cyp30hlr5k7c7" path="res://sprites/character_sprites/stage4/dialogue/joker_talk_9.png" id="9_d5epk"]
 [ext_resource type="Texture2D" uid="uid://dw8tvo1i87wy0" path="res://sprites/character_sprites/stage4/dialogue/joker_talk_10.png" id="10_p7mas"]
 [ext_resource type="Texture2D" uid="uid://dv5m6wbnflq2p" path="res://sprites/character_sprites/stage4/dialogue/joker_talk_11.png" id="11_c75y2"]
+[ext_resource type="Texture2D" uid="uid://no37tis1ufta" path="res://sprites/character_sprites/stage4/joker_level_close.png" id="12_2en5w"]
 [ext_resource type="Texture2D" uid="uid://dm3j5s5dhv8gv" path="res://sprites/character_sprites/stage4/joker_nametag.png" id="12_88hu3"]
+[ext_resource type="Texture2D" uid="uid://xubc1tic51pv" path="res://sprites/character_sprites/stage4/joker_level_hints.png" id="13_35rbm"]
 [ext_resource type="Texture2D" uid="uid://b3iqn6w2dnvp7" path="res://sprites/character_sprites/stage4/dialogue/joker_level_right.png" id="13_icog3"]
 [ext_resource type="Texture2D" uid="uid://4jtvmjvr28n6" path="res://sprites/character_sprites/stage4/joker_talk_close.png" id="14_hvmi7"]
 [ext_resource type="Texture2D" uid="uid://djk4it4qq0nik" path="res://sprites/character_sprites/stage4/joker_talk_open.png" id="15_ut65n"]
 [ext_resource type="Texture2D" uid="uid://yo3l80qkkqkx" path="res://sprites/character_sprites/stage4/dialogue/joker_level_wrong.png" id="16_8y813"]
 [ext_resource type="Texture2D" uid="uid://c108xjpxcn0pf" path="res://sprites/levels/sea_level.png" id="17_h0m2o"]
-[ext_resource type="Texture2D" uid="uid://dh2i4iwldn2cg" path="res://sprites/joker_hints.png" id="18_dde4o"]
 [ext_resource type="Texture2D" uid="uid://cekk7wbsrjjji" path="res://sprites/pet_sprites/healseal.png" id="18_lou31"]
 [ext_resource type="Texture2D" uid="uid://beejarkgx61h0" path="res://sprites/healseal_nametag.png" id="19_8mu8m"]
 [ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/info_scripts/info_stage.gd" id="19_y0d1u"]
+[ext_resource type="Texture2D" uid="uid://ctrs48vse22rv" path="res://sprites/character_sprites/stage4/joker_hints.png" id="20_pxyfv"]
 
 [resource]
 script = ExtResource("19_y0d1u")
@@ -33,9 +35,11 @@ clientTalkClose = ExtResource("14_hvmi7")
 clientTalkOpen = ExtResource("15_ut65n")
 clientDialogue = Array[Texture2D]([ExtResource("1_otnsg"), ExtResource("2_bv0wc"), ExtResource("3_dde4o"), ExtResource("4_8mu8m"), ExtResource("5_2en5w"), ExtResource("6_35rbm"), ExtResource("7_pxyfv"), ExtResource("8_kf0ol"), ExtResource("9_d5epk"), ExtResource("10_p7mas"), ExtResource("11_c75y2")])
 petNameTag = ExtResource("19_8mu8m")
-packingHint = ExtResource("18_dde4o")
+packingHint = ExtResource("20_pxyfv")
 clientWrongLine = ExtResource("16_8y813")
 clientSuccessLine = ExtResource("13_icog3")
+clientGameplayBuild = ExtResource("12_2en5w")
+clientGameplayHints = ExtResource("13_35rbm")
 answer_personality = Dictionary[int, bool]({
 0: true,
 1: false,

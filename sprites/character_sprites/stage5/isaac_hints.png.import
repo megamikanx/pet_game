@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctcusln2aqlbf"
-path="res://.godot/imported/beer.png-e64c4119d84048a57feefe177e33cb73.ctex"
+uid="uid://dohnm3mk2jpdg"
+path="res://.godot/imported/isaac_hints.png-fd6f118345b3e3cfae8a945c31934ba0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/item_sprites/beer.png"
-dest_files=["res://.godot/imported/beer.png-e64c4119d84048a57feefe177e33cb73.ctex"]
+source_file="res://sprites/character_sprites/stage5/isaac_hints.png"
+dest_files=["res://.godot/imported/isaac_hints.png-fd6f118345b3e3cfae8a945c31934ba0.ctex"]
 
 [params]
 
