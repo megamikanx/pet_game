@@ -27,10 +27,6 @@ extends Control
 	# Yakult = Yakult,
 }
 
-@onready var pattern: TextureRect = $Background/Pattern
-var start_x
-var start_y
-
 @onready var pet_nametag: TextureRect = $PetNameTag
 @onready var clue_sheet: TextureRect = $ClueSheet
 
@@ -41,8 +37,8 @@ var max_packed_items: int = 5
 
 
 func _ready() -> void:
-	start_x = pattern.position.x
-	start_y = pattern.position.y
+	Background.set_background("packing")
+	
 	var stage_data: Dictionary = Global.get_current_stage_data()
 	max_packed_items = int(stage_data.get("bag_limit", 5))
 	max_packed_items = mini(max_packed_items, slots.size())
@@ -82,14 +78,7 @@ func _ready() -> void:
 		button.mouse_entered.connect(_on_item_mouse_entered.bind(entry))
 		button.mouse_exited.connect(_on_item_mouse_exited)
 
-func _move_tiles():
-	pattern.position.x -= 0.3
-	pattern.position.y -= 0.3
-	
-	if (pattern.position.x == start_x - 170):
-		pattern.position.x = start_x
-		pattern.position.y = start_y
-		
+
 func _on_item_mouse_entered(entry: Dictionary) -> void:
 	var button: Button = entry["button"]
 	item_tooltip.texture = entry["tooltip"]
@@ -196,7 +185,3 @@ func _unpack_item(entry: Dictionary) -> void:
 	await get_tree().process_frame
 	button.global_position = entry["desk_global_pos"]
 	button.size = entry["desk_size"]
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	_move_tiles()

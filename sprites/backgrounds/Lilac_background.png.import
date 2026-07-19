@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://colfc5h1pmhbm"
-path="res://.godot/imported/Lilac_background.png-c6ee9809d980110c9a38e8b4b79d5cb6.ctex"
+path="res://.godot/imported/Lilac_background.png-9b2b51a0e73c7745971435908e107041.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Lilac_background.png"
-dest_files=["res://.godot/imported/Lilac_background.png-c6ee9809d980110c9a38e8b4b79d5cb6.ctex"]
+source_file="res://sprites/backgrounds/Lilac_background.png"
+dest_files=["res://.godot/imported/Lilac_background.png-9b2b51a0e73c7745971435908e107041.ctex"]
 
 [params]
 

@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://cusw0u0ho3lwq"]
 
 [ext_resource type="Script" uid="uid://bg8wcx516f352" path="res://scripts/packing_stage.gd" id="1_x4hyh"]
-[ext_resource type="Texture2D" uid="uid://c3kwheyp7d3fr" path="res://sprites/Blue_background.png" id="2_gmq2f"]
-[ext_resource type="Texture2D" uid="uid://br7u5m01wfp2s" path="res://sprites/Blue_logo_logo.png" id="3_0obs4"]
 [ext_resource type="Texture2D" uid="uid://dywykoinjrd2f" path="res://sprites/Storage.png" id="3_pdicg"]
-[ext_resource type="Texture2D" uid="uid://ctcusln2aqlbf" path="res://sprites/item_sprites/Beer.png" id="4_r01do"]
+[ext_resource type="Texture2D" uid="uid://ctcusln2aqlbf" path="res://sprites/item_sprites/beer.png" id="4_r01do"]
 [ext_resource type="Texture2D" uid="uid://dxm7hhb5xqip" path="res://sprites/bath.png" id="5_mspdc"]
 [ext_resource type="Texture2D" uid="uid://ugwhredpmb0o" path="res://sprites/water.png" id="6_uctxv"]
 [ext_resource type="Texture2D" uid="uid://banyr3bxsfhy5" path="res://sprites/burger.png" id="7_abt0k"]
@@ -33,27 +31,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_x4hyh")
-
-[node name="Background" type="TextureRect" parent="." unique_id=1809511776]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_gmq2f")
-
-[node name="Pattern" type="TextureRect" parent="Background" unique_id=1741193299]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 328.0
-offset_bottom = 204.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_0obs4")
-stretch_mode = 1
 
 [node name="DeskArea" type="Control" parent="." unique_id=2108115687]
 layout_mode = 1

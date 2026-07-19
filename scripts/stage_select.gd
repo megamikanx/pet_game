@@ -8,14 +8,10 @@ extends Control
 	$StageRow/StageButton5,
 ]
 
-@onready var pattern: TextureRect = $Background/Pattern
-var start_x
-var start_y
-
 func _ready() -> void:
+	Background.set_background("select")
+	
 	_refresh_stage_buttons()
-	start_x = pattern.position.x
-	start_y = pattern.position.y
 	for i in stage_buttons.size():
 		var stage_num: int = i + 1
 		stage_buttons[i].pressed.connect(_on_stage_pressed.bind(stage_num))
@@ -56,15 +52,4 @@ func _on_catalogue_button_pressed() -> void:
 	AudioManager.play_click()
 	Global.previous_scene = get_tree().current_scene.scene_file_path
 	get_tree().change_scene_to_file("res://scenes/catalogue.tscn")
-
-func _move_tiles():
-	pattern.position.x -= 0.3
-	pattern.position.y -= 0.3
-	
-	if (pattern.position.x == start_x - 170):
-		pattern.position.x = start_x
-		pattern.position.y = start_y
-	
-func _process(delta: float) -> void:
-	_move_tiles()
 	

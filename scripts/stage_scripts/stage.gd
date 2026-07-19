@@ -22,6 +22,8 @@ var health: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Background.set_background("spawn")
+	
 	Global.penTopLeftBorder = topLeftB.global_position
 	Global.penBotRightBorder = botRightB.global_position
 	

@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://fguh6mdw13wl"]
 
 [ext_resource type="Script" uid="uid://f6xxvgceo5hw" path="res://scripts/stage_select.gd" id="1_aysmx"]
-[ext_resource type="Texture2D" uid="uid://evvyu5ahii21" path="res://sprites/Yellow_background.png" id="2_j8ci8"]
-[ext_resource type="Texture2D" uid="uid://c1sae8qpaq45l" path="res://sprites/Yellow_logo.png" id="3_dpect"]
 [ext_resource type="Texture2D" uid="uid://6qmi31iaf3hw" path="res://sprites/Levelselect_title.png" id="3_iyq84"]
 [ext_resource type="Texture2D" uid="uid://b68678r3o47vp" path="res://sprites/level_1.png" id="4_dpect"]
 [ext_resource type="Texture2D" uid="uid://uqwpd3tjjf3w" path="res://sprites/Levelcomplete_tick.png" id="5_iyq84"]
@@ -23,27 +21,6 @@ offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_aysmx")
-
-[node name="Background" type="TextureRect" parent="." unique_id=216153792]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_j8ci8")
-
-[node name="Pattern" type="TextureRect" parent="Background" unique_id=1693573611]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 480.0
-offset_bottom = 292.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_dpect")
-stretch_mode = 1
 
 [node name="TitleBanner" type="TextureRect" parent="." unique_id=333313314]
 texture_filter = 1
