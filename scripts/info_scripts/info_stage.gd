@@ -6,6 +6,7 @@ extends Resource
 @export var stageNum = 1
 @export var NUM_PETS = 10
 @export var levelTexture: Texture2D
+@export var floorTexture: Texture2D
 @export var petTexture: Texture2D
 
 @export var clientName: String

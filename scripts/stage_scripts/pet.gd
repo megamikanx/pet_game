@@ -17,10 +17,10 @@ signal freeze_pets
 signal unfreeze_pets
 signal send_coll
 
-var border_topY: float = 78
-var border_botY: float = 598
-var border_lefX: float = 421
-var border_rigX: float = 941
+var border_topY: float = Global.penTopLeftBorder.y
+var border_botY: float = Global.penBotRightBorder.y
+var border_lefX: float = Global.penTopLeftBorder.x
+var border_rigX: float = Global.penBotRightBorder.x
 
 @onready var petSprite = $petSprite
 @onready var flagSprite = $petSprite/flagSprite
@@ -85,7 +85,7 @@ func _process(delta: float) -> void:
 
 # Walks toward goal location, stops if close enough too it
 func walk(delta: float) -> void:
-	if position.distance_to(goal) < 5:
+	if position.distance_to(goal) < 2:
 		linear_velocity = Vector2.ZERO
 		return
 

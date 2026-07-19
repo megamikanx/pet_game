@@ -7,6 +7,8 @@ extends Area2D
 var storedItem: Item
 var uses: int = 0
 
+const RAISE_DISTANCE = 5
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	colorRect.visible = false
@@ -23,6 +25,12 @@ func darken() -> void:
 	
 func undarken() -> void:
 	colorRect.visible = false
+
+func raise() -> void:
+	itemSprite.position.y -= RAISE_DISTANCE
+
+func unraise() -> void:
+	itemSprite.position.y += RAISE_DISTANCE
 
 func get_uses() -> int:
 	return uses

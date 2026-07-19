@@ -18,16 +18,18 @@
 [ext_resource type="Texture2D" uid="uid://4jtvmjvr28n6" path="res://sprites/character_sprites/stage4/joker_talk_close.png" id="14_hvmi7"]
 [ext_resource type="Texture2D" uid="uid://djk4it4qq0nik" path="res://sprites/character_sprites/stage4/joker_talk_open.png" id="15_ut65n"]
 [ext_resource type="Texture2D" uid="uid://yo3l80qkkqkx" path="res://sprites/character_sprites/stage4/dialogue/joker_level_wrong.png" id="16_8y813"]
-[ext_resource type="Texture2D" uid="uid://c108xjpxcn0pf" path="res://sprites/levels/sea_level.png" id="17_h0m2o"]
 [ext_resource type="Texture2D" uid="uid://cekk7wbsrjjji" path="res://sprites/pet_sprites/healseal.png" id="18_lou31"]
 [ext_resource type="Texture2D" uid="uid://beejarkgx61h0" path="res://sprites/healseal_nametag.png" id="19_8mu8m"]
+[ext_resource type="Texture2D" uid="uid://ce1xfhatn4m83" path="res://sprites/character_sprites/stage4/sea_floor.png" id="19_35rbm"]
 [ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/info_scripts/info_stage.gd" id="19_y0d1u"]
+[ext_resource type="Texture2D" uid="uid://dmxdgtjmstxgo" path="res://sprites/character_sprites/stage4/sea_level.png" id="20_35rbm"]
 [ext_resource type="Texture2D" uid="uid://ctrs48vse22rv" path="res://sprites/character_sprites/stage4/joker_hints.png" id="20_pxyfv"]
 
 [resource]
 script = ExtResource("19_y0d1u")
 stageNum = 4
-levelTexture = ExtResource("17_h0m2o")
+levelTexture = ExtResource("20_35rbm")
+floorTexture = ExtResource("19_35rbm")
 petTexture = ExtResource("18_lou31")
 clientName = "Joker"
 clientNameTag = ExtResource("12_88hu3")

@@ -13,15 +13,17 @@
 [ext_resource type="Texture2D" uid="uid://lxbwq7afrojm" path="res://sprites/character_sprites/stage1/miku_talk_close.png" id="9_eniei"]
 [ext_resource type="Texture2D" uid="uid://bn0q22wphepru" path="res://sprites/character_sprites/stage1/miku_talk_open.png" id="10_y5on1"]
 [ext_resource type="Texture2D" uid="uid://bffatiu2aiqph" path="res://sprites/character_sprites/stage1/dialogue/miku_level_wrong.png" id="11_ep4d3"]
-[ext_resource type="Texture2D" uid="uid://svfe8ewulpq4" path="res://sprites/levels/grass_level.png" id="12_qgxol"]
 [ext_resource type="Texture2D" uid="uid://dep3t3dypqyy4" path="res://sprites/pet_sprites/pibbles.png" id="13_ncsuh"]
+[ext_resource type="Texture2D" uid="uid://b4ab0iti3sls7" path="res://sprites/character_sprites/stage1/grass_floor.png" id="14_1gbrd"]
 [ext_resource type="Texture2D" uid="uid://df5573urtid34" path="res://sprites/pibbles_nametag.png" id="14_hn6pu"]
 [ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/info_scripts/info_stage.gd" id="14_jvn52"]
 [ext_resource type="Texture2D" uid="uid://calp1jt8vt4yc" path="res://sprites/character_sprites/stage1/miku_hints.png" id="15_ni8vb"]
+[ext_resource type="Texture2D" uid="uid://d26y06c7dmpaw" path="res://sprites/character_sprites/stage1/grass_level.png" id="15_uw0wi"]
 
 [resource]
 script = ExtResource("14_jvn52")
-levelTexture = ExtResource("12_qgxol")
+levelTexture = ExtResource("15_uw0wi")
+floorTexture = ExtResource("14_1gbrd")
 petTexture = ExtResource("13_ncsuh")
 clientName = "Miku"
 clientNameTag = ExtResource("7_ni8vb")

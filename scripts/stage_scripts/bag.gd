@@ -33,6 +33,8 @@ func slot_grab(viewport: Node, event: InputEvent, shape_idx: int, slot: Slot) ->
 
 func darken(slot: Slot) -> void:
 	slot.darken()
+	slot.raise()
 
 func undarken(slot: Slot) -> void:
 	slot.undarken()
+	slot.unraise()

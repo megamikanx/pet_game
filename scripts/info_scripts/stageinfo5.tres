@@ -18,16 +18,18 @@
 [ext_resource type="Texture2D" uid="uid://sbf1cw1flsqs" path="res://sprites/character_sprites/stage5/isaac_talk_close.png" id="14_bta83"]
 [ext_resource type="Texture2D" uid="uid://dufyqqyg0qsfe" path="res://sprites/character_sprites/stage5/isaac_talk_open.png" id="15_d1wwp"]
 [ext_resource type="Texture2D" uid="uid://4gml3nbtm4et" path="res://sprites/character_sprites/stage5/dialogue/isaac_level_wrong.png" id="16_sfklq"]
-[ext_resource type="Texture2D" uid="uid://b5idiou4yt0bq" path="res://sprites/levels/room_level.png" id="17_eob0a"]
 [ext_resource type="Texture2D" uid="uid://gil7g74ps4jw" path="res://sprites/pet_sprites/pyungus.png" id="18_5tmjx"]
 [ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/info_scripts/info_stage.gd" id="19_1hrmb"]
+[ext_resource type="Texture2D" uid="uid://c1wjpxmw0swsm" path="res://sprites/character_sprites/stage5/room_floor.png" id="19_hupua"]
 [ext_resource type="Texture2D" uid="uid://qhafnqxdpiw1" path="res://sprites/pyungus_nametag.png" id="19_ir3br"]
 [ext_resource type="Texture2D" uid="uid://dohnm3mk2jpdg" path="res://sprites/character_sprites/stage5/isaac_hints.png" id="20_1xess"]
+[ext_resource type="Texture2D" uid="uid://behdo25moa4at" path="res://sprites/character_sprites/stage5/room_level.png" id="20_hupua"]
 
 [resource]
 script = ExtResource("19_1hrmb")
 stageNum = 5
-levelTexture = ExtResource("17_eob0a")
+levelTexture = ExtResource("20_hupua")
+floorTexture = ExtResource("19_hupua")
 petTexture = ExtResource("18_5tmjx")
 clientName = "Isaac"
 clientNameTag = ExtResource("12_f3q5n")

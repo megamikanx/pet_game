@@ -23,13 +23,9 @@ func set_slot(owner_slot: Slot) -> void:
 func place() -> void:
 	monitorable = true
 	monitoring = true
-	var border_topY: float = 78
-	var border_botY: float = 598
-	var border_lefX: float = 421
-	var border_rigX: float = 941
 	
-	var square_pos = Vector2(421, 78)
-	var square_size = Vector2(598-78, 941-421)
+	var square_pos = Global.penTopLeftBorder
+	var square_size = Global.penBotRightBorder - Global.penTopLeftBorder
 	
 	if not Rect2(square_pos, square_size).has_point(global_position):
 		queue_free()

@@ -16,16 +16,18 @@
 [ext_resource type="Texture2D" uid="uid://waiou08e2tr3" path="res://sprites/character_sprites/stage2/sonic_talk_close.png" id="12_12d66"]
 [ext_resource type="Texture2D" uid="uid://dlsww1y84hxmu" path="res://sprites/character_sprites/stage2/sonic_talk_open.png" id="13_c37bw"]
 [ext_resource type="Texture2D" uid="uid://cp7xnd4il1omj" path="res://sprites/character_sprites/stage2/dialogue/sonic_level_wrong.png" id="14_n8myi"]
-[ext_resource type="Texture2D" uid="uid://chgcimg4xtnno" path="res://sprites/levels/hospital_level.png" id="15_nwqq6"]
 [ext_resource type="Texture2D" uid="uid://b6ijcmt71i13k" path="res://sprites/pet_sprites/gooba.png" id="16_vacps"]
 [ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/info_scripts/info_stage.gd" id="17_dfuyk"]
+[ext_resource type="Texture2D" uid="uid://cxqumo4c5s2gg" path="res://sprites/character_sprites/stage2/hospital_floor.png" id="17_jmdxu"]
 [ext_resource type="Texture2D" uid="uid://bhngymis78va6" path="res://sprites/gooba_nametag.png" id="17_v5mbg"]
 [ext_resource type="Texture2D" uid="uid://coyv8cifepkdt" path="res://sprites/character_sprites/stage2/sonic_hints.png" id="18_gjsgf"]
+[ext_resource type="Texture2D" uid="uid://c6dwejxgdfb0v" path="res://sprites/character_sprites/stage2/hospital_level.png" id="18_grbsk"]
 
 [resource]
 script = ExtResource("17_dfuyk")
 stageNum = 2
-levelTexture = ExtResource("15_nwqq6")
+levelTexture = ExtResource("18_grbsk")
+floorTexture = ExtResource("17_jmdxu")
 petTexture = ExtResource("16_vacps")
 clientName = "Sonic"
 clientNameTag = ExtResource("10_76521")

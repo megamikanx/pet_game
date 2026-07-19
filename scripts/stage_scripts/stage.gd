@@ -1,7 +1,11 @@
 extends Node2D
 
-#if drop pet near pen edge sometimes gets placed wrong
-# if dropped fast when in collection sometimes isnt centered
+
+@onready var penSprite = $Pen
+@onready var topLeftB = $Pen/TopLeftBorders
+@onready var botRightB = $Pen/BottomRightBorders
+
+@onready var collectionSprite = $Collection/block
 
 @onready var spawner = $Spawner
 @onready var bag = $Bag
@@ -13,15 +17,21 @@ var held: Node
 var locked: bool = false
 
 
+
 var health: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Global.penTopLeftBorder = topLeftB.global_position
+	Global.penBotRightBorder = botRightB.global_position
+	
 	var info = StageLoadedInfo
 	bag.set_bag(info.get_hotbar())
 	spawner.config_preferences(info.get_valid_preferences(), info.get_answer_personality())
 	spawner.spawn_pets(info.get_numPets(), info.get_petTexture())
-
+	
+	penSprite.texture = info.get_stageTexture()
+	collectionSprite.texture = info.get_floorTexture()
 	client.texture = info.get_playClient()
 	clientHint.texture = info.get_playHint()
 	
@@ -30,6 +40,7 @@ func _ready() -> void:
 	
 	set_process(false)
 	set_process_input(false)
+	
 	
 	health = Global.GameStats.Health
 	

@@ -17,16 +17,18 @@
 [ext_resource type="Texture2D" uid="uid://c3q42a02xvsh7" path="res://sprites/character_sprites/stage3/kris_talk_close.png" id="13_4n37s"]
 [ext_resource type="Texture2D" uid="uid://cxt8hc55tp1cy" path="res://sprites/character_sprites/stage3/kris_talk_open.png" id="14_gg1dx"]
 [ext_resource type="Texture2D" uid="uid://cubc03y8dhslq" path="res://sprites/character_sprites/stage3/dialogue/kris_level_wrong.png" id="15_mts8f"]
-[ext_resource type="Texture2D" uid="uid://b2ht25xfsmyhw" path="res://sprites/levels/tiles_level.png" id="16_r5ldo"]
 [ext_resource type="Texture2D" uid="uid://cgkktykj64nh1" path="res://sprites/pet_sprites/bingus.png" id="17_is3v5"]
+[ext_resource type="Texture2D" uid="uid://cebkhdcvdqwip" path="res://sprites/character_sprites/stage3/tile_floor.png" id="18_3jr4v"]
 [ext_resource type="Texture2D" uid="uid://c1t8fq0o2kbe2" path="res://sprites/bingus_nametag.png" id="18_i4vk0"]
 [ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/info_scripts/info_stage.gd" id="18_y37d1"]
+[ext_resource type="Texture2D" uid="uid://bycegv0d8l7s1" path="res://sprites/character_sprites/stage3/tiles_level.png" id="19_gs0rs"]
 [ext_resource type="Texture2D" uid="uid://fkx3fkprl677" path="res://sprites/character_sprites/stage3/kris_hints.png" id="19_nssu7"]
 
 [resource]
 script = ExtResource("18_y37d1")
 stageNum = 3
-levelTexture = ExtResource("16_r5ldo")
+levelTexture = ExtResource("19_gs0rs")
+floorTexture = ExtResource("18_3jr4v")
 petTexture = ExtResource("17_is3v5")
 clientName = "Kris"
 clientNameTag = ExtResource("11_yrmxm")

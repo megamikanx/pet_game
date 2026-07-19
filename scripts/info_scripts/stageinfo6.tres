@@ -19,16 +19,18 @@
 [ext_resource type="Texture2D" uid="uid://craengumnyk0e" path="res://sprites/character_sprites/stage6/usagi_talk_close.png" id="15_4jd55"]
 [ext_resource type="Texture2D" uid="uid://dks6yk7vnwchx" path="res://sprites/character_sprites/stage6/usagi_talk_open.png" id="16_et1l7"]
 [ext_resource type="Texture2D" uid="uid://b0p8a2s2mrr6h" path="res://sprites/character_sprites/stage6/dialogue/usagi_level_wrong.png" id="17_0lss3"]
-[ext_resource type="Texture2D" uid="uid://bmnog56vj4i85" path="res://sprites/levels/moon_level.png" id="18_8534e"]
 [ext_resource type="Texture2D" uid="uid://ccci5tarjq36j" path="res://sprites/pet_sprites/littleman.png" id="19_6c356"]
 [ext_resource type="Texture2D" uid="uid://cfpagwgykjvje" path="res://sprites/littleman_nametag.png" id="20_ownhp"]
 [ext_resource type="Script" uid="uid://byo44lt2ql7u4" path="res://scripts/info_scripts/info_stage.gd" id="20_pevxu"]
+[ext_resource type="Texture2D" uid="uid://dfy4hxajoram1" path="res://sprites/character_sprites/stage6/moon_floor.png" id="20_y03g8"]
 [ext_resource type="Texture2D" uid="uid://bggddodh72soc" path="res://sprites/character_sprites/stage6/usagi_hints.png" id="21_3qvlq"]
+[ext_resource type="Texture2D" uid="uid://b11isy6hdsfsw" path="res://sprites/character_sprites/stage6/moon_level.png" id="21_y03g8"]
 
 [resource]
 script = ExtResource("20_pevxu")
 stageNum = 6
-levelTexture = ExtResource("18_8534e")
+levelTexture = ExtResource("21_y03g8")
+floorTexture = ExtResource("20_y03g8")
 petTexture = ExtResource("19_6c356")
 clientName = "Usagi"
 clientNameTag = ExtResource("13_4yof1")

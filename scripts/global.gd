@@ -12,6 +12,10 @@ var has_seen_comic: bool = false
 var captured_pets: Array[Dictionary] = []
 var previous_scene: String = ""
 
+#cheap so dont have to do work
+var penTopLeftBorder: Vector2
+var penBotRightBorder: Vector2
+
 var petScale: float = 0.25
 
 var stage_data: Dictionary[int, Dictionary]
