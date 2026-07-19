@@ -43,23 +43,26 @@ func _ready() -> void:
 	client_portrait.texture = portrait_closed
 	bubble.visible = true
 	continue_button.visible = false
+	continue_button.disabled = true
 	trait_index = 0
 	portrait_rest_pos = client_portrait.position
 	_show_current_trait()
 
-func _on_advance_button_pressed() -> void:
-	if is_talking:
-		return
-	AudioManager.play_click()
-	is_talking = true
-	await _play_talk_animation()
-	is_talking = false
-	trait_index += 1
-	if trait_index >= trait_icons.size():
-		bubble.visible = false
-		continue_button.visible = true
-	else:
-		_show_current_trait()
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("LMB") and trait_index < trait_icons.size():
+		if is_talking:
+			return
+		AudioManager.play_click()
+		is_talking = true
+		await _play_talk_animation()
+		is_talking = false
+		trait_index += 1
+		if trait_index >= trait_icons.size():
+			bubble.visible = false
+			continue_button.visible = true
+			continue_button.disabled = false
+		else:
+			_show_current_trait()
 
 func _on_continue_button_pressed() -> void:
 	AudioManager.play_click()

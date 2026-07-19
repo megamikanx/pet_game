@@ -141,12 +141,13 @@ func _on_item_pressed(entry: Dictionary) -> void:
 
 
 func _on_go_pressed() -> void:
-	AudioManager.play_click()
 	var packed := _get_packed_buttons()
 	if packed.size() != max_packed_items:
+		AudioManager.play_incorrect()
 		print("Need exactly ", max_packed_items, " items. Have ", packed.size())
 		return
 
+	AudioManager.play_click()
 	StageLoadedInfo.set_items(packed)
 	Global.previous_scene = get_tree().current_scene.scene_file_path
 	get_tree().change_scene_to_file("res://scenes/spawning.tscn")

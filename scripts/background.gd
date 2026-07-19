@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _move_tiles(delta: float):
-	var offset = 75 * delta
+	var offset = 50 * delta
 	pattern.position.x -= offset
 	pattern.position.y -= offset * 1.07058823529 #texture not 45 degree angle
 	
