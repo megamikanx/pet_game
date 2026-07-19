@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bheg2jkkb33c"
+path="res://.godot/imported/Arrow_Right_bitmap.png-4b4ee9f9252db4255419b7efd15d5eb1.res"
+
+[deps]
+
+source_file="res://sprites/Extra/Arrow_Right_bitmap.png"
+dest_files=["res://.godot/imported/Arrow_Right_bitmap.png-4b4ee9f9252db4255419b7efd15d5eb1.res"]
+
+[params]
+
+create_from=1
+threshold=0.0
