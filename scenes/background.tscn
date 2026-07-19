@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dd872pwidqv2a"]
 
-[ext_resource type="Texture2D" uid="uid://knl1u8f7j8hg" path="res://sprites/backgrounds/green_background.png" id="1_jougr"]
+[ext_resource type="Texture2D" uid="uid://c3kwheyp7d3fr" path="res://sprites/backgrounds/Blue_background.png" id="1_jougr"]
 [ext_resource type="Script" uid="uid://camp37uidt13p" path="res://scripts/background.gd" id="2_cbsqf"]
-[ext_resource type="Texture2D" uid="uid://ekiejpp1obhy" path="res://sprites/backgrounds/Green_logo.png" id="3_cbsqf"]
+[ext_resource type="Texture2D" uid="uid://rryt2ci27357" path="res://sprites/backgrounds/Lilac_logo.png" id="3_cbsqf"]
 
 [node name="Background" type="TextureRect" unique_id=2054081698]
 anchors_preset = 15
