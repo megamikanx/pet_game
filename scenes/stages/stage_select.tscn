@@ -67,10 +67,10 @@ expand_icon = true
 [node name="LockOverlay" type="ColorRect" parent="StageRow/StageButton1" unique_id=1826693015]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 0
-offset_left = 16.689117
-offset_top = 38.732094
-offset_right = 120.75861
-offset_bottom = 134.73209
+offset_left = 15.8302145
+offset_top = 38.91836
+offset_right = 120.77858
+offset_bottom = 134.91837
 rotation = -0.21355894
 color = Color(0.40784314, 0.40784314, 0.40784314, 0.30980393)
 
@@ -101,10 +101,10 @@ expand_icon = true
 [node name="LockOverlay" type="ColorRect" parent="StageRow/StageButton2" unique_id=122086450]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 0
-offset_left = 26.5
+offset_left = 25.5
 offset_top = 22.5
 offset_right = 126.5
-offset_bottom = 118.5
+offset_bottom = 121.5
 color = Color(0.40784314, 0.40784314, 0.40784314, 0.30980393)
 
 [node name="CheckMark" type="TextureRect" parent="StageRow/StageButton2" unique_id=1551009172]
@@ -135,7 +135,7 @@ expand_icon = true
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 0
 offset_left = 16.5
-offset_top = 21.5
+offset_top = 20.5
 offset_right = 129.5
 offset_bottom = 126.5
 color = Color(0.40784314, 0.40784314, 0.40784314, 0.30980393)
@@ -166,10 +166,10 @@ expand_icon = true
 [node name="LockOverlay" type="ColorRect" parent="StageRow/StageButton4" unique_id=1582729405]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 0
-offset_left = 22.5
-offset_top = 27.5
-offset_right = 121.99347
-offset_bottom = 128.53342
+offset_left = 19.796236
+offset_top = 26.798903
+offset_right = 124.29837
+offset_bottom = 131.33595
 rotation = -0.0680407
 color = Color(0.40784314, 0.40784314, 0.40784314, 0.30980393)
 
@@ -201,10 +201,10 @@ expand_icon = true
 [node name="LockOverlay" type="ColorRect" parent="StageRow/StageButton5" unique_id=1980300479]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 0
-offset_left = 15.5
-offset_top = 26.5
-offset_right = 119.5
-offset_bottom = 129.2287
+offset_left = 14.847977
+offset_top = 26.524027
+offset_right = 119.50044
+offset_bottom = 131.00862
 rotation = -0.036834408
 color = Color(0.40784314, 0.40784314, 0.40784314, 0.30980393)
 

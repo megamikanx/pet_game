@@ -61,7 +61,7 @@ func _ready() -> void:
 		{"button": $DeskArea/Flower, "tooltip": preload("res://sprites/flower_text.png")},
 		{"button": $DeskArea/Plushie, "tooltip": preload("res://sprites/plushie_text.png")},
 		{"button": $DeskArea/TopHat, "tooltip": preload("res://sprites/tophat_text.png")},
-		# {"button": $DeskArea/Yakult, "tooltip": preload("res://sprites/yakult_text.png")},
+		{"button": $DeskArea/Yakult, "tooltip": preload("res://sprites/yakult_text.png")},
 	]
 
 	for data in buttons:

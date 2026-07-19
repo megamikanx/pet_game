@@ -25,6 +25,7 @@ extends Node
 	Flower = Flower,
 	Plushie = Plushie,
 	TopHat = TopHat,
+	Yakult = Chocolate
 }
 
 @onready var stageInfo: Resource = STAGES[0]

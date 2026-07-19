@@ -46,7 +46,7 @@ func spawn_pets(num : int, texture: Texture2D) -> void:
 func create_random_personality() -> Array[ItemInfo.ITEM_TYPE]:
 	var personality: Array[ItemInfo.ITEM_TYPE] = []
 	for pre in valid_preferences:
-		if randi() % 2 == 0:
+		if randi() % 10 < ItemInfo.ITEM.get(pre).get("CHANCE"):
 			personality.append(pre)
 		
 	for key in answer_personality.keys():
