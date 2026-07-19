@@ -60,12 +60,13 @@ func make_answer_personality() -> Array[ItemInfo.ITEM_TYPE]:
 	var personality: Array[ItemInfo.ITEM_TYPE] = []
 	
 	for pre in valid_preferences:
-		if pre in answer_personality.keys() and answer_personality.get(pre):
-			personality.append(pre)
-		else:
-			if randi() % 2 == 0:
+		if pre in answer_personality.keys():
+			if answer_personality.get(pre):
 				personality.append(pre)
-	
+		else:
+			if randi() % 10 < ItemInfo.ITEM.get(pre).get("CHANCE"):
+				personality.append(pre)
+
 	return personality
 
 func config_preferences(valid: Array[ItemInfo.ITEM_TYPE],

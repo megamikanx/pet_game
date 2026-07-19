@@ -37,10 +37,12 @@ func load_catalogue_screen() -> void:
 	logic_left_right_appearance()
 
 func left_clicked() -> void:
+	AudioManager.play_click()
 	current_screen -= 1
 	load_catalogue_screen()
 	
 func right_clicked() -> void:
+	AudioManager.play_click()
 	current_screen += 1
 	load_catalogue_screen()
 

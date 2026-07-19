@@ -10,6 +10,7 @@ signal hold_pet
 signal wrong_guess
 
 var collected_pet: Pet
+var ended = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,6 +20,7 @@ func _ready() -> void:
 	
 	responseSprite.visible = false
 	instructionsSprite.visible = true
+	ended = false
 	
 	submitButton.pressed.connect(check_answer)
 	body_entered.connect(collect_held_pet)
@@ -30,8 +32,12 @@ func check_answer() -> void:
 	print(collected_pet.get_ID())
 	responseSprite.visible = true
 	
+	if get_parent().health == 0 or ended:
+		return
+	
 	if collected_pet.get_ID() == 0:
 		print("found")
+		AudioManager.play_correct()
 		# once stage cleared mark down and move on to next
 		var pet_tex: Texture2D = StageLoadedInfo.get_petTexture()
 		var pet_name: String = ""
@@ -39,11 +45,13 @@ func check_answer() -> void:
 		Global.clear_stage(Global.current_stage)
 		
 		responseSprite.texture = StageLoadedInfo.get_successLine()
+		ended = true
 		await get_tree().create_timer(2).timeout
 		
 		get_tree().change_scene_to_file("res://scenes/stages/stage_select.tscn")
 	else:
 		print("wrong pet")
+		AudioManager.play_incorrect()
 		responseSprite.texture = StageLoadedInfo.get_wrongLine()
 		wrong_guess.emit()
 		await get_tree().create_timer(3).timeout

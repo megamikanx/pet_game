@@ -5,6 +5,8 @@ extends Node
 
 var click_sfx: AudioStream = preload("res://music/mouse_click.ogg")
 var boop_sfx: AudioStream = preload("res://music/boop.ogg")
+var correct_sfx: AudioStream = preload("res://music/correct.mp3")
+var wrong_sfx: AudioStream = preload("res://music/wrong.mp3")
 
 func _ready() -> void:
 	play_bgm()
@@ -25,3 +27,8 @@ func play_click() -> void:
 	
 func play_boop() -> void:
 	play_sfx(boop_sfx)
+
+func play_correct() -> void:
+	play_sfx(correct_sfx)
+func play_incorrect() -> void:
+	play_sfx(wrong_sfx)

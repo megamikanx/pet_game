@@ -28,7 +28,7 @@
 [resource]
 script = ExtResource("19_1hrmb")
 stageNum = 5
-NUM_PETS = 1
+NUM_PETS = 15
 levelTexture = ExtResource("20_hupua")
 floorTexture = ExtResource("19_hupua")
 petTexture = ExtResource("18_5tmjx")

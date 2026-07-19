@@ -22,6 +22,7 @@
 
 [resource]
 script = ExtResource("14_jvn52")
+NUM_PETS = 15
 levelTexture = ExtResource("15_uw0wi")
 floorTexture = ExtResource("14_1gbrd")
 petTexture = ExtResource("13_ncsuh")

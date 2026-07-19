@@ -48,9 +48,9 @@ func _ready() -> void:
 	_show_current_trait()
 
 func _on_advance_button_pressed() -> void:
-	AudioManager.play_click()
 	if is_talking:
 		return
+	AudioManager.play_click()
 	is_talking = true
 	await _play_talk_animation()
 	is_talking = false

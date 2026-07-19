@@ -6,7 +6,7 @@ extends Node
 @onready var ITEM_SCENE = preload("res://scenes/item_scene.tscn")
 
 var current_stage: int = 1
-var highest_unlocked: int = 7
+var highest_unlocked: int = 1
 var cleared_stages: Array[int] = []
 var has_seen_comic: bool = false
 var captured_pets: Array[Dictionary] = []
