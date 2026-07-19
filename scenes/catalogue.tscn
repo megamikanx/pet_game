@@ -98,4 +98,9 @@ pivot_offset_ratio = Vector2(1, 0.5)
 texture_normal = ExtResource("7_a8oho")
 texture_click_mask = ExtResource("9_2yvpm")
 
+[node name="PetName" type="Sprite2D" parent="." unique_id=539870321]
+position = Vector2(640, 628)
+rotation = 1.5707964
+scale = Vector2(4, 4)
+
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

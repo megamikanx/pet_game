@@ -2,6 +2,7 @@ extends Control
 
 @onready var petSprite = $Pet
 @onready var petFloor = $PetContainer/TextureRect
+@onready var nameSprite = $PetName
 
 @onready var left = $Left
 @onready var right = $Right
@@ -30,6 +31,7 @@ func _on_back_button_pressed() -> void:
 func load_catalogue_screen() -> void:
 	if current_screen < max_screen:
 		petSprite.texture = StageLoadedInfo.STAGES[current_screen - 1].petTexture
+		nameSprite.texture = StageLoadedInfo.STAGES[current_screen - 1].petNameTag
 	petFloor.texture = StageLoadedInfo.STAGES[current_screen - 1].floorTexture
 	
 	logic_left_right_appearance()

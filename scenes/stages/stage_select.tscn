@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cj3m6fuy01t2c" path="res://sprites/level_3.png" id="6_inlx4"]
 [ext_resource type="Texture2D" uid="uid://baoqoroxlutph" path="res://sprites/level_4.png" id="7_fp7w0"]
 [ext_resource type="Texture2D" uid="uid://bctaccwb2ri40" path="res://sprites/level_5.png" id="8_x7rqn"]
+[ext_resource type="Texture2D" uid="uid://bsilu1rmwadrw" path="res://sprites/level_6.png" id="9_iyq84"]
 [ext_resource type="Texture2D" uid="uid://ch5av183lw6yq" path="res://sprites/Catalogue.png" id="9_vhbds"]
 [ext_resource type="Texture2D" uid="uid://bds7hjwimoaci" path="res://sprites/Menu_button.png" id="10_v2kd5"]
 
@@ -192,7 +193,6 @@ texture_filter = 1
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 2
-button_mask = 0
 icon = ExtResource("8_x7rqn")
 flat = true
 icon_alignment = 1
@@ -209,6 +209,45 @@ rotation = -0.036834408
 color = Color(0.40784314, 0.40784314, 0.40784314, 0.30980393)
 
 [node name="CheckMark" type="TextureRect" parent="StageRow/StageButton5" unique_id=34278080]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -21.5
+offset_top = -64.5
+offset_right = 69.5
+offset_bottom = 33.5
+grow_horizontal = 2
+rotation = 0.49921936
+texture = ExtResource("5_iyq84")
+expand_mode = 1
+
+[node name="StageButton6" type="Button" parent="." unique_id=1298150573]
+texture_filter = 1
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 0
+offset_left = 1049.0
+offset_top = 537.0
+offset_right = 1199.0
+offset_bottom = 687.0
+size_flags_horizontal = 2
+icon = ExtResource("9_iyq84")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_group_ = true
+
+[node name="LockOverlay" type="ColorRect" parent="StageButton6" unique_id=1222916493]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 0
+offset_left = 14.847977
+offset_top = 26.524027
+offset_right = 119.50044
+offset_bottom = 131.00862
+rotation = -0.036834408
+color = Color(0.40784314, 0.40784314, 0.40784314, 0.30980393)
+
+[node name="CheckMark" type="TextureRect" parent="StageButton6" unique_id=601955608]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5

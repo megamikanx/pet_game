@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_2lfmg")
 Health = 3
-MaxItemUsages = 2
+MaxItemUsages = 3
 metadata/_custom_type_script = "uid://ib55y4hv7kio"

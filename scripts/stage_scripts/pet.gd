@@ -29,6 +29,8 @@ var border_rigX: float = Global.penBotRightBorder.x
 @onready var aniPlayer = $petSprite/AnimationPlayer
 @onready var timer = $Timer
 
+@onready var remote = $Remote
+
 @onready var selectArea = $SelectionArea
 
 var OFFSET = 0
@@ -37,6 +39,7 @@ var petID: int = -1
 
 #Pet variables
 var SPEED = 50
+var lock_rot = false
 
 var personality: Array[ItemInfo.ITEM_TYPE] = []
 var afflication: Array[Item]
@@ -55,6 +58,7 @@ func _ready() -> void:
 	timer.wait_time = 0.5
 	
 	selectArea.input_event.connect(input_selection_area)
+	petSprite.scale = 0.5 * Vector2.ONE
 	pass
 
 func set_petTexture(new_text: Texture2D) -> void:
@@ -73,6 +77,9 @@ func set_personality(pers: Array[ItemInfo.ITEM_TYPE]) -> void:
 	personality = pers
 
 func start_animation(animation: String) -> void:
+	if animation == "Bounce":
+		rotation = 0
+		lock_rot = true
 	aniPlayer.current_animation = animation
 
 func get_ID() -> int:
@@ -80,6 +87,8 @@ func get_ID() -> int:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if lock_rot:
+		rotation = 0
 	if !frozen:
 		walk(delta)
 	pass

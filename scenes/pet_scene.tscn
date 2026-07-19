@@ -10,15 +10,15 @@ length = 0.6
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/path = NodePath("petSprite:offset")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.0009999999, 0.15666667, 0.3, 0.46666667),
+"times": PackedFloat32Array(0, 0.15666667, 0.3, 0.46666667),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(5.3, -14), Vector2(5.3, -43), Vector2(5.3, -43), Vector2(5.3, -14)]
+"values": [Vector2(5.3, 0), Vector2(5.3, -57), Vector2(5.3, -43), Vector2(5.3, -14)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -30,7 +30,19 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0.0009999999, 0.15666667, 0.3, 0.46666667),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0.25, 0.25), Vector2(0.35, 0.35), Vector2(0.35, 0.35), Vector2(0.25, 0.25)]
+"values": [Vector2(0.25, 0.25), Vector2(0.35, 0.35), Vector2(0.32, 0.32), Vector2(0.25, 0.25)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Remote:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.15666667, 0.3, 0.46666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -50), Vector2(0, -35), Vector2(0, -14)]
 }
 
 [sub_resource type="Animation" id="Animation_jwt70"]
@@ -72,10 +84,10 @@ tracks/0/path = NodePath("petSprite:offset")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.0009999999, 0.15666667, 0.3, 0.46666667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0.0009999999),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(5.3, -14), Vector2(5.3, -43), Vector2(5.3, -43), Vector2(5.3, -14)]
+"values": [Vector2(0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -84,10 +96,10 @@ tracks/1/path = NodePath("petSprite:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.0009999999, 0.15666667, 0.3, 0.46666667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0.0009999999),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.25, 0.25), Vector2(0.35, 0.35), Vector2(0.35, 0.35), Vector2(0.25, 0.25)]
+"values": [Vector2(0.25, 0.25)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -122,17 +134,17 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jwt70"]
-radius = 13.5
-height = 40.0
+radius = 30.0
+height = 60.0
 
 [node name="Pet" type="RigidBody2D" unique_id=806234367]
 collision_layer = 3
 mass = 3.0
 gravity_scale = 0.0
 script = ExtResource("1_hmkkh")
-metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="." unique_id=2009394774]
+[node name="Remote" type="RemoteTransform2D" parent="." unique_id=2009394774]
 remote_path = NodePath("../petSprite")
 update_rotation = false
 update_scale = false
@@ -141,7 +153,6 @@ update_scale = false
 top_level = true
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_jwt70")
-offset = Vector2(5.3, -14)
 
 [node name="flagSprite" type="Sprite2D" parent="petSprite" unique_id=2065679614]
 position = Vector2(28, 4)

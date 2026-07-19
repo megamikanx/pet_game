@@ -42,7 +42,6 @@ func spawn_pets(num : int, texture: Texture2D) -> void:
 			instance.set_personality(make_answer_personality())
 		else:
 			instance.set_personality(create_random_personality())
-		print(instance.personality)
 	pass
 
 func create_random_personality() -> Array[ItemInfo.ITEM_TYPE]:

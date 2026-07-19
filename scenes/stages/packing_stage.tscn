@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://ce7ktiwo2p5j1" path="res://sprites/plushie.png" id="15_du5x5"]
 [ext_resource type="Texture2D" uid="uid://bxsjc61gp0m3a" path="res://sprites/tophat.png" id="16_m5k0b"]
 [ext_resource type="Texture2D" uid="uid://lvdlaqirwf5t" path="res://sprites/yakult.png" id="17_7lp5q"]
+[ext_resource type="Texture2D" uid="uid://dltnmawgl1le7" path="res://sprites/item_sprites/speaker.png" id="17_r0ehs"]
 [ext_resource type="Texture2D" uid="uid://df5573urtid34" path="res://sprites/pibbles_nametag.png" id="23_du5x5"]
 [ext_resource type="Texture2D" uid="uid://cy6wqsd3ib1ju" path="res://sprites/miku_hints.png" id="24_m5k0b"]
 
@@ -54,10 +55,10 @@ texture = ExtResource("3_pdicg")
 [node name="Beer" type="Button" parent="DeskArea" unique_id=1025757343]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 0
-offset_left = 273.0
-offset_top = 87.0
-offset_right = 405.0
-offset_bottom = 230.0
+offset_left = 295.83328
+offset_top = 90.0
+offset_right = 395.83328
+offset_bottom = 190.0
 icon = ExtResource("4_r01do")
 flat = true
 icon_alignment = 1
@@ -65,20 +66,20 @@ expand_icon = true
 
 [node name="Bath" type="Button" parent="DeskArea" unique_id=1437634563]
 layout_mode = 0
-offset_left = 920.0
-offset_top = 221.0
-offset_right = 1020.0
-offset_bottom = 329.0
+offset_left = 921.8749
+offset_top = 210.0
+offset_right = 1021.8749
+offset_bottom = 310.0
 icon = ExtResource("5_mspdc")
 flat = true
 expand_icon = true
 
 [node name="Water" type="Button" parent="DeskArea" unique_id=220656396]
 layout_mode = 0
-offset_left = 936.0
-offset_top = 77.0
-offset_right = 1048.0
-offset_bottom = 193.0
+offset_left = 921.8749
+offset_top = 90.0
+offset_right = 1021.8749
+offset_bottom = 190.0
 icon = ExtResource("6_uctxv")
 flat = true
 icon_alignment = 1
@@ -87,10 +88,10 @@ expand_icon = true
 [node name="Burger" type="Button" parent="DeskArea" unique_id=1593031628]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
-offset_left = 781.0
-offset_top = 98.0
-offset_right = 894.0
-offset_bottom = 217.0
+offset_left = 775.0
+offset_top = 90.0
+offset_right = 875.0
+offset_bottom = 190.0
 icon = ExtResource("7_abt0k")
 flat = true
 icon_alignment = 1
@@ -98,10 +99,10 @@ expand_icon = true
 
 [node name="Money" type="Button" parent="DeskArea" unique_id=961589761]
 layout_mode = 0
-offset_left = 611.0
-offset_top = 80.0
-offset_right = 728.0
-offset_bottom = 191.0
+offset_left = 610.0
+offset_top = 90.0
+offset_right = 710.0
+offset_bottom = 190.0
 icon = ExtResource("8_fok3m")
 flat = true
 icon_alignment = 1
@@ -109,10 +110,10 @@ expand_icon = true
 
 [node name="Squishy" type="Button" parent="DeskArea" unique_id=714759041]
 layout_mode = 0
-offset_left = 581.0
-offset_top = 195.0
-offset_right = 689.0
-offset_bottom = 317.0
+offset_left = 610.0
+offset_top = 210.0
+offset_right = 710.0
+offset_bottom = 310.0
 icon = ExtResource("9_kk86w")
 flat = true
 icon_alignment = 1
@@ -120,10 +121,10 @@ expand_icon = true
 
 [node name="EnergyDrink" type="Button" parent="DeskArea" unique_id=966926920]
 layout_mode = 0
-offset_left = 461.0
-offset_top = 85.0
-offset_right = 572.0
-offset_bottom = 214.0
+offset_left = 445.0
+offset_top = 90.0
+offset_right = 545.0
+offset_bottom = 190.0
 icon = ExtResource("10_r73xc")
 flat = true
 icon_alignment = 1
@@ -131,10 +132,10 @@ expand_icon = true
 
 [node name="ProteinBar" type="Button" parent="DeskArea" unique_id=1602508745]
 layout_mode = 0
-offset_left = 743.0
-offset_top = 217.0
-offset_right = 860.0
-offset_bottom = 334.0
+offset_left = 775.0
+offset_top = 210.0
+offset_right = 875.0
+offset_bottom = 310.0
 icon = ExtResource("11_0obs4")
 flat = true
 icon_alignment = 1
@@ -142,10 +143,10 @@ expand_icon = true
 
 [node name="BucketSlop" type="Button" parent="DeskArea" unique_id=1474641584]
 layout_mode = 0
-offset_left = 440.0
-offset_top = 228.0
-offset_right = 531.0
-offset_bottom = 339.0
+offset_left = 445.0
+offset_top = 210.0
+offset_right = 545.0
+offset_bottom = 310.0
 icon = ExtResource("12_r73xc")
 flat = true
 icon_alignment = 1
@@ -153,10 +154,10 @@ expand_icon = true
 
 [node name="Carcass" type="Button" parent="DeskArea" unique_id=1122412785]
 layout_mode = 0
-offset_left = 322.0
-offset_top = 240.0
-offset_right = 422.0
-offset_bottom = 334.0
+offset_left = 295.83328
+offset_top = 210.0
+offset_right = 395.83328
+offset_bottom = 310.0
 icon = ExtResource("13_0obs4")
 flat = true
 icon_alignment = 1
@@ -164,10 +165,10 @@ expand_icon = true
 
 [node name="Flower" type="Button" parent="DeskArea" unique_id=1575875824]
 layout_mode = 0
-offset_left = 398.0
-offset_top = 342.0
-offset_right = 507.0
-offset_bottom = 456.0
+offset_left = 445.0
+offset_top = 330.0
+offset_right = 545.0
+offset_bottom = 430.0
 icon = ExtResource("14_r0ehs")
 flat = true
 icon_alignment = 1
@@ -175,10 +176,10 @@ expand_icon = true
 
 [node name="Plushie" type="Button" parent="DeskArea" unique_id=795202083]
 layout_mode = 0
-offset_left = 573.0
-offset_top = 355.0
-offset_right = 660.0
-offset_bottom = 451.0
+offset_left = 610.0
+offset_top = 330.0
+offset_right = 710.0
+offset_bottom = 430.0
 icon = ExtResource("15_du5x5")
 flat = true
 icon_alignment = 1
@@ -186,10 +187,10 @@ expand_icon = true
 
 [node name="TopHat" type="Button" parent="DeskArea" unique_id=418861088]
 layout_mode = 0
-offset_left = 716.0
-offset_top = 349.0
-offset_right = 806.0
-offset_bottom = 457.0
+offset_left = 775.0
+offset_top = 330.0
+offset_right = 875.0
+offset_bottom = 430.0
 icon = ExtResource("16_m5k0b")
 flat = true
 icon_alignment = 1
@@ -197,11 +198,22 @@ expand_icon = true
 
 [node name="Yakult" type="Button" parent="DeskArea" unique_id=1436688774]
 layout_mode = 0
-offset_left = 880.0
-offset_top = 332.0
-offset_right = 958.0
-offset_bottom = 423.0
+offset_left = 921.8749
+offset_top = 330.0
+offset_right = 1021.8749
+offset_bottom = 430.0
 icon = ExtResource("17_7lp5q")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Speaker" type="Button" parent="DeskArea" unique_id=1201696290]
+layout_mode = 0
+offset_left = 295.83328
+offset_top = 330.0
+offset_right = 395.83328
+offset_bottom = 430.0
+icon = ExtResource("17_r0ehs")
 flat = true
 icon_alignment = 1
 expand_icon = true

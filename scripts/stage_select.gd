@@ -6,6 +6,7 @@ extends Control
 	$StageRow/StageButton3,
 	$StageRow/StageButton4,
 	$StageRow/StageButton5,
+	$StageButton6,
 ]
 
 func _ready() -> void:
@@ -15,6 +16,10 @@ func _ready() -> void:
 	for i in stage_buttons.size():
 		var stage_num: int = i + 1
 		stage_buttons[i].pressed.connect(_on_stage_pressed.bind(stage_num))
+	
+	$StageButton6.visible = false
+	if Global.highest_unlocked >= 6:
+		$StageButton6.visible = true
 
 func _refresh_stage_buttons() -> void:
 	for i in stage_buttons.size():

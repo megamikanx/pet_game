@@ -41,8 +41,8 @@ petNameTag = ExtResource("20_ownhp")
 packingHint = ExtResource("21_3qvlq")
 clientWrongLine = ExtResource("17_0lss3")
 clientSuccessLine = ExtResource("14_hkiys")
-clientGameplayBuild = ExtResource("13_ybdd4")
-clientGameplayHints = ExtResource("14_y03g8")
+clientGameplayBuild = ExtResource("14_y03g8")
+clientGameplayHints = ExtResource("13_ybdd4")
 answer_personality = Dictionary[int, bool]({
 2: false,
 3: true,
