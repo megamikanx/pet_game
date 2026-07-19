@@ -3,10 +3,11 @@ extends RigidBody2D
 
 const PALETTE: Array[Color] = [
 	Color.WHITE,
-	Color.GREEN,
+	Color.SADDLE_BROWN,
 	Color.MEDIUM_PURPLE,
-	Color.ORANGE,
-	Color.DEEP_SKY_BLUE
+	Color.DARK_ORANGE,
+	Color.DEEP_SKY_BLUE,
+	Color.SEA_GREEN
 ]
 
 const MIN_RAND_GOAL_DIST = 75
@@ -51,7 +52,7 @@ func _ready() -> void:
 	flagSprite.visible = false
 	
 	timer.timeout.connect(timeout_rand_walk)
-	timer.wait_time = randf_range(0.5, 1.5)
+	timer.wait_time = 0.5
 	
 	selectArea.input_event.connect(input_selection_area)
 	pass

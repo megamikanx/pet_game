@@ -115,8 +115,12 @@ static var ITEM: Dictionary[ITEM_TYPE, Dictionary] = {
 
 static var ADD_SPRITES : Dictionary[ITEM_TYPE, Dictionary] = {
 	ITEM_TYPE.Beer : {
-		SPRITE 		= preload("res://sprites/item_sprites/item_addition/sweat.png"),
-		DIM 		= Vector3(5, -100, 2)
+		SPRITE 		= preload("res://sprites/item_sprites/item_addition/blood.png"),
+		DIM 		= Vector3(-35, -65, 2)
+	},
+	ITEM_TYPE.Money : {
+		SPRITE 		= preload("res://sprites/item_sprites/money.png"),
+		DIM 		= Vector3(-40, 0, 2)
 	},
 	ITEM_TYPE.TopHat : {
 		SPRITE 		= preload("res://sprites/item_sprites/tophat.png"),

@@ -7,7 +7,7 @@ radius = 125.0
 
 [sub_resource type="Gradient" id="Gradient_a127h"]
 offsets = PackedFloat32Array(0, 0.6927083, 0.6979167)
-colors = PackedColorArray(0, 0, 0, 0.23529412, 0, 0, 0, 0.23529412, 0, 0, 0, 0)
+colors = PackedColorArray(0, 0, 0, 0.11764706, 0, 0, 0, 0.11764706, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_ai6g8"]
 gradient = SubResource("Gradient_a127h")
